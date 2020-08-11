@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProblemsViewState">
+    <hideBySeverity>
+      <option value="200" />
+    </hideBySeverity>
+  </component>
+  <component name="ProjectId" id="1fZna9PlHsTztB5BOerDwC22rTr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/js/animation" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js/animation" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="" />
+      <created>1596434543185</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596434543185</updated>
+      <workItem from="1596434544282" duration="8693000" />
+      <workItem from="1596447247487" duration="569000" />
+      <workItem from="1596447841042" duration="968000" />
+      <workItem from="1596448811573" duration="1680000" />
+      <workItem from="1596475328724" duration="13557000" />
+      <workItem from="1596701096096" duration="7244000" />
+      <workItem from="1597052239827" duration="24439000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="312" y="52" width="732" height="632" key="#Inspections" timestamp="1596445562307">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="312" y="52" width="732" height="632" key="#Inspections/0.0.1366.744@0.0.1366.744" timestamp="1596445562307" />
+    <state x="394" y="227" width="568" height="299" key="#SCSS_Lint" timestamp="1596448827039">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="394" y="227" width="568" height="299" key="#SCSS_Lint/0.0.1366.744@0.0.1366.744" timestamp="1596448827039" />
+    <state x="446" y="263" width="464" height="211" key="#Stylelint" timestamp="1596445581217">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="446" y="263" width="464" height="211" key="#Stylelint/0.0.1366.744@0.0.1366.744" timestamp="1596445581217" />
+    <state x="340" y="152" width="676" height="432" key="EditFileWatcherDialog" timestamp="1596447221171">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="340" y="152" width="676" height="432" key="EditFileWatcherDialog/0.0.1366.744@0.0.1366.744" timestamp="1596447221171" />
+    <state x="461" y="127" width="424" height="479" key="FileChooserDialogImpl" timestamp="1596448808060">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="461" y="127" width="424" height="479" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1596448808060" />
+    <state x="187" y="6" key="SettingsEditor" timestamp="1596480156458">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="187" y="6" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1596480156458" />
+    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597153690352">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1597153690352" />
+    <state x="0" y="6" width="1013" height="493" key="dock-window-1" timestamp="1596480532375">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="0" y="6" width="1013" height="493" key="dock-window-1/0.0.1366.744@0.0.1366.744" timestamp="1596480532375" />
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1596444180470">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1596444180470" />
+  </component>
+</project>
