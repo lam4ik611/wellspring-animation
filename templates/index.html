@@ -5,32 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../dist/css/style.css">
     <title>Wellspring</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="animation" data-el="animated.container">
+            <div class="animation-background" data-name="sky"></div>
+            <div class="animation-background" data-name="road" data-el="animated.element" data-speed=".2"></div>
+            <div class="animation-person" data-el="animated.person" data-speed="1"></div>
             <div class="animation-wrapper" data-el="animated.element" data-speed="1">
                 <section class="animation-section" data-el="animated.section"></section>
                 <section class="animation-section" data-el="animated.section"></section>
                 <section class="animation-section" data-el="animated.section"></section>
             </div>
-            <div
-                    class="animation-background"
-                    data-name="background"
-                    data-el="animated.element"
-                    data-speed=".5"
-            ></div>
-            <div
-                    class="animation-background"
-                    data-name="road"
-                    data-el="animated.element"
-                    data-speed="2"
-            >
-            </div>
         </div>
     </div>
-    <script src="../dist/js/index.min.js"></script>
 </body>
 </html>

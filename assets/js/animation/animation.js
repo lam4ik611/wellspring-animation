@@ -12,7 +12,11 @@ class Animation {
     constructor() {
         this.animatedContainer = '[data-el="animated.container"]';
         this.animatedElement = '[data-el="animated.element"]';
+        this.animatedPerson = '[data-el="animated.person"]';
         this.viewportHeight = window.innerHeight;
+        this.elements = document.querySelectorAll(this.animatedElement);
+        this.person = document.querySelector(this.animatedPerson);
+        this.scrollStep = 100;
         this.scrollHeight = document.querySelector(this.animatedContainer).offsetWidth;
 
         this.update();
@@ -26,18 +30,15 @@ class Animation {
 
         document.addEventListener('scroll', () => {
             const currentScrollPosition = document.documentElement.scrollTop;
-            const elements = document.querySelectorAll(this.animatedElement);
 
-            elements.forEach(item => {
+            this.elements.forEach(item => {
                 const itemSpeed = item.dataset.speed;
 
                 TweenMax
                     .from(item, {
                         x: -itemSpeed * currentScrollPosition,
                     });
-            })
-
-            // console.log(currentScrollPosition);
+            });
         });
     }
 }

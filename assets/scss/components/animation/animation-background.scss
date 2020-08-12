@@ -1,20 +1,24 @@
 .animation-background {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+	width: 1000%;
 	background-size: 100% 100vh;
+	background-repeat: no-repeat;
 
-	&[data-name="background"] {
-		background-image: url('../images/background.jpg');
-		background-repeat: no-repeat;
+	&[data-name="sky"] {
+		background-image: url('../images/sky.svg');
+		background-size: cover;
 	}
 
 	&[data-name="road"] {
+		position: absolute;
 		background-image: url('../images/road.png');
 		background-repeat: repeat-x;
-		background-position-y: 70vh;
+		background-position-y: 60vh;
+		background-size: contain;
 	}
 }
 
