@@ -1,1 +1,3 @@
-import './animation';
+import Animation from './animation';
+
+new Animation();

@@ -8,32 +8,41 @@ gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(Draggable);
 gsap.registerPlugin(TweenMax);
 
-const animatedContainer = '[data-el="animated.container"]',
-    animatedElement = '[data-el="animated.element"]',
-    viewportHeight = window.innerHeight,
-    scrollHeight = document.querySelector(animatedContainer).offsetWidth - 925;
+class Animation {
+    constructor() {
+        this.animatedContainer = '[data-el="animated.container"]';
+        this.animatedElement = '[data-el="animated.element"]';
+        this.viewportHeight = window.innerHeight;
+        this.scrollHeight = document.querySelector(this.animatedContainer).offsetWidth;
 
-TweenMax.set('body', {
-    height: scrollHeight,
-    overflowY:'scroll',
-});
+        this.update();
+    }
 
-document.addEventListener('scroll', () => {
-    const currentScrollPosition = document.documentElement.scrollTop;
-    const elements = document.querySelectorAll(animatedElement);
+    update() {
+        TweenMax.set('body', {
+            height: this.scrollHeight,
+            overflowY:'scroll',
+        });
 
-    elements.forEach(item => {
-        const itemSpeed = item.dataset.speed;
+        document.addEventListener('scroll', () => {
+            const currentScrollPosition = document.documentElement.scrollTop;
+            const elements = document.querySelectorAll(this.animatedElement);
 
-        TweenMax
-            .from(item, {
-                x: -itemSpeed * currentScrollPosition,
-            });
-    })
+            elements.forEach(item => {
+                const itemSpeed = item.dataset.speed;
 
-    //  '0.5' = half speed of user scroll
-    console.log(currentScrollPosition);
-});
+                TweenMax
+                    .from(item, {
+                        x: -itemSpeed * currentScrollPosition,
+                    });
+            })
+
+            // console.log(currentScrollPosition);
+        });
+    }
+}
+
+export default Animation;
 
 
 
