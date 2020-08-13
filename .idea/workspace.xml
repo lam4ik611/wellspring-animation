@@ -30,11 +30,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/animation/animation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/index.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +95,7 @@
       <workItem from="1597052239827" duration="24991000" />
       <workItem from="1597218401618" duration="9345000" />
       <workItem from="1597236019416" duration="6297000" />
-      <workItem from="1597254715665" duration="2160000" />
+      <workItem from="1597254715665" duration="13795000" />
     </task>
     <servers />
   </component>
@@ -156,10 +159,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1597256532344" />
-    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597256793853">
+    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597312086162">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1597256793853" />
+    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1597312086162" />
     <state x="0" y="6" width="1013" height="493" key="dock-window-1" timestamp="1596480532375">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
