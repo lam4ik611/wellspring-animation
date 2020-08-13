@@ -73,9 +73,10 @@ class Animation {
             this.scroller.scrollRequest = 0;
         }
 
-        TweenLite.to(this.elements, 1, {
+        gsap.to(this.elements, {
+            scrollTrigger: this.elements,
             x: (index, target) => {
-                return `${-(this.scroller.x / 500) * target.dataset.speed}%`;
+                return -(this.scroller.x / 2) * target.dataset.speed;
             },
             force3D: true,
         });

@@ -16,17 +16,17 @@
 	}
 
 	&[data-name="ground"] {
-		background-image: url('../images/ground.svg');
+		background-image: url('../images/ground.png');
 		z-index: 3;
 	}
 
 	&[data-name="buildings"] {
-		background-image: url('../images/buildings.svg');
+		background-image: url('../images/buildings.png');
 		z-index: 2;
 	}
 
 	&[data-name="silhouette"] {
-		background-image: url('../images/silhouette.svg');
+		background-image: url('../images/silhouette.png');
 		z-index: 1;
 	}
 }
