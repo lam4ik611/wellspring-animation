@@ -65,11 +65,6 @@ class Animation {
         const scrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         const resized = this.scroller.resizeRequest > 0;
 
-        if (resized) {
-            /*document.body.style.height = `${this.scrollHeight}px`;
-            this.scroller.resizeRequest = 0;*/
-        }
-
         this.scroller.endX = scrollY;
         this.scroller.x += (scrollY - this.scroller.x) * this.scroller.ease;
 
@@ -78,25 +73,14 @@ class Animation {
             this.scroller.scrollRequest = 0;
         }
 
-        this.elements.forEach(item => {
-            const itemSpeed = item.dataset.speed;
-            const elementSpeed = `${Math.floor(-itemSpeed * this.scroller.x) * .05}%`;
-            if (item.dataset.name === 'ground') console.log(elementSpeed)
-
-            TweenLite.to(item, 0.5, {
-                x: elementSpeed,
-                z: 0.01
-            })
+        TweenLite.to(this.elements, 1, {
+            x: (index, target) => {
+                return `${-(this.scroller.x / 500) * target.dataset.speed}%`;
+            },
+            force3D: true,
         });
 
         this.requestId = this.scroller.scrollRequest > 0 ? requestAnimationFrame(this.update) : null;
-        /* this.elements.forEach(item => {
-            const itemSpeed = item.dataset.speed;
-
-            TweenMax.set(item, {
-                x: -itemSpeed * currentScrollPosition * .5
-            })
-        });*/
     }
 }
 
