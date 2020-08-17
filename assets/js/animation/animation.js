@@ -3,6 +3,8 @@ import ScrollTrigger from './gsap/ScrollTrigger';
 import ScrollToPlugin from './gsap/ScrollToPlugin';
 import Draggable from './gsap/Draggable';
 
+import getScrollSpeed from '../util/scrollSpeed';
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(Draggable);
@@ -16,7 +18,7 @@ class Animation {
         this.viewportHeight = window.innerHeight;
         this.elements = document.querySelectorAll(this.animatedElement);
         this.person = document.querySelector(this.animatedPerson);
-        this.scrollStep = 100;
+        this.isScrolling = null;
         this.scrollHeight = document.querySelector(this.animatedContainer).offsetWidth;
 
         this.scroller = {
@@ -26,7 +28,6 @@ class Animation {
             resizeRequest: 1,
             scrollRequest: 0,
         };
-
         this.init();
     }
 
@@ -39,12 +40,12 @@ class Animation {
         });
 
         window.addEventListener('load', () => {
-            this.update();
+            //this.update();
             window.focus();
+            //this.walking();
             window.addEventListener('resize', () => this.onResize());
             document.addEventListener('scroll', () => this.onScroll());
         });
-        //document.addEventListener('scroll', () => requestAnimationFrame(() => this.update()));
     }
 
     onResize() {
@@ -58,6 +59,31 @@ class Animation {
         this.scroller.scrollRequest++;
         if (!this.requestId) {
             this.requestId = requestAnimationFrame(() => this.update());
+        }
+    }
+
+    walking(state) {
+        const spriteSheet = {
+            total: 6,
+            duration: 1,
+        };
+
+        const personTimeline = new TimelineMax();
+        for (let i = 0; i <= spriteSheet.total; i++) {
+            personTimeline
+                .set(this.person, {
+                    onCompleted: i === spriteSheet.total ? () => this.walking(true) : {},
+                    attr: {
+                        ['data-step']: i,
+                    }
+                }, i / spriteSheet.total * spriteSheet.duration)
+        }
+
+        if (!state) {
+            TweenMax.killTweensOf(this.person);
+            setTimeout(() => {
+                this.person.dataset.step = 7;
+            }, 200);
         }
     }
 
@@ -82,6 +108,19 @@ class Animation {
         });
 
         this.requestId = this.scroller.scrollRequest > 0 ? requestAnimationFrame(this.update) : null;
+
+        // detect started/stopped scroll
+        if (this.isScrolling === null) {
+            this.walking(true);
+        } else {
+            clearTimeout(this.isScrolling);
+        }
+
+        this.isScrolling = setTimeout(() => {
+            console.log( 'Scrolling has stopped.' );
+            this.walking(false);
+            this.isScrolling = null;
+        }, 500);
     }
 }
 

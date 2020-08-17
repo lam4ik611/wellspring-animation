@@ -1,12 +1,36 @@
 .animation-person {
 	position: fixed;
-	top: 40%;
+	top: 35%;
 	left: 20%;
 	right: 0;
-	bottom: 0;
+	bottom: 10%;
 	width: 25vh;
 	background-repeat: no-repeat;
 	background-image: url('../images/persons/girl.svg');
 	background-size: cover;
 	z-index: 10;
+
+	&[data-step="1"] {
+		background-position-x: 67%;
+	}
+
+	&[data-step="2"] {
+		background-position-x: 0;
+	}
+
+	&[data-step="3"] {
+		background-position-x: 17%;
+	}
+
+	&[data-step="4"] {
+		background-position-x: 34%;
+	}
+
+	&[data-step="5"] {
+		background-position-x: 53%;
+	}
+
+	&[data-step="7"] {
+		background-position-x: 102%;
+	}
 }
