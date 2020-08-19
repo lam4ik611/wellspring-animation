@@ -1,5 +1,13 @@
 .animation {
 	position: fixed;
-	min-width: 300vw;
+	display: flex;
+	min-width: auto;
 	min-height: 100vh;
+}
+
+.animation-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	z-index: 4;
 }

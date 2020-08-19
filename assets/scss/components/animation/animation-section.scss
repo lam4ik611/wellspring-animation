@@ -1,9 +1,11 @@
 .animation-section {
 	position: relative;
-	/*width: 100vw;
-	height: 100vh;*/
-	border-radius: 10px;
-	background-color: #91e600;
-	opacity: .1;
-	border: 1px solid black;
+	width: calc(100vw - 15px);
+	height: 100vh;
+	border: 5px solid red;
+	transition-duration: 1.5s;
+
+	&.visible {
+		border-color: green;
+	}
 }

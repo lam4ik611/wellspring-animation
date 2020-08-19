@@ -1,0 +1,38 @@
+.animation-preview {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 40%;
+	width: 70vw;
+	height: 80vh;
+	margin: 0 auto;
+	color: #fff;
+
+	&__top,
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+	}
+
+	&__top {
+		background-color: #bf1b52;
+	}
+
+	&__bottom {
+		background-color: #94244a;
+		clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 75%, 0 50%);
+	}
+
+	&__logo {
+		width: 25%;
+		height: auto;
+	}
+
+	&__text {
+		font-size: 14px;
+		width: 50%;
+		padding-bottom: 70px;
+	}
+}
