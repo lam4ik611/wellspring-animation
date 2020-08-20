@@ -56,6 +56,10 @@ module.exports = {
                     from: './assets/images',
                     to: 'images',
                 },
+                {
+                    from: './assets/fonts',
+                    to: 'fonts',
+                },
             ],
         }),
     ],

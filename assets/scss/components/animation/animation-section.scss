@@ -1,14 +1,19 @@
 .animation-section {
 	position: relative;
-	width: calc(100vw - 15px);
+	width: 100vw;
 	height: 100vh;
-	border: 5px solid red;
+	//border: 5px solid red;
 	transition-duration: 1.5s;
 
 	&.visible {
-		border-color: green;
+		//border-color: green;
 
-		.animation-lamp__light {
+		.animation-lamp__lamplight {
+			height: 98%;
+		}
+
+		.animation-lamp__icon,
+		.animation-lamp__text {
 			opacity: 1;
 		}
 	}

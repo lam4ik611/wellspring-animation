@@ -2,11 +2,21 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	max-width: 40%;
+	max-width: 120vh;
 	width: 70vw;
 	height: 80vh;
 	margin: 0 auto;
 	color: #fff;
+	transform: translateY(0);
+	transition: 1s cubic-bezier(.47,.22,.39,.79);
+
+	&.hidden {
+		transform: translateY(-100%);
+
+		& + .animation-button {
+			transform: translate(-50%, 200%);
+		}
+	}
 
 	&__top,
 	&__bottom {
@@ -22,25 +32,32 @@
 	}
 
 	&__bottom {
-		padding-bottom: 110px;
+		padding-bottom: 25vh;
 		background-color: #94244a;
 		clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 75%, 0 50%);
 	}
 
 	&__logo {
-		width: 25%;
+		width: 20vh;
 		height: auto;
 	}
 
 	&__text {
 		width: 50%;
-		font-size: 14px;
+		font-size: 2.5vh;
+		font-weight: 800;
 		line-height: 1.75;
+		text-align: center;
 	}
 
 	&__text-label {
-		margin-top: 20px;
-		font-size: 22px;
-		color: yellow;
+		margin-top: 15px;
+		font-size: 5vh;
+		font-weight: 800;
+		color: #ffc425ff;
+		text-align: center;
+		text-shadow: #ab8418ff -3px 3px 0px, #ab8418ff -3px 3px 0px;
+		--darkreader-inline-color: #ab8418ff;
+		--darkreader-inline-bgimage: initial;
 	}
 }

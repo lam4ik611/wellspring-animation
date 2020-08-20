@@ -40,11 +40,15 @@ class Animation {
         TweenLite.set('body', {
             height: this.container.offsetWidth,
             overflowY: 'scroll',
-            //rotation: 0.01,
-            //force3D: true
         });
 
+
+
         window.addEventListener('load', () => {
+            window.onbeforeunload = () => {
+                window.scrollTo(0, 0);
+            }
+
             //this.update();
             window.focus();
             //this.walking();
@@ -77,32 +81,27 @@ class Animation {
                         return;
                     }
 
-                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-                    window.onscroll = () => window.scrollTo(scrollLeft, scrollTop);
-                    this.walking(false);
+                    TweenLite.to('body', {
+                        overflowY: 'hidden',
+                    });
 
                     setTimeout(() => {
-                        window.onscroll = () => {};
-                        this.walking(true);
-                    }, 3000);
+                        TweenLite.set('body', {
+                            height: this.container.offsetWidth,
+                            overflowY: 'scroll',
+                        });
+                    }, 2000);
                 },
                 //pinSpacing: false
             });
         });
 
-        gsap.to(this.preview, {
-            scrollTrigger: {
-                trigger: this.preview,
-                start: `${window.innerWidth / 2} center`,
-                end: `${window.innerWidth * 2} enter`,
-                toggleActions: 'play pause play reverse',
-            },
-            y: function (index, target, targets) {
-                return -target.offsetHeight - 20;
-            },
-            duration: 2,
+        ScrollTrigger.create({
+            trigger: this.preview,
+            start: `${window.innerWidth / 2} center`,
+            end: `${window.innerWidth * 2} enter`,
+            toggleClass: 'hidden',
+            toggleActions: 'play pause play reverse',
         });
     }
 
