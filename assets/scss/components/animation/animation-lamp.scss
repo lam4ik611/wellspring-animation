@@ -3,23 +3,24 @@
 	&__pillar {
 		position: relative;
 		top: 10vh;
-		margin: 0 auto;
+		left: 38vw;
 		width: 25vw;
 		height: 80vh;
-		background-image: url('../images/lamps.png');
+		background-image: url('../images/lamp.png');
 		background-size: cover;
-		background-position-x: 17%;
 	}
 
 	&__light {
 		position: absolute;
-		top: 35vh;
-		left: 50%;
+		top: 55vh;
+		left: 40vw;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 10vw;
+		width: 15vw;
 		transform: translateX(-68%);
+		background-color: #777373;
+		border-radius: 10px;
 		opacity: 0;
 		transition-delay: 1s;
 		transition-duration: 2s;

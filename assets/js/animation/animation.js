@@ -95,8 +95,8 @@ class Animation {
         gsap.to(this.preview, {
             scrollTrigger: {
                 trigger: this.preview,
-                start: `${window.innerWidth / 2.5} top`,
-                end: `${window.innerWidth} bottom`,
+                start: `${window.innerWidth / 2} center`,
+                end: `${window.innerWidth * 2} enter`,
                 toggleActions: 'play pause play reverse',
             },
             y: function (index, target, targets) {
