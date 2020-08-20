@@ -18,6 +18,7 @@
 	&[data-name="sky"] {
 		background-image: url('../images/sky.png');
 		background-size: cover;
+		filter: brightness(70%);
 	}
 
 	&[data-name="stars"] {
@@ -37,7 +38,7 @@
 
 	&[data-name="silhouette"] {
 		background-image: url('../images/silhouette.png');
-		filter: contrast(90%);
+		filter: brightness(85%);
 		z-index: 1;
 	}
 }

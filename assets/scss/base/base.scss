@@ -132,6 +132,12 @@ ul {
 	list-style-type: none;
 }
 
+img {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
 video:focus {
 	outline: none;
 }

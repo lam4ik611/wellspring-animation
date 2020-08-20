@@ -72,6 +72,22 @@ class Animation {
                 start: `${index * value.offsetWidth} center`,
                 end: `${(index + 1) * value.offsetWidth} center`,
                 scrub: true,
+                onEnter: self => {
+                    if (!self.isActive || self.trigger === this.sections[0]) {
+                        return;
+                    }
+
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+                    window.onscroll = () => window.scrollTo(scrollLeft, scrollTop);
+                    this.walking(false);
+
+                    setTimeout(() => {
+                        window.onscroll = () => {};
+                        this.walking(true);
+                    }, 3000);
+                },
                 //pinSpacing: false
             });
         });
@@ -79,14 +95,14 @@ class Animation {
         gsap.to(this.preview, {
             scrollTrigger: {
                 trigger: this.preview,
-                start: `${window.innerWidth / 3} top`,
+                start: `${window.innerWidth / 2.5} top`,
                 end: `${window.innerWidth} bottom`,
-                toggleActions: 'play reverse play reverse',
+                toggleActions: 'play pause play reverse',
             },
             y: function (index, target, targets) {
                 return -target.offsetHeight - 20;
             },
-            duration: 3,
+            duration: 2,
         });
     }
 

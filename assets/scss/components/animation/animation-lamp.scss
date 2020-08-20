@@ -1,0 +1,37 @@
+.animation-lamp {
+
+	&__pillar {
+		position: relative;
+		top: 10vh;
+		margin: 0 auto;
+		width: 25vw;
+		height: 80vh;
+		background-image: url('../images/lamps.png');
+		background-size: cover;
+		background-position-x: 17%;
+	}
+
+	&__light {
+		position: absolute;
+		top: 35vh;
+		left: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 10vw;
+		transform: translateX(-68%);
+		opacity: 0;
+		transition-delay: 1s;
+		transition-duration: 2s;
+	}
+
+	&__icon {
+		display: block;
+		width: 5vw;
+		height: 5vw;
+	}
+
+	&__text {
+		font-size: .9vw;
+	}
+}
