@@ -20,7 +20,7 @@ class Animation {
         this.viewportHeight = window.innerHeight;
 
         this.elements = document.querySelectorAll(this.animatedElement);
-        this.person = document.querySelector(this.animatedPerson);
+        this.persons = document.querySelectorAll(this.animatedPerson);
         this.wrapper = document.querySelector('[data-el="animated.wrapper"]');
         this.sections = document.querySelectorAll('[data-el="animated.section"]');
         this.preview = document.querySelectorAll('[data-el="animated.preview"]');
@@ -112,11 +112,11 @@ class Animation {
             duration: 1,
         };
 
-        const personTimeline = new TimelineMax();
+        const personsTimeline = new TimelineMax();
 
         for (let i = 0; i <= spriteSheet.frames; i++) {
-            personTimeline
-                .set(this.person, {
+            personsTimeline
+                .set(this.persons, {
                     ...i === spriteSheet.frames ? {
                         onComplete: () => this.walking(true),
                     } : {},
@@ -127,9 +127,9 @@ class Animation {
         }
 
         if (!state) {
-            TweenMax.killTweensOf(this.person);
+            TweenMax.killTweensOf(this.persons);
             setTimeout(() => {
-                this.person.dataset.step = spriteSheet.defaultFrame;
+                this.persons.forEach(person => person.dataset.step = spriteSheet.defaultFrame);
             }, 200);
         }
     }

@@ -23,8 +23,8 @@
 		transform: translateX(-68%);
 		background-image: url('../images/lamplight.png');
 		background-repeat: no-repeat;
-		background-size: cover;
-		transition: height 1s cubic-bezier(.9, .2, .5, -0.2);
+		background-size: 99%;
+		transition: height 1s linear;
 	}
 
 	&__icon {
