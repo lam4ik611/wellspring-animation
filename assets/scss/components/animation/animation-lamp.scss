@@ -1,11 +1,11 @@
 .animation-lamp {
 	position: relative;
-	top: 3vh;
+	top: 20vh;
 	left: 50vw;
 
 	&__lamp {
 		width: 55vh;
-		height: 85vh;
+		height: 70vh;
 		background-image: url('../images/lamp.png');
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -13,18 +13,19 @@
 
 	&__lamplight {
 		position: absolute;
-		top: 5vh;
-		left: 18vh;
+		top: 4vh;
+		left: 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 74vh;
+		width: 61vh;
 		height: 0;
-		transform: translateX(-68%);
+		opacity: 0;
+		transform: translateX(-43%);
 		background-image: url('../images/lamplight.png');
 		background-repeat: no-repeat;
 		background-size: 99%;
-		transition: height 1s linear;
+		transition: height, opacity 1s linear;
 	}
 
 	&__icon {
@@ -34,19 +35,19 @@
 		height: auto;
 		margin-bottom: 15px;
 		opacity: 0;
-		transition-delay: .5s;
+		transition-delay: .25s;
 		transition-duration: .5s;
 	}
 
 	&__text {
 		max-width: 30vh;
-		font-size: 2.4vh;
+		font-size: 2vh;
 		font-weight: 800;
 		line-height: 1.25;
 		text-align: center;
-		color: #2b1c6bff;
+		color: $blue;
 		opacity: 0;
-		transition-delay: 1s;
+		transition-delay: .5s;
 		transition-duration: .5s;
 	}
 }

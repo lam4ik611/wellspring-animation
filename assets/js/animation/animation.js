@@ -13,71 +13,163 @@ gsap.registerPlugin(TimelineMax);
 
 class Animation {
     constructor() {
-        this.animatedWalkingContainer = '[data-el="animated.container"]';
-        this.animatedContainer = '[data-el="animated.container"]';
-        this.animatedElement = '[data-el="animated.element"]';
-        this.animatedPerson = '[data-el="animated.person"]';
-        this.viewportHeight = window.innerHeight;
-
-        this.elements = document.querySelectorAll(this.animatedElement);
-        this.persons = document.querySelectorAll(this.animatedPerson);
-        this.wrapper = document.querySelector('[data-el="animated.wrapper"]');
+        this.container = document.querySelector('[data-el="animated.container"]');
+        this.elements = document.querySelectorAll('[data-el="animated.element"]');
+        this.persons = document.querySelectorAll('[data-el="animated.person"]');
+        this.wrapper = document.getElementById('wrapper');
         this.sections = document.querySelectorAll('[data-el="animated.section"]');
         this.preview = document.querySelectorAll('[data-el="animated.preview"]');
+        this.walkingContainer = document.querySelector('[data-el="animated.walking-container"]');
+        this.house = document.querySelector('[data-el="animated.house"]');
 
+        this.viewportHeight = window.innerHeight;
         this.isScrolling = null;
-        this.container = document.querySelector(this.animatedContainer);
+        this.stopScroll = false;
 
-        this.scroller = {
-            x: 0,
-            resizeRequest: 1,
-            scrollRequest: 0,
-        };
         this.init();
     }
 
     init() {
-        TweenLite.set('body', {
-            height: this.container.offsetWidth,
-            overflowY: 'scroll',
-        });
-
-
-
         window.addEventListener('load', () => {
             window.onbeforeunload = () => {
                 window.scrollTo(0, 0);
             }
 
-            //this.update();
-            window.focus();
-            //this.walking();
+            this.setBodyScroll();
             this.scrollTrigger();
-            document.addEventListener('scroll', () => this.onScroll());
         });
     }
 
-    onScroll() {
-        this.scroller.scrollRequest++;
-        if (!this.requestId) {
-            this.requestId = requestAnimationFrame(() => this.parallax());
-        }
+    setBodyScroll() {
+        TweenLite.set('body', {
+            height: +this.container.offsetWidth,
+            overflowY: 'scroll',
+        });
     }
 
     scrollTrigger() {
-        const sectionContainer = document.querySelector('[data-section]');
-        const globalContext = this;
+        this.parallaxMethod();
+        this.sectionsMethod();
+        this.previewMethod();
+    }
 
+    parallaxMethod() {
+        const walkingSheet = {
+            frames: 5,
+            defaultFrame: 7,
+            duration: 1,
+        };
+
+        let counter = 1;
+        let walkingInterval;
+
+        // appear of persons
+        gsap.set(this.persons, {x: window.innerWidth});
+        gsap.to(this.persons, {
+            x: () => window.innerWidth / 8,
+            scrollTrigger: {
+                trigger: this.walkingContainer,
+                start: `+=${window.innerWidth / 3} top`,
+                end: () => `${window.innerWidth} bottom`,
+                scrub: 1,
+            },
+        });
+
+        // parallax elements
+        gsap.to(this.elements, {
+            x: (index, target) => {
+                return -window.innerWidth * target.dataset.speed * (this.elements.length + 2);
+            },
+            scrollTrigger: {
+                trigger: this.container,
+                scrub: true,
+                start: 'top top',
+                end: () => `+=${this.container.offsetWidth}`,
+                onUpdate: (self) => {
+                    const velocity = self.getVelocity();
+
+                    if (this.isScrolling === null) {
+                        // setting walking animation
+                        this.persons.forEach(person => person.dataset.step = counter);
+                        walkingInterval = setInterval(() => {
+                            counter++;
+                            this.persons.forEach(person => person.dataset.step = counter);
+
+                            if (counter >= walkingSheet.frames) {
+                                counter = 0;
+                            }
+                        }, 170);
+                    } else {
+                        clearTimeout(this.isScrolling);
+                    }
+
+                    // flip persons
+                    setTimeout(() => {
+                        if (velocity > 1) {
+                            gsap.to(this.persons, {scaleX: 1, duration: .1, ease: 'power2.out'});
+                        } else if (velocity < -1) {
+                            gsap.to(this.persons, {scaleX: -1, duration: .1, ease: 'power2.out'});
+                        }
+                    }, 300);
+
+                    this.isScrolling = setTimeout(() => {
+                        // clearing walking animation
+                        clearInterval(walkingInterval);
+                        this.persons.forEach(person => person.dataset.step = walkingSheet.defaultFrame);
+                        this.isScrolling = null;
+                    }, 500);
+                },
+            },
+        });
+    }
+
+    sectionsMethod() {
+        // appear of lamp lights while section is visible
         this.sections.forEach((value, index) => {
+            let startPosition, endPosition;
+
+            switch (index) {
+                case 0:
+                    startPosition = window.innerWidth / 2;
+                    endPosition = startPosition + window.innerWidth;
+                    break;
+                case 1:
+                    startPosition = window.innerWidth * 1.2;
+                    endPosition = startPosition + window.innerWidth * 2.5;
+                    break;
+                case 2:
+                    startPosition = window.innerWidth * 2.3;
+                    endPosition = startPosition + window.innerWidth * 2.5;
+                    break;
+                case 3:
+                    startPosition = window.innerWidth * 4.3;
+                    endPosition = startPosition + window.innerWidth * 2.5;
+                    break;
+                case 4:
+                    startPosition = window.innerWidth * 6.3;
+                    endPosition = startPosition + window.innerWidth * 2.5;
+                    break;
+                case 5:
+                    startPosition = window.innerWidth * 8.3;
+                    endPosition = startPosition + window.innerWidth * 2.5;
+                    break;
+                case 6:
+                    startPosition = window.innerWidth * 12;
+                    endPosition = startPosition + window.innerWidth * 2.5;
+                    break;
+            }
+
             ScrollTrigger.create({
                 trigger: value,
                 toggleActions: 'play pause reverse pause',
                 toggleClass: 'visible',
-                start: `${index * value.offsetWidth} center`,
-                end: `${(index + 1) * value.offsetWidth} center`,
+                start: `${startPosition} center`,
+                end: `${endPosition} center`,
                 scrub: true,
                 onEnter: self => {
-                    if (!self.isActive || self.trigger === this.sections[0]) {
+                    if (!self.isActive ||
+                        self.trigger === this.sections[0] ||
+                        self.trigger === this.sections[this.sections.length - 1]) {
                         return;
                     }
 
@@ -86,16 +178,31 @@ class Animation {
                     });
 
                     setTimeout(() => {
-                        TweenLite.set('body', {
-                            height: this.container.offsetWidth,
-                            overflowY: 'scroll',
-                        });
+                        this.setBodyScroll();
                     }, 2000);
+                },
+                onUpdate: self => {
+                    //console.log(self)
+                    if (self.trigger === this.sections[this.sections.length - 1]) {
+                        /*console.log(self)
+                        this.stopScroll = true;
+                        this.wrapper.style.display = 'none';
+                        this.house.classList.add('visible');
+                        setTimeout(() => {
+                            TweenLite.set('body', {
+                                height: this.house.offsetHeight,
+                                overflowY: 'scroll',
+                            });
+                        }, 1000);*/
+                    }
                 },
                 //pinSpacing: false
             });
         });
+    }
 
+    previewMethod() {
+        // preview animation
         ScrollTrigger.create({
             trigger: this.preview,
             start: `${window.innerWidth / 2} center`,
@@ -103,67 +210,6 @@ class Animation {
             toggleClass: 'hidden',
             toggleActions: 'play pause play reverse',
         });
-    }
-
-    walking(state) {
-        const spriteSheet = {
-            frames: 5,
-            defaultFrame: 7,
-            duration: 1,
-        };
-
-        const personsTimeline = new TimelineMax();
-
-        for (let i = 0; i <= spriteSheet.frames; i++) {
-            personsTimeline
-                .set(this.persons, {
-                    ...i === spriteSheet.frames ? {
-                        onComplete: () => this.walking(true),
-                    } : {},
-                    attr: {
-                        ['data-step']: i,
-                    },
-                }, i / spriteSheet.frames * spriteSheet.duration)
-        }
-
-        if (!state) {
-            TweenMax.killTweensOf(this.persons);
-            setTimeout(() => {
-                this.persons.forEach(person => person.dataset.step = spriteSheet.defaultFrame);
-            }, 200);
-        }
-    }
-
-    parallax() {
-        const scrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        const resized = this.scroller.resizeRequest > 0;
-
-        this.scroller.x = scrollY;
-
-        if (Math.abs(scrollY - this.scroller.x) < 0.05 || resized) {
-            this.scroller.scrollRequest = 0;
-        }
-
-        gsap.to(this.elements, {
-            x: (index, target) => {
-                return -this.scroller.x * target.dataset.speed;
-            },
-            force3D: true,
-        });
-
-        this.requestId = this.scroller.scrollRequest > 0 ? requestAnimationFrame(this.parallax) : null;
-
-        // detect started/stopped scroll
-        if (this.isScrolling === null) {
-            this.walking(true);
-        } else {
-            clearTimeout(this.isScrolling);
-        }
-
-        this.isScrolling = setTimeout(() => {
-            this.walking(false);
-            this.isScrolling = null;
-        }, 500);
     }
 }
 

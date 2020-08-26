@@ -25,7 +25,7 @@
 
 	&[data-name="sky-color"] {
 		opacity: .8;
-		background-color: #2c1d69;
+		background-color: $sky-color;
 	}
 
 	&[data-name="stars"] {

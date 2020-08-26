@@ -1,0 +1,29 @@
+.animation-house {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	opacity: .8;
+	background-color: yellow;
+	transition: 1s;
+	z-index: 4;
+
+	&.visible {
+
+	}
+
+	&__content {
+		width: 100vw;
+		height: 600%;
+		background-image: url('../images/house.png');
+		background-repeat: no-repeat;
+		background-position-x: 0%;
+		background-position-y: calc(100% - 12vh);
+		background-size: 100%;
+	}
+
+	&__button {
+		@extend .animation-button;
+
+		transform: translate(-10%, 0);
+	}
+}

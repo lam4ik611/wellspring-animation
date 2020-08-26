@@ -6,14 +6,17 @@
 	transition-duration: 1.5s;
 
 	&.visible {
-		// kiborder-color: green;
+		//border-color: green;
 
 		.animation-lamp__lamplight {
 			height: 100%;
+			opacity: 1;
 		}
 
 		.animation-lamp__icon,
-		.animation-lamp__text {
+		.animation-lamp__text,
+		.animation-copy__label,
+		.animation-copy__text {
 			opacity: 1;
 		}
 	}

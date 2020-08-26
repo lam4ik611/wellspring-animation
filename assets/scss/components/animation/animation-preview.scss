@@ -11,7 +11,7 @@
 	transition: 1s cubic-bezier(.47,.22,.39,.79);
 
 	&.hidden {
-		transform: translateY(-100%);
+		transform: translateY(-150%);
 
 		& + .animation-button {
 			transform: translate(-50%, 200%);
@@ -28,7 +28,7 @@
 	}
 
 	&__top {
-		background-color: #bf1b52;
+		background-color: $cherry;
 	}
 
 	&__bottom {
@@ -52,14 +52,9 @@
 		text-align: center;
 	}
 
-	&__text-label {
+	&__label {
+		@extend .label;
+
 		margin-top: 15px;
-		font-size: 4.5vh;
-		font-weight: 800;
-		color: #ffc425ff;
-		text-align: center;
-		text-shadow: #ab8418ff -3px 3px 0px, #ab8418ff -3px 3px 0px;
-		--darkreader-inline-color: #ab8418ff;
-		--darkreader-inline-bgimage: initial;
 	}
 }

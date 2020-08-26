@@ -1,0 +1,9 @@
+.label {
+	font-size: 4.5vh;
+	font-weight: 800;
+	color: $yellow;
+	text-align: center;
+	text-shadow: $yellow-shadow -3px 3px 0px, $yellow-shadow -3px 3px 0px;
+	--darkreader-inline-color: $yellow-shadow;
+	--darkreader-inline-bgimage: initial;
+}

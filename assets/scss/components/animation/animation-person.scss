@@ -1,15 +1,16 @@
 .animation-person {
-	position: fixed;
+	position: absolute;
+	top: 45vh;
+	left: 0;
 	right: 0;
-	bottom: 5%;
-	width: 20vh;
+	bottom: 0;
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 10;
 
 	&[data-name="girl"] {
-		top: 45%;
-		left: 20%;
+		width: 18vh;
+		height: 50%;
 		background-image: url('../images/persons/girl.svg');
 		z-index: 11;
 
@@ -43,9 +44,10 @@
 	}
 
 	&[data-name="boy"] {
-		top: 40%;
-		left: 20%;
-		width: 26vh;
+		top: 36vh;
+		left: 4vh;
+		width: 27vh;
+		height: 60%;
 		background-image: url('../images/persons/boy.svg');
 
 		&[data-step="1"] {
@@ -78,9 +80,10 @@
 	}
 
 	&[data-name="cyclist"] {
+		top: 55vh;
+		left: 25vh;
 		width: 45vh;
-		top: 55%;
-		left: 30%;
+		height: 40%;
 		background-image: url('../images/persons/cyclist.svg');
 		background-position-x: 0;
 	}
