@@ -174,9 +174,9 @@ class Animation {
                         return;
                     }
 
-                    /*TweenLite.to('body', {
+                    TweenLite.to('body', {
                         overflowY: 'hidden',
-                    });*/
+                    });
 
                     setTimeout(() => {
                         this.setBodyScroll();
@@ -205,13 +205,13 @@ class Animation {
 
     houseMethod() {
         console.log('house is init')
-        gsap.to(this.house, {
+        /*gsap.to(this.house, {
             scrollTrigger: {
                 trigger: this.container,
                 start: `${this.container.offsetWidth / 2} center`
                 //snap: 1 / (sections.length - 1),
             }
-        });
+        });*/
     }
 }
 
