@@ -51,6 +51,7 @@ class Animation {
         this.parallaxMethod();
         this.sectionsMethod();
         this.previewMethod();
+        //this.houseMethod();
     }
 
     parallaxMethod() {
@@ -173,30 +174,20 @@ class Animation {
                         return;
                     }
 
-                    TweenLite.to('body', {
+                    /*TweenLite.to('body', {
                         overflowY: 'hidden',
-                    });
+                    });*/
 
                     setTimeout(() => {
                         this.setBodyScroll();
                     }, 2000);
                 },
-                onUpdate: self => {
-                    //console.log(self)
-                    if (self.trigger === this.sections[this.sections.length - 1]) {
-                        /*console.log(self)
-                        this.stopScroll = true;
-                        this.wrapper.style.display = 'none';
-                        this.house.classList.add('visible');
-                        setTimeout(() => {
-                            TweenLite.set('body', {
-                                height: this.house.offsetHeight,
-                                overflowY: 'scroll',
-                            });
-                        }, 1000);*/
-                    }
+                onLeave: (self) => {
+                    if (self.trigger !== this.sections[this.sections.length - 1]) return;
+
+                    console.log(self)
+                    this.houseMethod();
                 },
-                //pinSpacing: false
             });
         });
     }
@@ -209,6 +200,17 @@ class Animation {
             end: `${window.innerWidth * 2} enter`,
             toggleClass: 'hidden',
             toggleActions: 'play pause play reverse',
+        });
+    }
+
+    houseMethod() {
+        console.log('house is init')
+        gsap.to(this.house, {
+            scrollTrigger: {
+                trigger: this.container,
+                start: `${this.container.offsetWidth / 2} center`
+                //snap: 1 / (sections.length - 1),
+            }
         });
     }
 }
