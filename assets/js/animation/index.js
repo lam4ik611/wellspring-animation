@@ -1,3 +1,8 @@
 import Animation from './animation';
+import MobileAnimation from './mobile-animation';
 
-new Animation();
+if (window.innerWidth > 1024) { // TODO
+    new Animation();
+} else {
+    new MobileAnimation();
+}

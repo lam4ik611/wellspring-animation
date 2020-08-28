@@ -5,6 +5,29 @@
 	//border: 5px solid red;
 	transition-duration: 1.5s;
 
+	@media only screen and (max-width: $screen-lg) {
+		height: 50vh;
+		min-height: 300px;
+		overflow: hidden;
+
+		&:first-child {
+			height: 100vh;
+		}
+
+		.animation-lamp__lamplight {
+			height: 100%;
+			opacity: 1;
+		}
+
+		.animation-lamp__icon,
+		.animation-lamp__text,
+		.animation-copy__label,
+		.animation-copy__text,
+		.animation-copy__button {
+			opacity: 1;
+		}
+	}
+
 	&.visible {
 		//border-color: green;
 

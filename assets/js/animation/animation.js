@@ -1,15 +1,9 @@
-import {gsap, TweenMax, TweenLite, TimelineMax} from './gsap';
+import {gsap, TweenLite} from './gsap';
 import ScrollTrigger from './gsap/ScrollTrigger';
 import ScrollToPlugin from './gsap/ScrollToPlugin';
-import Draggable from './gsap/Draggable';
-
-import getScrollSpeed from '../util/scrollSpeed';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
-gsap.registerPlugin(Draggable);
-gsap.registerPlugin(TweenMax);
-gsap.registerPlugin(TimelineMax);
 
 class Animation {
     constructor() {
@@ -209,9 +203,9 @@ class Animation {
                         return;
                     }
 
-                    TweenLite.to('body', {
+                    /*TweenLite.to('body', {
                         overflowY: 'hidden',
-                    });
+                    });*/
 
                     setTimeout(() => {
                         this.setBodyScroll();

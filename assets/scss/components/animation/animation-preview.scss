@@ -4,57 +4,67 @@
 	flex-direction: column;
 	max-width: 100vh;
 	width: 70vw;
-	height: 80vh;
+	height: 82vh;
 	margin: 0 auto;
 	color: #fff;
 	transform: translateY(0);
 	transition: 1s cubic-bezier(.47,.22,.39,.79);
+	background-image: url('../images/banner.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media only screen and (max-width: $screen-lg) {
+		width: 90vw;
+		height: 70vh;
+		background-position: top;
+		background-size: cover;
+		z-index: 10;
+	}
 
 	&.hidden {
-		transform: translateY(-150%);
+		transform: translateY(-100%);
 
 		& + .animation-button {
 			transform: translate(-50%, 200%);
 		}
 	}
 
-	&__top,
-	&__bottom {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-	}
-
-	&__top {
-		background-color: $cherry;
-	}
-
-	&__bottom {
-		padding-bottom: 25vh;
-		background-image: url('../images/noise.png');
-		background-color: #94244a;
-		filter: brightness(130%);
-		clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 75%, 0 50%);
-	}
-
 	&__logo {
 		width: 30vh;
 		height: auto;
+
+		@media only screen and (max-width: $screen-lg) {
+			width: 20vh;
+		}
 	}
 
 	&__text {
+		position: absolute;
+		top: 41vh;
+		left: 50%;
 		width: 55%;
+		min-width: 225px;
 		font-size: 2.5vh;
 		font-weight: 400;
 		line-height: 1.75;
 		text-align: center;
+		transform: translateX(-50%);
+
+		@media only screen and (max-width: $screen-lg) {
+			top: 36vh;
+			width: 100%;
+			font-size: 2vh;
+		}
 	}
 
 	&__label {
 		@extend .label;
 
 		margin-top: 15px;
+
+		@media only screen and (max-width: $screen-lg) {
+			font-size: 4vh;
+		}
 	}
 }

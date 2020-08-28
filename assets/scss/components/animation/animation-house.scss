@@ -11,6 +11,48 @@
 	overflow: hidden;
 	z-index: 9;
 
+	@media only screen and (max-width: $screen-lg) {
+		position: relative;
+		top: 0;
+		height: 140vh;
+		transform: translateX(0%);
+
+		.animation-person {
+
+			&[data-name="girl"] {
+				top: 81%;
+				height: 25vh;
+			}
+
+			&[data-name="boy"] {
+				top: 78%;
+				height: 30vh;
+			}
+
+			&[data-name="cyclist"] {
+				top: 85%;
+				left: 34vh;
+				height: 20vh;
+				transform: scaleX(-1);
+			}
+		}
+
+		.animation-background {
+
+			&[data-name="ground"] {
+				background-position-y: 14vh;
+			}
+
+			&[data-name="buildings"] {
+				background-position-y: 20vh;
+			}
+
+			&[data-name="silhouette"] {
+				background-position-y: 10vh;
+			}
+		}
+	}
+
 	&.visible {
 
 	}
@@ -26,6 +68,19 @@
 		background-position-y: 85%;
 		background-size: 90%;
 
+		@media only screen and (max-width: $screen-lg) {
+			top: 0;
+			height: 140vh;
+			background-position-y: 78%;
+			background-size: 100% 65%;
+			z-index: 20;
+
+			.animation-copy__label,
+			.animation-copy__button {
+				opacity: 1;
+			}
+		}
+
 		&.active {
 			.animation-copy__label,
 			.animation-copy__button {
@@ -38,6 +93,12 @@
 			height: 60vh;
 			transform: translateX(-50%);
 
+			@media only screen and (max-width: $screen-lg) {
+				top: -8vh;
+				height: 40vh;
+				transform: unset;
+			}
+
 			&__label,
 			&__button {
 				transition-delay: .5s;
@@ -45,6 +106,10 @@
 
 			&__label {
 				font-size: 24pt;
+
+				@media only screen and (max-width: $screen-lg) {
+					font-size: 4vh;
+				}
 			}
 		}
 	}
@@ -53,5 +118,10 @@
 		@extend .animation-button;
 
 		transform: translate(-10%, 0);
+
+		@media only screen and (max-width: $screen-lg) {
+			bottom: 1vh;
+			transform: translate(-35%, 0);
+		}
 	}
 }

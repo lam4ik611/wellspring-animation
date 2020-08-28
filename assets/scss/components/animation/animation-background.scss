@@ -8,6 +8,17 @@
 	background-repeat: repeat-x;
 	background-size: contain;
 
+	@media only screen and (max-width: $screen-lg) {
+		width: 100%;
+		background-size: cover;
+
+		&[data-name="sky"],
+		&[data-name="stars-1"],
+		&[data-name="stars-2"] {
+			position: absolute;
+		}
+	}
+
 	&[data-name="sky"],
 	&[data-name="stars-1"],
 	&[data-name="stars-2"] {

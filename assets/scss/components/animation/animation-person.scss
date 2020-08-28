@@ -1,6 +1,6 @@
 .animation-person {
 	position: absolute;
-	top: 45vh;
+	top: 48%;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -13,6 +13,10 @@
 		height: 50%;
 		background-image: url('../images/persons/girl.svg');
 		z-index: 11;
+
+		@media only screen and (max-width: $screen-lg) {
+			width: 10vh;
+		}
 
 		&[data-step="1"] {
 			background-position-x: 67%;
@@ -50,6 +54,11 @@
 		height: 60%;
 		background-image: url('../images/persons/boy.svg');
 
+		@media only screen and (max-width: $screen-lg) {
+			top: 39%;
+			width: 10vh;
+		}
+
 		&[data-step="1"] {
 			background-position-x: 72%;
 		}
@@ -85,6 +94,12 @@
 		width: 45vh;
 		height: 40%;
 		background-image: url('../images/persons/cyclist.svg');
+
+		@media only screen and (max-width: $screen-lg) {
+			top: 59%;
+			left: 20vw;
+			width: 22vh;
+		}
 
 		&[data-step="1"] {
 			background-position-x: 33.2%;
