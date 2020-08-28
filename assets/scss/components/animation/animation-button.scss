@@ -1,3 +1,17 @@
 .animation-button {
 	@extend .animation-button;
+
+	&--to-start {
+		position: fixed;
+		bottom: 10vh;
+		left: unset;
+		right: 5vw;
+		transform: translateX(0);
+		opacity: 0;
+		z-index: 50;
+
+		&.active {
+			opacity: 1;
+		}
+	}
 }

@@ -30,7 +30,35 @@
   <component name="ChangeListManager">
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/boy.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/persons/boy.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/cyclist.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/persons/cyclist.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/girl-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/girl-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/girl-03.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/girl-04.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/girl-05.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/girl-06.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/persons/girl-07.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/section-1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/section-1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/section-2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/section-2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/section-3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/section-3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/section-4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/section-4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/section-5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/section-5.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/animation/animation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/base/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-copy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-copy.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-house.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-house.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-lamp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-lamp.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-preview.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-preview.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-section.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/mixins/label.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/mixins/label.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/variables/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/variables/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/index.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,9 +215,9 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="347" y="164" key="run.anything.popup/0.0.1366.744@0.0.1366.744" timestamp="1598399695417" />
-    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1598481380764">
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup" timestamp="1598545664868">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1598481380764" />
+    <state x="346" y="65" width="672" height="678" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1598545664868" />
   </component>
 </project>

@@ -21,10 +21,15 @@ class Animation {
         this.preview = document.querySelectorAll('[data-el="animated.preview"]');
         this.walkingContainer = document.querySelector('[data-el="animated.walking-container"]');
         this.house = document.querySelector('[data-el="animated.house"]');
+        this.houseContent = document.querySelector('[data-el="animated.house-content"]');
+        this.beginButton = document.querySelector('[data-el="animated.begin-button"]');
 
         this.viewportHeight = window.innerHeight;
         this.isScrolling = null;
-        this.stopScroll = false;
+        this.isElementsStopped = false;
+
+        this.elementsTimeline = null;
+        this.personsTimeline = null;
 
         this.init();
     }
@@ -37,6 +42,10 @@ class Animation {
 
             this.setBodyScroll();
             this.scrollTrigger();
+
+            this.beginButton.addEventListener('click', () => {
+                window.location.reload();
+            })
         });
     }
 
@@ -66,7 +75,7 @@ class Animation {
 
         // appear of persons
         gsap.set(this.persons, {x: window.innerWidth});
-        gsap.to(this.persons, {
+        this.personsTimeline = gsap.to(this.persons, {
             x: () => window.innerWidth / 8,
             scrollTrigger: {
                 trigger: this.walkingContainer,
@@ -77,7 +86,7 @@ class Animation {
         });
 
         // parallax elements
-        gsap.to(this.elements, {
+        this.elementsTimeline = gsap.to(this.elements, {
             x: (index, target) => {
                 return -window.innerWidth * target.dataset.speed * (this.elements.length + 2);
             },
@@ -87,6 +96,32 @@ class Animation {
                 start: 'top top',
                 end: () => `+=${this.container.offsetWidth}`,
                 onUpdate: (self) => {
+                    if (this.isElementsStopped) {
+                        return;
+                    }
+
+                    if (self.progress >= .8) {
+                        this.houseMethod();
+                        return;
+                    }
+
+                    gsap.to(this.house, {
+                        x: (index, target) => {
+                            console.log(target)
+                            return 0;
+                        },
+                        scrollTrigger: {
+                            trigger: this.container,
+                            toggleActions: 'restart none none none',
+                            start: `${window.innerWidth * 13.5} top`,
+                            //end: `bottom 100%+=${window.innerWidth * 10}`,
+                            scrub: true,
+                        },
+                        onComplete: () => {
+                            console.log('completed')
+                        }
+                    });
+
                     const velocity = self.getVelocity();
 
                     if (this.isScrolling === null) {
@@ -135,23 +170,23 @@ class Animation {
                     endPosition = startPosition + window.innerWidth;
                     break;
                 case 1:
-                    startPosition = window.innerWidth * 1.2;
+                    startPosition = window.innerWidth * 1.5;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 2:
-                    startPosition = window.innerWidth * 2.3;
+                    startPosition = window.innerWidth * 2.8;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 3:
-                    startPosition = window.innerWidth * 4.3;
+                    startPosition = window.innerWidth * 4.5;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 4:
-                    startPosition = window.innerWidth * 6.3;
+                    startPosition = window.innerWidth * 6.5;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 5:
-                    startPosition = window.innerWidth * 8.3;
+                    startPosition = window.innerWidth * 8.5;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 6:
@@ -185,8 +220,8 @@ class Animation {
                 onLeave: (self) => {
                     if (self.trigger !== this.sections[this.sections.length - 1]) return;
 
-                    console.log(self)
-                    this.houseMethod();
+                    console.log(self);
+                    //this.houseMethod();
                 },
             });
         });
@@ -204,14 +239,89 @@ class Animation {
     }
 
     houseMethod() {
-        console.log('house is init')
-        /*gsap.to(this.house, {
+        const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars');
+        const stars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name === 'stars');
+        const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
+
+        //gsap.set(this.house, {x: 0});
+
+        //this.elementsTimeline.pause(this.elements);
+        this.isElementsStopped = true;
+
+        gsap.to(this.houseContent, {
             scrollTrigger: {
-                trigger: this.container,
-                start: `${this.container.offsetWidth / 2} center`
+                trigger: this.house,
+                start: `top center`,
+                end: `+=${this.container.offsetWidth} bottom`,
+                scrub: true,
+                onEnter: () => {
+                    TweenLite.to('body', {
+                        overflowY: 'hidden',
+                    });
+
+                    gsap.to(cyclist, {
+                        x: () => window.innerWidth * .65,
+                        duration: 2,
+                        scrollTrigger: {
+                            trigger: this.walkingContainer,
+                            start: `top top`,
+                            end: `top top`,
+                            onLeave: () => {
+
+                            },
+                        },
+                        onComplete: () => {
+                            TweenLite.set('body', {
+                                height: +this.container.offsetWidth + (this.houseContent.offsetHeight * 6),
+                                overflowY: 'scroll',
+                            });
+
+                            gsap.to(cyclist, {scaleX: -1, duration: .1, ease: 'power2.out'});
+                        },
+                    });
+                },
+                onUpdate: self => {
+                    console.log(self.progress);
+
+                    gsap.to(stars, {y: -(self.progress * 50)})
+                    gsap.to(exceptStars, {y: (self.progress * 2000)});
+                    gsap.to(this.persons, {y: (self.progress * 2000)});
+                    gsap.to(this.houseContent, {y: (self.progress * 2500)});
+
+                    if (self.progress >= .55) {
+                        this.houseContent.classList.add('active');
+
+                        setTimeout(() => {
+                            TweenLite.to('body', {
+                                overflowY: 'hidden',
+                            });
+
+                            this.beginButton.classList.add('active');
+                        }, 1000);
+                    } else {
+                        this.houseContent.classList.remove('active');
+                    }
+                },
+                onLeaveBack: self => {
+                    this.setBodyScroll();
+                    this.isElementsStopped = false;
+                    console.log('LEAVE!!!', self)
+                    //this.elementsTimeline.play(this.elements, false);
+                    //gsap.set(this.house, {x: '100%'});
+
+                    gsap.to(cyclist, {
+                        x: () => 200,
+                        duration: 2,
+                        scrollTrigger: {
+                            trigger: this.walkingContainer,
+                            start: `top top`,
+                            end: `top top`,
+                        },
+                    });
+                }
                 //snap: 1 / (sections.length - 1),
             }
-        });*/
+        });
     }
 }
 

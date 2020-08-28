@@ -1,21 +1,21 @@
 .animation-copy {
 	position: absolute;
 	top: 5vh;
-	left: 50vw;
+	left: 50%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100vh;
 	height: 50vh;
-	background-image: url('../images/stars-1.png');
+	background-image: url('../images/stars-2.png');
 	background-repeat: no-repeat;
-	background-size: 1200%;
+	background-size: 350%;
 
 	&__label {
 		@extend .label;
 
-		text-shadow: $yellow-shadow -1.5px 1.5px 0, $yellow-shadow 0 0 0;
+		text-shadow: #4a3f20 -2.5px 2.5px 0, #585a65 -4px 4px 0;
 		opacity: 0;
 		transition: 1s;
 	}
@@ -24,12 +24,22 @@
 		@extend .label;
 
 		margin-top: 20px;
-		font-size: 3vh;
+		font-size: 3.5vh;
 		color: $white;
 		text-shadow: #989898 -1px 1px 0px, #989898 -1px 1px 0px;
 		--darkreader-inline-color: #989898;
 		opacity: 0;
 		transition-delay: .2s;
 		transition: 1s;
+	}
+
+	&__button {
+		@extend .animation-button;
+
+		bottom: 0;
+		color: $white;
+		box-shadow: #3c3034 -3px 4px 0px, #3c3034 0px 0px 0px;
+		filter: opacity(1);
+		background: linear-gradient(0.25turn, #de5081, #b1305b, #BF1B52);
 	}
 }

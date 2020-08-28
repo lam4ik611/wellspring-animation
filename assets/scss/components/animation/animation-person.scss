@@ -85,6 +85,29 @@
 		width: 45vh;
 		height: 40%;
 		background-image: url('../images/persons/cyclist.svg');
-		background-position-x: 0;
+
+		&[data-step="1"] {
+			background-position-x: 33.2%;
+		}
+
+		&[data-step="2"] {
+			background-position-x: 67%;
+		}
+
+		&[data-step="3"] {
+			background-position-x: 100.3%;
+		}
+
+		&[data-step="4"] {
+			background-position-x: -0.3%;
+		}
+
+		&[data-step="5"] {
+			background-position-x: 33.4%;
+		}
+
+		&[data-step="7"] {
+			background-position-x: 67%;
+		}
 	}
 }
