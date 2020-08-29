@@ -6,15 +6,10 @@
 	transition-duration: 1.5s;
 
 	@media only screen and (max-width: $screen-lg) {
-		height: 50vh;
-		min-height: 300px;
+		height: 100vh;
 		overflow: hidden;
 
-		&:first-child {
-			height: 100vh;
-		}
-
-		.animation-lamp__lamplight {
+		/*.animation-lamp__lamplight {
 			height: 100%;
 			opacity: 1;
 		}
@@ -25,7 +20,7 @@
 		.animation-copy__text,
 		.animation-copy__button {
 			opacity: 1;
-		}
+		}*/
 	}
 
 	&.visible {

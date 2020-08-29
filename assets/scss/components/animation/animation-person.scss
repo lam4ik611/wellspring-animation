@@ -15,7 +15,9 @@
 		z-index: 11;
 
 		@media only screen and (max-width: $screen-lg) {
+			top: 60%;
 			width: 10vh;
+			height: 30%;
 		}
 
 		&[data-step="1"] {
@@ -55,8 +57,10 @@
 		background-image: url('../images/persons/boy.svg');
 
 		@media only screen and (max-width: $screen-lg) {
-			top: 39%;
-			width: 10vh;
+			top: 57%;
+			left: 1vh;
+			width: 14vh;
+			height: 33%;
 		}
 
 		&[data-step="1"] {
@@ -96,9 +100,10 @@
 		background-image: url('../images/persons/cyclist.svg');
 
 		@media only screen and (max-width: $screen-lg) {
-			top: 59%;
+			top: 70%;
 			left: 20vw;
 			width: 22vh;
+			height: 20%;
 		}
 
 		&[data-step="1"] {
