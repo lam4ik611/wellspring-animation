@@ -203,9 +203,9 @@ class Animation {
                         return;
                     }
 
-                    TweenLite.to('body', {
+                    /*TweenLite.to('body', {
                         overflowY: 'hidden',
-                    });
+                    });*/
 
                     setTimeout(() => {
                         this.setBodyScroll();

@@ -43,6 +43,11 @@
 		background-image: url('../images/stars-1.png');
 		background-size: contain;
 		filter: brightness(70%);
+
+		@media only screen and (max-width: $screen-lg) {
+			background-size: cover;
+			z-index: 3;
+		}
 	}
 
 	&[data-name="ground"] {
