@@ -1,17 +1,43 @@
+/*@import url("https://p.typekit.net/p.css?s=1&k=pbk5udx&ht=tk&f=2009.2032.2036&a=7889660&app=typekit&e=css");
+
 @font-face {
-	font-family: 'Frutiger';
-	src: url('../fonts/FrutigerLight.eot?') format('eot'),
-	url('../fonts/FrutigerLight.woff2') format('woff2'),
-	url('../fonts/FrutigerLight.woff') format('woff'),
-	url('../fonts/FrutigerLight.ttf') format('truetype');
-	font-weight: 400;
+	font-family:"MuseoSans";
+	src:url("https://use.typekit.net/af/e3ca36/00000000000000000000e805/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/e3ca36/00000000000000000000e805/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/e3ca36/00000000000000000000e805/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+	font-display:auto;font-style:normal;font-weight:500;
 }
 
 @font-face {
-	font-family: 'Frutiger';
-	src: url('../fonts/FrutigerBold.eot?') format('eot'),
-	url('../fonts/FrutigerBold.woff2') format('woff2'),
-	url('../fonts/FrutigerBold.woff') format('woff'),
-	url('../fonts/FrutigerBold.ttf') format('truetype');
-	font-weight: 800;
+	font-family:"MuseoSlab";
+	src:url("https://use.typekit.net/af/c225e2/000000000000000000011aff/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/c225e2/000000000000000000011aff/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/c225e2/000000000000000000011aff/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+	font-display:auto;font-style:normal;font-weight:700;
+}
+
+@font-face {
+	font-family:"MuseoSlab";
+	src:url("https://use.typekit.net/af/a09522/00000000000000000000ec0b/27/l?subset_id=2&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/a09522/00000000000000000000ec0b/27/d?subset_id=2&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/a09522/00000000000000000000ec0b/27/a?subset_id=2&fvd=n8&v=3") format("opentype");
+	font-display:auto;font-style:normal;font-weight:900;
+}*/
+
+@font-face {
+	font-family: 'MuseoSlab';
+	src: url('../fonts/MuseoSlab-700.eot?') format('eot'),
+	url('../fonts/MuseoSlab-700.woff') format('woff'),
+	url('../fonts/MuseoSlab-700.ttf') format('truetype');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'MuseoSlab';
+	src: url('../fonts/MuseoSlab-900.eot?') format('eot'),
+	url('../fonts/MuseoSlab-900.woff') format('woff'),
+	url('../fonts/MuseoSlab-900.ttf') format('truetype');
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: 'MuseoSans';
+	src: url('../fonts/MuseoSans-700.eot?') format('eot'),
+	url('../fonts/MuseoSans-700.woff') format('woff'),
+	url('../fonts/MuseoSans-700.ttf') format('truetype');
+	font-weight: 500;
 }

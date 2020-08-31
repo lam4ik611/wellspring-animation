@@ -23,7 +23,9 @@
 	&__label {
 		@extend .label;
 
-		//text-shadow: #4a3f20 -2.5px 2.5px 0, #585a65 -4px 4px 0;
+		text-shadow: rgba(29, 24, 51, 0.8) -1px 1px 0,
+					rgba(20, 13, 45, 0.4) -2px 2px 0,
+					rgba(20, 13, 45, 0.2) -3px 3px 0;
 		opacity: 0;
 		transition: 1s;
 	}
@@ -34,8 +36,9 @@
 		margin-top: 20px;
 		font-size: 3.5vh;
 		color: $white;
-		text-shadow: #989898 -.5px .5px 0px;
-		--darkreader-inline-color: #989898;
+		text-shadow: rgba(29, 24, 51, 0.8) -1px 1px 0,
+		rgba(20, 13, 45, 0.4) -2px 2px 0,
+		rgba(20, 13, 45, 0.2) -3px 3px 0;
 		opacity: 0;
 		transition-delay: .2s;
 		transition: 1s;

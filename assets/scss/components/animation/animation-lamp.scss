@@ -53,10 +53,10 @@
 
 	&__icon {
 		display: block;
-		margin-top: 15vh;
+		margin-top: 20vh;
 		width: 4vw;
 		height: auto;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		opacity: 0;
 		transition-delay: .25s;
 		transition-duration: .5s;
@@ -68,9 +68,10 @@
 	}
 
 	&__text {
-		max-width: 28vh;
-		font-size: 2.4vh;
-		font-weight: 800;
+		max-width: calc(72vh - 50%);
+		font-size: 2.1vh;
+		font-family: 'MuseoSlab', serif;
+		font-weight: 700;
 		line-height: 1.25;
 		text-align: center;
 		color: $blue;
