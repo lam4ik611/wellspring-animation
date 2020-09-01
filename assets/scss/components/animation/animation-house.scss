@@ -78,7 +78,7 @@
 		background-repeat: no-repeat;
 		background-position-x: center;
 		background-position-y: bottom;
-		background-size: 90%;
+		background-size: 80%;
 
 		@media only screen and (max-width: $screen-lg) {
 			top: 0;
@@ -96,6 +96,7 @@
 		}
 
 		.animation-copy {
+			top: 2%;
 			height: 60vh;
 			transform: translateX(-45%);
 
@@ -111,7 +112,6 @@
 			}
 
 			&__label {
-				font-size: 24pt;
 
 				@media only screen and (max-width: $screen-lg) {
 					font-size: 4vh;
@@ -124,7 +124,7 @@
 		@extend .animation-button;
 
 		bottom: -12.5vh;
-		transform: translate(-10%, 0);
+		transform: translate(-20%, 0);
 
 		@media only screen and (max-width: $screen-lg) {
 			bottom: 1vh;

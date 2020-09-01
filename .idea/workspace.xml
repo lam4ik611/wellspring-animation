@@ -30,139 +30,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/animation/animation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/base/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-house.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-house.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/mixins/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/mixins/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/History.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/build/uint32.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/build/uint32.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/build/uint64.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/build/uint64.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/examples/adding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/examples/dividing.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/examples/uint32.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/lib/uint32.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/lib/uint64.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_add-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_and-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_div-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_equals-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_greaterThan-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_lessThan-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_multiply-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_negate-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_not-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_or-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_rotateLeft-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_rotateRight-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_shiftLeft-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_shiftRight-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_subtract-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_toNumber-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_toString-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT32_xor-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_add-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_and-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_div-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_equals-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_greaterThan-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_lessThan-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_multiply-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_negate-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_not-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_or-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_rotateLeft-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_rotateRight-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_shiftLeft-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_shiftRight-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_subtract-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_toNumber-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_toString-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cuint/test/UINT64_xor-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/Mime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/cli.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/lite.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/types/other.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/types/standard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/lib/join-media.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/lib/load-content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/lib/parse-statements.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/lib/process-content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/lib/resolve-id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/node_modules/postcss-value-parser/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/node_modules/postcss-value-parser/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/node_modules/postcss-value-parser/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/node_modules/postcss-value-parser/lib/parse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/node_modules/postcss-value-parser/lib/stringify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/node_modules/postcss-value-parser/lib/unit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/node_modules/postcss-value-parser/lib/walk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/node_modules/postcss-value-parser/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-import/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/lib/decl-processor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/lib/encode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/lib/get-file.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/lib/hash.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/lib/match-options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/lib/paths.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/type/copy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/type/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/type/inline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/postcss-url/src/type/rebase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-cache/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-cache/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-cache/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-cache/node_modules/pify/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-cache/node_modules/pify/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-cache/node_modules/pify/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-cache/node_modules/pify/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/read-cache/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/History.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/build/xxhash.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/build/xxhash.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/examples/from_file.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/examples/from_file64.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/examples/one_step.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/examples/xxhash.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/lib/xxhash.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/lib/xxhash64.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/test/XXH-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xxhashjs/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/index.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +113,7 @@
       <workItem from="1598346153918" duration="30617000" />
       <workItem from="1598433025969" duration="20347000" />
       <workItem from="1598604216128" duration="25399000" />
-      <workItem from="1598875982699" duration="30480000" />
+      <workItem from="1598875982699" duration="36740000" />
     </task>
     <servers />
   </component>

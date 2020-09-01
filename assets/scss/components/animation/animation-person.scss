@@ -50,8 +50,8 @@
 	}
 
 	&[data-name="boy"] {
-		top: 51vh;
-		left: 7vh;
+		top: 50vh;
+		left: 5vmin;
 		width: 22vh;
 		height: 45%;
 		background-image: url('../images/persons/boy.svg');
@@ -81,6 +81,7 @@
 
 		&[data-step="5"] {
 			background-position-x: 54%;
+			width: 19vh;
 		}
 
 		&[data-step="6"] {
@@ -89,6 +90,7 @@
 
 		&[data-step="7"] {
 			background-position-x: 102%;
+			width: 21vh;
 		}
 	}
 

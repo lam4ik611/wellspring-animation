@@ -81,25 +81,14 @@ class Animation {
         });
 
         // set position of house
-        gsap.set(this.house, {x: window.innerHeight * 50});
+        gsap.set(this.house, {x: window.innerHeight * 20});
         this.houseTimeline = gsap.to(this.house, {
-            x: 0,
+            x: -window.innerWidth / 50,
             scrollTrigger: {
                 trigger: this.house,
                 scrub: true,
                 start: 'top top',
                 end: () => `+=${this.container.offsetWidth}`,
-                onUpdate: self => {
-                    if (this.isElementsStopped) {
-                        return;
-                    }
-
-                    if (self.progress < .95) {
-                        return;
-                    }
-
-                    this.houseMethod();
-                },
             },
         });
 
@@ -112,7 +101,8 @@ class Animation {
                 trigger: this.container,
                 scrub: true,
                 start: 'top top',
-                end: () => `+=${this.container.offsetWidth}`,
+                end: () => `+=${this.container.offsetWidth - (window.innerWidth * 1.25)}`,
+                onLeave: () => this.houseMethod(),
                 onUpdate: (self) => {
                     if (this.isElementsStopped) {
                         return;
@@ -170,7 +160,7 @@ class Animation {
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 2:
-                    startPosition = window.innerWidth * 2.8;
+                    startPosition = window.innerWidth * 3;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 3:
@@ -178,15 +168,15 @@ class Animation {
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 4:
-                    startPosition = window.innerWidth * 6.5;
+                    startPosition = window.innerWidth * 6;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 5:
-                    startPosition = window.innerWidth * 8.5;
+                    startPosition = window.innerWidth * 8;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
                 case 6:
-                    startPosition = window.innerWidth * 12;
+                    startPosition = window.innerWidth * 11;
                     endPosition = startPosition + window.innerWidth * 2.5;
                     break;
             }
@@ -229,17 +219,18 @@ class Animation {
     }
 
     houseMethod() {
-        const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars');
         const stars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name === 'stars');
+        const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
+        const scrollHeight = this.house.offsetHeight * 5;
 
         this.isElementsStopped = true;
 
         gsap.to(this.houseContent, {
             scrollTrigger: {
                 trigger: this.house,
-                start: `top top`,
-                end: `+=${this.container.offsetWidth} bottom`,
+                start: `${this.house.offsetHeight} top`,
+                end: `+=${scrollHeight}`,
                 scrub: true,
                 onEnter: () => {
                     TweenLite.to('body', {
@@ -247,8 +238,9 @@ class Animation {
                     });
 
                     gsap.to(cyclist, {
-                        x: () => window.innerWidth * .65,
+                        x: () => window.innerWidth * .6,
                         duration: 2,
+                        ease: 'power2.out',
                         scrollTrigger: {
                             trigger: this.walkingContainer,
                             start: `top top`,
@@ -256,7 +248,7 @@ class Animation {
                         },
                         onComplete: () => {
                             TweenLite.set('body', {
-                                height: +this.container.offsetWidth + (this.houseContent.offsetHeight * 6),
+                                height: +this.container.offsetWidth + scrollHeight,
                                 overflowY: 'scroll',
                             });
 
@@ -265,22 +257,14 @@ class Animation {
                     });
                 },
                 onUpdate: self => {
-                    console.log(this.houseContent.getBoundingClientRect())
-                    if (this.houseContent.getBoundingClientRect().x === 0) {
-                        gsap.to(stars, {y: -(self.progress.toFixed(3) * 50)});
-                        gsap.to(exceptStars, {y: (self.progress.toFixed(3) * 1000)});
-                        gsap.to(this.persons, {y: (self.progress.toFixed(3) * 2000)});
-                        gsap.to(this.houseContent, {y: (self.progress.toFixed(3) * 2500)});
-                    }
+                    let houseSpeed = self.progress * window.innerWidth;
 
-                    if (this.houseContent.getBoundingClientRect().x > 0) {
-                        gsap.to(stars, {y: 0});
-                        gsap.to(exceptStars, {y: 0});
-                        gsap.to(this.persons, {y: 0});
-                        gsap.to(this.houseContent, {y: 0});
-                    }
+                    gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
+                    gsap.to(exceptStars, {y: houseSpeed});
+                    gsap.to(this.persons, {y: houseSpeed});
+                    gsap.to(this.houseContent, {y: houseSpeed * 1.1});
 
-                    if (self.progress >= .6) {
+                    if (self.progress >= .9) {
                         this.houseContent.classList.add('active');
                         this.learnMoreButton.classList.add('active');
                     } else {
@@ -303,8 +287,7 @@ class Animation {
                             end: `top top`,
                         },
                     });
-                }
-                //snap: 1 / (sections.length - 1),
+                },
             }
         });
     }
