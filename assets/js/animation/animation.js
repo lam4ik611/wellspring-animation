@@ -9,6 +9,7 @@ class Animation {
     constructor() {
         this.container = document.querySelector('[data-el="animated.container"]');
         this.elements = document.querySelectorAll('[data-el="animated.element"]');
+        this.ground = document.querySelector('[data-el="animated.ground"]');
         this.persons = document.querySelectorAll('[data-el="animated.person"]');
         this.wrapper = document.getElementById('wrapper');
         this.sections = document.querySelectorAll('[data-el="animated.section"]');
@@ -195,9 +196,9 @@ class Animation {
                         return;
                     }
 
-                    TweenLite.to('body', {
+                    /*TweenLite.to('body', {
                         overflowY: 'hidden',
-                    });
+                    });*/
 
                     setTimeout(() => {
                         this.setBodyScroll();
@@ -222,6 +223,7 @@ class Animation {
         const stars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name === 'stars');
         const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
+        const newParallaxElements = Array.prototype.concat.call(exceptStars, this.ground);
         const scrollHeight = this.house.offsetHeight * 5;
 
         this.isElementsStopped = true;
@@ -229,7 +231,7 @@ class Animation {
         gsap.to(this.houseContent, {
             scrollTrigger: {
                 trigger: this.house,
-                start: `${this.house.offsetHeight} top`,
+                start: `${window.innerWidth} center`,
                 end: `+=${scrollHeight}`,
                 scrub: true,
                 onEnter: () => {
@@ -260,7 +262,7 @@ class Animation {
                     let houseSpeed = self.progress * window.innerWidth;
 
                     gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
-                    gsap.to(exceptStars, {y: houseSpeed});
+                    gsap.to(newParallaxElements, {y: houseSpeed});
                     gsap.to(this.persons, {y: houseSpeed});
                     gsap.to(this.houseContent, {y: houseSpeed * 1.1});
 

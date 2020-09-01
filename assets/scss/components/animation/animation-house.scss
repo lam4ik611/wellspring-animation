@@ -124,7 +124,7 @@
 		@extend .animation-button;
 
 		bottom: -12.5vh;
-		transform: translate(-20%, 0);
+		transform: translate(-10%, 0);
 
 		@media only screen and (max-width: $screen-lg) {
 			bottom: 1vh;
