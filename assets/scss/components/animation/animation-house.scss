@@ -16,7 +16,7 @@
 		height: 140vh;
 		transform: translateX(0%);
 
-		.animation-button {
+		.animation-button--finished {
 			top: 23vh;
 			bottom: unset;
 			transform: translateX(-50%);
@@ -128,7 +128,7 @@
 
 		@media only screen and (max-width: $screen-lg) {
 			bottom: 1vh;
-			transform: translate(-35%, 0);
+			transform: translate(-40%, 0);
 		}
 	}
 }

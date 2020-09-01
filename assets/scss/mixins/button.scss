@@ -5,4 +5,45 @@
 	transform: translate(-50%, 0);
 	transition: .4s cubic-bezier(.47,.22,.39,.79);
 	z-index: 20;
+
+	&--top {
+
+		&::before,
+		&::after {
+			right: 1.75rem !important;
+			transform: rotate(-45deg) !important;
+		}
+
+		&::before {
+			top: 1.35rem !important;
+		}
+
+		&::after {
+			top: 1.6rem !important;
+		}
+	}
+
+	&[data-el="animated.scroll-button"] {
+		padding-right: 40px;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 1.35rem;
+			width: .4rem;
+			height: .4rem;
+			border-top: .09rem solid $blue;
+			border-right: .09rem solid $blue;
+			transform: rotate(45deg);
+		}
+
+		&::before {
+			right: 1.95rem;
+		}
+
+		&::after {
+			right: 1.65rem;
+		}
+	}
 }

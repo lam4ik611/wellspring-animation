@@ -9,8 +9,12 @@
 		z-index: 50;
 		color: $white;
 		box-shadow: #3c3034 -3px 4px 0px, #3c3034 0px 0px 0px;
-		filter: opacity(1);
+		filter: opacity(1) brightness(100%);
 		background: linear-gradient(0.25turn, #de5081, #b1305b, #BF1B52);
+
+		&:hover {
+			filter: opacity(1) brightness(110%);
+		}
 
 		&.active {
 			opacity: 1;

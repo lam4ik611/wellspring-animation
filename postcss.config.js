@@ -1,8 +1,6 @@
 module.exports = {
     syntax: 'postcss-scss',
     plugins: {
-        'postcss-import': {},
-        'postcss-url': {},
         'postcss-mixins': {},
         'postcss-for': {},
         'postcss-each-variables': {},
