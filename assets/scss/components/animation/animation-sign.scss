@@ -1,0 +1,17 @@
+.animation-sign {
+	position: absolute;
+	top: 40vh;
+	right: 0;
+	width: 12vmax;
+	height: 45vh;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	&--first {
+		background-image: url('../images/sign-1.png');
+	}
+
+	&--second {
+		background-image: url('../images/sign-2.png');
+	}
+}

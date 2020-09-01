@@ -1,14 +1,16 @@
 .animation-button {
 	@extend .animation-button;
 
-	&--to-start {
+	&--finished {
 		position: fixed;
-		bottom: 10vh;
-		left: unset;
-		right: 5vw;
-		transform: translateX(0);
+		bottom: 15vh;
+		transform: translateX(-30%);
 		opacity: 0;
 		z-index: 50;
+		color: $white;
+		box-shadow: #3c3034 -3px 4px 0px, #3c3034 0px 0px 0px;
+		filter: opacity(1);
+		background: linear-gradient(0.25turn, #de5081, #b1305b, #BF1B52);
 
 		&.active {
 			opacity: 1;

@@ -16,7 +16,9 @@ class Animation {
         this.walkingContainer = document.querySelector('[data-el="animated.walking-container"]');
         this.house = document.querySelector('[data-el="animated.house"]');
         this.houseContent = document.querySelector('[data-el="animated.house-content"]');
-        this.beginButton = document.querySelector('[data-el="animated.begin-button"]');
+
+        this.scrollUpButton = document.querySelector('[data-el="animated.scroll-button"]');
+        this.learnMoreButton = document.querySelector('[data-el="animated.learn-more"]');
 
         this.viewportHeight = window.innerHeight;
         this.isScrolling = null;
@@ -24,6 +26,7 @@ class Animation {
 
         this.elementsTimeline = null;
         this.personsTimeline = null;
+        this.houseTimeline = null;
 
         this.init();
     }
@@ -36,10 +39,6 @@ class Animation {
 
             this.setBodyScroll();
             this.scrollTrigger();
-
-            this.beginButton.addEventListener('click', () => {
-                window.location.reload();
-            })
         });
     }
 
@@ -58,6 +57,8 @@ class Animation {
     }
 
     parallaxMethod() {
+        const parallaxElements = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'ground');
+
         const walkingSheet = {
             frames: 5,
             defaultFrame: 7,
@@ -79,10 +80,33 @@ class Animation {
             },
         });
 
+        // set position of house
+        gsap.set(this.house, {x: window.innerHeight * 50});
+        this.houseTimeline = gsap.to(this.house, {
+            x: 0,
+            scrollTrigger: {
+                trigger: this.house,
+                scrub: true,
+                start: 'top top',
+                end: () => `+=${this.container.offsetWidth}`,
+                onUpdate: self => {
+                    if (this.isElementsStopped) {
+                        return;
+                    }
+
+                    if (self.progress < .95) {
+                        return;
+                    }
+
+                    this.houseMethod();
+                },
+            },
+        });
+
         // parallax elements
-        this.elementsTimeline = gsap.to(this.elements, {
+        this.elementsTimeline = gsap.to(parallaxElements, {
             x: (index, target) => {
-                return -window.innerWidth * target.dataset.speed * (this.elements.length + 2);
+                return -window.innerWidth * target.dataset.speed * 7;
             },
             scrollTrigger: {
                 trigger: this.container,
@@ -93,28 +117,6 @@ class Animation {
                     if (this.isElementsStopped) {
                         return;
                     }
-
-                    if (self.progress >= .8) {
-                        this.houseMethod();
-                        return;
-                    }
-
-                    gsap.to(this.house, {
-                        x: (index, target) => {
-                            console.log(target)
-                            return 0;
-                        },
-                        scrollTrigger: {
-                            trigger: this.container,
-                            toggleActions: 'restart none none none',
-                            start: `${window.innerWidth * 13.5} top`,
-                            //end: `bottom 100%+=${window.innerWidth * 10}`,
-                            scrub: true,
-                        },
-                        onComplete: () => {
-                            console.log('completed')
-                        }
-                    });
 
                     const velocity = self.getVelocity();
 
@@ -211,12 +213,6 @@ class Animation {
                         this.setBodyScroll();
                     }, 2000);
                 },
-                onLeave: (self) => {
-                    if (self.trigger !== this.sections[this.sections.length - 1]) return;
-
-                    console.log(self);
-                    //this.houseMethod();
-                },
             });
         });
     }
@@ -237,15 +233,12 @@ class Animation {
         const stars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name === 'stars');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
 
-        //gsap.set(this.house, {x: 0});
-
-        //this.elementsTimeline.pause(this.elements);
         this.isElementsStopped = true;
 
         gsap.to(this.houseContent, {
             scrollTrigger: {
                 trigger: this.house,
-                start: `top center`,
+                start: `top top`,
                 end: `+=${this.container.offsetWidth} bottom`,
                 scrub: true,
                 onEnter: () => {
@@ -259,10 +252,7 @@ class Animation {
                         scrollTrigger: {
                             trigger: this.walkingContainer,
                             start: `top top`,
-                            end: `top top`,
-                            onLeave: () => {
-
-                            },
+                            end: `top bottom`,
                         },
                         onComplete: () => {
                             TweenLite.set('body', {
@@ -275,25 +265,27 @@ class Animation {
                     });
                 },
                 onUpdate: self => {
-                    console.log(self.progress);
+                    console.log(this.houseContent.getBoundingClientRect())
+                    if (this.houseContent.getBoundingClientRect().x === 0) {
+                        gsap.to(stars, {y: -(self.progress.toFixed(3) * 50)});
+                        gsap.to(exceptStars, {y: (self.progress.toFixed(3) * 1000)});
+                        gsap.to(this.persons, {y: (self.progress.toFixed(3) * 2000)});
+                        gsap.to(this.houseContent, {y: (self.progress.toFixed(3) * 2500)});
+                    }
 
-                    gsap.to(stars, {y: -(self.progress * 50)})
-                    gsap.to(exceptStars, {y: (self.progress * 2000)});
-                    gsap.to(this.persons, {y: (self.progress * 2000)});
-                    gsap.to(this.houseContent, {y: (self.progress * 2500)});
+                    if (this.houseContent.getBoundingClientRect().x > 0) {
+                        gsap.to(stars, {y: 0});
+                        gsap.to(exceptStars, {y: 0});
+                        gsap.to(this.persons, {y: 0});
+                        gsap.to(this.houseContent, {y: 0});
+                    }
 
-                    if (self.progress >= .55) {
+                    if (self.progress >= .6) {
                         this.houseContent.classList.add('active');
-
-                        setTimeout(() => {
-                            TweenLite.to('body', {
-                                overflowY: 'hidden',
-                            });
-
-                            this.beginButton.classList.add('active');
-                        }, 1000);
+                        this.learnMoreButton.classList.add('active');
                     } else {
                         this.houseContent.classList.remove('active');
+                        this.learnMoreButton.classList.remove('active');
                     }
                 },
                 onLeaveBack: self => {
@@ -301,7 +293,6 @@ class Animation {
                     this.isElementsStopped = false;
                     console.log('LEAVE!!!', self)
                     //this.elementsTimeline.play(this.elements, false);
-                    //gsap.set(this.house, {x: '100%'});
 
                     gsap.to(cyclist, {
                         x: () => 200,

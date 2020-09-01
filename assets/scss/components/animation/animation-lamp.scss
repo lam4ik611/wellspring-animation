@@ -1,12 +1,13 @@
 .animation-lamp {
-	position: relative;
+	position: absolute;
 	top: 6vh;
 	left: 50vw;
 
 	@media only screen and (max-width: $screen-lg) {
 		top: 43vh;
-		left: 4vh;
+		left: 15vh;
 		height: 50vh;
+		width: 80%;
 		z-index: 10;
 	}
 
@@ -72,7 +73,7 @@
 		font-size: 2.1vh;
 		font-family: 'MuseoSlab', serif;
 		font-weight: 700;
-		line-height: 1.25;
+		line-height: 1.3;
 		text-align: center;
 		color: $blue;
 		opacity: 0;

@@ -9,6 +9,7 @@ class MobileAnimation {
     constructor() {
         this.mobileContainer = document.querySelector('[data-el="animated.mobile-container"]');
         this.mobileSections = document.querySelectorAll('[data-el="animated.mobile-section"]');
+        this.mobileHouse = document.querySelectorAll('[data-el="animated.mobile-house"]');
 
         this.init();
     }
@@ -39,8 +40,16 @@ class MobileAnimation {
                 start: `top center`,
                 end: 'bottom center',
                 toggleClass: 'visible',
-                once: true
+                once: true,
             });
+        });
+
+        ScrollTrigger.create({
+            trigger: this.mobileHouse,
+            start: `top center`,
+            end: 'bottom center',
+            toggleClass: 'visible',
+            once: true
         });
     }
 }

@@ -36,7 +36,14 @@
 
 	&[data-name="sky-color"] {
 		opacity: .8;
-		background-color: $sky-color;
+		background: linear-gradient(
+						rgba(24, 15, 60, 1),
+						rgba(24, 15, 60, 0.9),
+						rgba(24, 15, 60, 0.8),
+						rgba(24, 15, 60, 0.7),
+						rgba(24, 15, 60, 0.6),
+						rgba(24, 15, 60, 0.5)
+					);
 	}
 
 	&[data-name="stars"] {
@@ -51,7 +58,12 @@
 	}
 
 	&[data-name="ground"] {
+		position: absolute;
+		width: 100vw;
 		background-image: url('../images/ground.png');
+		background-position-x: center;
+		background-position-y: 101%;
+		background-size: 1440vh;
 		z-index: 3;
 	}
 
@@ -62,7 +74,7 @@
 
 	&[data-name="silhouette"] {
 		background-image: url('../images/silhouette.png');
-		filter: contrast(90%);
+		filter: contrast(95%);
 		z-index: 1;
 	}
 
