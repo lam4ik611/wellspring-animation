@@ -49,7 +49,7 @@
 	&[data-name="stars"] {
 		background-image: url('../images/stars-1.png');
 		background-size: contain;
-		filter: brightness(70%);
+		filter: opacity(.2);
 
 		@media only screen and (max-width: $screen-lg) {
 			background-size: cover;

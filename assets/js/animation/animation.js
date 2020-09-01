@@ -19,7 +19,7 @@ class Animation {
         this.houseContent = document.querySelector('[data-el="animated.house-content"]');
 
         this.scrollUpButton = document.querySelector('[data-el="animated.scroll-button"]');
-        this.learnMoreButton = document.querySelector('[data-el="animated.learn-more"]');
+        this.finishedElement = document.querySelector('[data-el="animated.finished"]');
 
         this.viewportHeight = window.innerHeight;
         this.isScrolling = null;
@@ -153,32 +153,32 @@ class Animation {
 
             switch (index) {
                 case 0:
-                    startPosition = window.innerWidth / 2;
+                    startPosition = value.getBoundingClientRect().x * 1.5;
                     endPosition = startPosition + window.innerWidth;
                     break;
                 case 1:
-                    startPosition = window.innerWidth * 1.5;
-                    endPosition = startPosition + window.innerWidth * 2.5;
+                    startPosition = value.getBoundingClientRect().x * 1.25;
+                    endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 2:
-                    startPosition = window.innerWidth * 3;
-                    endPosition = startPosition + window.innerWidth * 2.5;
+                    startPosition = value.getBoundingClientRect().x * 1.45;
+                    endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 3:
-                    startPosition = window.innerWidth * 4.5;
-                    endPosition = startPosition + window.innerWidth * 2.5;
+                    startPosition = value.getBoundingClientRect().x * 1.45;
+                    endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 4:
-                    startPosition = window.innerWidth * 6;
-                    endPosition = startPosition + window.innerWidth * 2.5;
+                    startPosition = value.getBoundingClientRect().x * 1.5;
+                    endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 5:
-                    startPosition = window.innerWidth * 8;
-                    endPosition = startPosition + window.innerWidth * 2.5;
+                    startPosition = value.getBoundingClientRect().x * 1.6;
+                    endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 6:
-                    startPosition = window.innerWidth * 11;
-                    endPosition = startPosition + window.innerWidth * 2.5;
+                    startPosition = value.getBoundingClientRect().x * 1.7;
+                    endPosition = startPosition + window.innerWidth * 4;
                     break;
             }
 
@@ -196,9 +196,9 @@ class Animation {
                         return;
                     }
 
-                    /*TweenLite.to('body', {
+                    TweenLite.to('body', {
                         overflowY: 'hidden',
-                    });*/
+                    });
 
                     setTimeout(() => {
                         this.setBodyScroll();
@@ -224,17 +224,17 @@ class Animation {
         const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
         const newParallaxElements = Array.prototype.concat.call(exceptStars, this.ground);
-        const scrollHeight = this.house.offsetHeight * 5;
+        const scrollHeight = this.house.offsetHeight * 2;
 
         this.isElementsStopped = true;
 
         gsap.to(this.houseContent, {
             scrollTrigger: {
-                trigger: this.house,
+                trigger: this.houseContent,
                 start: `${window.innerWidth} center`,
-                end: `+=${scrollHeight}`,
+                end: `${scrollHeight} bottom`,
                 scrub: true,
-                onEnter: () => {
+                onEnter: (self) => {
                     TweenLite.to('body', {
                         overflowY: 'hidden',
                     });
@@ -258,26 +258,28 @@ class Animation {
                         },
                     });
                 },
+                markers: true,
                 onUpdate: self => {
-                    let houseSpeed = self.progress * window.innerWidth;
+                    let houseSpeed = self.progress * (window.innerWidth);
 
                     gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
                     gsap.to(newParallaxElements, {y: houseSpeed});
                     gsap.to(this.persons, {y: houseSpeed});
-                    gsap.to(this.houseContent, {y: houseSpeed * 1.1});
+                    gsap.to(this.houseContent, {y: houseSpeed});
 
-                    if (self.progress >= .9) {
+                    if (self.progress >= .95) {
                         this.houseContent.classList.add('active');
-                        this.learnMoreButton.classList.add('active');
+                        this.finishedElement.classList.add('active');
                     } else {
                         this.houseContent.classList.remove('active');
-                        this.learnMoreButton.classList.remove('active');
+                        this.finishedElement.classList.remove('active');
                     }
                 },
                 onLeaveBack: self => {
                     this.setBodyScroll();
                     this.isElementsStopped = false;
                     console.log('LEAVE!!!', self)
+                    self.kill();
                     //this.elementsTimeline.play(this.elements, false);
 
                     gsap.to(cyclist, {

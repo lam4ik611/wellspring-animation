@@ -4,7 +4,7 @@
 	bottom: 0;
 	left: 0;
 	width: 100vw;
-	height: 150vmax;
+	height: 130vmax;
 	//transition: .1s;
 	//transform: translateX(100%);
 	overflow: hidden;
@@ -15,12 +15,6 @@
 		top: 0;
 		height: 140vh;
 		transform: translateX(0%);
-
-		.animation-button--finished {
-			top: 23vh;
-			bottom: unset;
-			transform: translateX(-50%);
-		}
 
 		.animation-person {
 
@@ -62,7 +56,7 @@
 
 		@media only screen and (max-width: $screen-lg) {
 
-			.animation-copy__label,
+			.animation-copy,
 			.animation-button {
 				opacity: 1;
 			}
@@ -89,33 +83,9 @@
 		}
 
 		&.active {
-			.animation-copy__label,
+			.animation-copy,
 			.animation-copy__button {
 				opacity: 1;
-			}
-		}
-
-		.animation-copy {
-			top: 2%;
-			height: 60vh;
-			transform: translateX(-45%);
-
-			@media only screen and (max-width: $screen-lg) {
-				top: -8vh;
-				height: 40vh;
-				transform: unset;
-			}
-
-			&__label,
-			&__button {
-				transition-delay: .5s;
-			}
-
-			&__label {
-
-				@media only screen and (max-width: $screen-lg) {
-					font-size: 4vh;
-				}
 			}
 		}
 	}
@@ -124,7 +94,7 @@
 		@extend .animation-button;
 
 		bottom: -12.5vh;
-		transform: translate(-10%, 0);
+		transform: translate(-20%, 0);
 
 		@media only screen and (max-width: $screen-lg) {
 			bottom: 1vh;

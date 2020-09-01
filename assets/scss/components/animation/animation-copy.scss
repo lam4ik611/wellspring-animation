@@ -8,9 +8,11 @@
 	justify-content: center;
 	width: 100vh;
 	height: 50vh;
-	background-image: url('../images/stars-2.png');
+	background-image: url('../images/star-1.svg');
 	background-repeat: no-repeat;
-	background-size: 350%;
+	background-size: contain;
+	opacity: 0;
+	transition: 1s;
 
 	@media only screen and (max-width: $screen-lg) {
 		top: 10%;
@@ -20,14 +22,38 @@
 		z-index: 10;
 	}
 
+	&--finished {
+		position: fixed;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-image: url('../images/star-2.svg');
+		z-index: 21;
+
+		@media only screen and (max-width: $screen-lg) {
+			top: 2.5%;
+			height: 40vh;
+		}
+
+		&.active {
+			opacity: 1;
+		}
+
+		.animation-copy__label {
+			transition-delay: .5s;
+
+			@media only screen and (max-width: $screen-lg) {
+				font-size: 3vh;
+			}
+		}
+	}
+
 	&__label {
 		@extend .label;
 
 		text-shadow: rgba(29, 24, 51, 0.8) -1px 1px 0,
 					rgba(20, 13, 45, 0.4) -2px 2px 0,
 					rgba(20, 13, 45, 0.2) -3px 3px 0;
-		opacity: 0;
-		transition: 1s;
 	}
 
 	&__text {

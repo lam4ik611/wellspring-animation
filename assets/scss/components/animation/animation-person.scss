@@ -82,6 +82,10 @@
 		&[data-step="5"] {
 			background-position-x: 54%;
 			width: 19vh;
+
+			@media only screen and (max-width: $screen-lg) {
+				width: 14vh;
+			}
 		}
 
 		&[data-step="6"] {
@@ -91,6 +95,10 @@
 		&[data-step="7"] {
 			background-position-x: 102%;
 			width: 21vh;
+
+			@media only screen and (max-width: $screen-lg) {
+				width: 14vh;
+			}
 		}
 	}
 
