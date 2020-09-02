@@ -15,10 +15,8 @@ class Animation {
         this.sections = document.querySelectorAll('[data-el="animated.section"]');
         this.preview = document.querySelectorAll('[data-el="animated.preview"]');
         this.walkingContainer = document.querySelector('[data-el="animated.walking-container"]');
-        this.house = document.querySelector('[data-el="animated.house"]');
-        this.houseContent = document.querySelector('[data-el="animated.house-content"]');
 
-        this.scrollUpButton = document.querySelector('[data-el="animated.scroll-button"]');
+        this.scrollUpButton = document.querySelector('[data-el="animated.scroll-up-button"]');
         this.finishedElement = document.querySelector('[data-el="animated.finished"]');
 
         this.viewportHeight = window.innerHeight;
@@ -82,28 +80,39 @@ class Animation {
         });
 
         // set position of house
-        gsap.set(this.house, {x: window.innerHeight * 20});
+        /*gsap.set(this.house, {x: window.innerWidth * 20});
         this.houseTimeline = gsap.to(this.house, {
             x: -window.innerWidth / 50,
             scrollTrigger: {
                 trigger: this.house,
                 scrub: true,
-                start: 'top top',
+                start: 'bottom top',
                 end: () => `+=${this.container.offsetWidth}`,
             },
-        });
+            force3D: true,
+        });*/
 
         // parallax elements
         this.elementsTimeline = gsap.to(parallaxElements, {
             x: (index, target) => {
                 return -window.innerWidth * target.dataset.speed * 7;
             },
+            ease: 'none',
             scrollTrigger: {
                 trigger: this.container,
                 scrub: true,
                 start: 'top top',
                 end: () => `+=${this.container.offsetWidth - (window.innerWidth * 1.25)}`,
-                onLeave: () => this.houseMethod(),
+                onLeave: () => {
+                    TweenLite.to('body', {
+                        overflowY: 'hidden',
+                    });
+
+                    setTimeout(() => {
+                        this.setBodyScroll();
+                        this.houseMethod();
+                    }, 200)
+                },
                 onUpdate: (self) => {
                     if (this.isElementsStopped) {
                         return;
@@ -155,31 +164,31 @@ class Animation {
 
             switch (index) {
                 case 0:
-                    startPosition = value.getBoundingClientRect().x * 1.5;
+                    startPosition = value.getBoundingClientRect().x * 2.5;
                     endPosition = startPosition + window.innerWidth;
                     break;
                 case 1:
-                    startPosition = value.getBoundingClientRect().x * 1.25;
-                    endPosition = startPosition + window.innerWidth * 4;
+                    startPosition = value.getBoundingClientRect().x * 3;
+                    endPosition = startPosition + window.innerWidth * 3;
                     break;
                 case 2:
-                    startPosition = value.getBoundingClientRect().x * 1.45;
+                    startPosition = value.getBoundingClientRect().x * 2.85;
                     endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 3:
-                    startPosition = value.getBoundingClientRect().x * 1.45;
+                    startPosition = value.getBoundingClientRect().x * 2.75;
                     endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 4:
-                    startPosition = value.getBoundingClientRect().x * 1.5;
+                    startPosition = value.getBoundingClientRect().x * 2.75;
                     endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 5:
-                    startPosition = value.getBoundingClientRect().x * 1.6;
+                    startPosition = value.getBoundingClientRect().x * 2.75;
                     endPosition = startPosition + window.innerWidth * 4;
                     break;
                 case 6:
-                    startPosition = value.getBoundingClientRect().x * 1.7;
+                    startPosition = value.getBoundingClientRect().x * 2.5;
                     endPosition = startPosition + window.innerWidth * 4;
                     break;
             }
@@ -204,7 +213,7 @@ class Animation {
 
                     setTimeout(() => {
                         this.setBodyScroll();
-                    }, 2000);
+                    }, 1000);
                 },
             });
         });
@@ -222,75 +231,82 @@ class Animation {
     }
 
     houseMethod() {
-        const stars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name === 'stars');
-        const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars');
+        const stars = Array.prototype.slice.call(this.elements).find(value => value.dataset.name === 'stars');
+        const houseElement = Array.prototype.slice.call(this.elements).find(value => value.dataset.name === 'house');
+        const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars' && value.dataset.name !== 'house');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
         const newParallaxElements = Array.prototype.concat.call(exceptStars, this.ground);
-        const scrollHeight = this.house.offsetHeight * 2;
+        const scrollHeight = houseElement.offsetHeight - window.innerHeight;
 
         this.isElementsStopped = true;
 
-        gsap.to(this.houseContent, {
+        this.scrollUpButton.classList.add('active');
+
+        TweenLite.to('body', {
+            overflowY: 'hidden',
+        });
+
+        gsap.to(cyclist, {
+            x: () => window.innerWidth * .6,
+            duration: 1.5,
+            ease: 'power2.out',
             scrollTrigger: {
-                trigger: this.houseContent,
-                start: `${window.innerWidth} center`,
-                end: `${scrollHeight} bottom`,
+                trigger: this.walkingContainer,
+                start: `top top`,
+                end: `top bottom`,
+            },
+            onComplete: () => {
+                TweenLite.set('body', {
+                    height: +this.container.offsetWidth + scrollHeight,
+                    overflowY: 'scroll',
+                });
+
+                gsap.to(cyclist, {scaleX: -1, duration: .1, ease: 'power2.out'});
+            },
+        });
+
+        gsap.to(houseElement, {
+            scrollTrigger: {
+                trigger: this.container,
+                start: `${window.innerWidth / 2} bottom`,
+                end: `${scrollHeight} top`,
                 scrub: true,
-                onEnter: (self) => {
-                    TweenLite.to('body', {
-                        overflowY: 'hidden',
-                    });
-
-                    gsap.to(cyclist, {
-                        x: () => window.innerWidth * .6,
-                        duration: 2,
-                        ease: 'power2.out',
-                        scrollTrigger: {
-                            trigger: this.walkingContainer,
-                            start: `top top`,
-                            end: `top bottom`,
-                        },
-                        onComplete: () => {
-                            TweenLite.set('body', {
-                                height: +this.container.offsetWidth + scrollHeight,
-                                overflowY: 'scroll',
-                            });
-
-                            gsap.to(cyclist, {scaleX: -1, duration: .1, ease: 'power2.out'});
-                        },
-                    });
-                },
-                markers: true,
+                onEnter: () => {},
                 onUpdate: self => {
-                    let houseSpeed = self.progress * (window.innerWidth);
+                    let houseSpeed = self.progress * (scrollHeight * 1.25);
 
                     gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
                     gsap.to(newParallaxElements, {y: houseSpeed});
                     gsap.to(this.persons, {y: houseSpeed});
-                    gsap.to(this.houseContent, {y: houseSpeed});
+                    gsap.to(houseElement, {y: houseSpeed});
+
+                    if (self.progress >= .15) {
+                        this.scrollUpButton.classList.remove('active');
+                    } else {
+                        this.scrollUpButton.classList.add('active');
+                    }
 
                     if (self.progress >= .95) {
-                        this.houseContent.classList.add('active');
                         this.finishedElement.classList.add('active');
                     } else {
-                        this.houseContent.classList.remove('active');
                         this.finishedElement.classList.remove('active');
                     }
                 },
                 onLeaveBack: self => {
                     this.setBodyScroll();
-                    this.isElementsStopped = false;
-                    console.log('LEAVE!!!', self)
                     self.kill();
-                    //this.elementsTimeline.play(this.elements, false);
 
                     gsap.to(cyclist, {
                         x: () => 200,
-                        duration: 2,
+                        duration: 1.5,
                         scrollTrigger: {
                             trigger: this.walkingContainer,
                             start: `top top`,
                             end: `top top`,
+                        },
+                        onComplete: () => {
+                            this.isElementsStopped = false;
+                            this.scrollUpButton.classList.remove('active');
                         },
                     });
                 },

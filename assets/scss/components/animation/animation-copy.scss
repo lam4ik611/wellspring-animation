@@ -55,8 +55,9 @@
 	&__text {
 		@extend .label;
 
+		font-family: 'MuseoSans', serif;
 		margin-top: 20px;
-		font-size: 3.5vh;
+		font-size: 3.2vh;
 		color: $white;
 		text-shadow: rgba(29, 24, 51, 0.8) -1px 1px 0,
 		rgba(20, 13, 45, 0.4) -2px 2px 0,

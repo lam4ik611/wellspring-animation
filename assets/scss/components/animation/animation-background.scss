@@ -4,8 +4,9 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	width: 1800vw;
+	width: 100%;
 	background-repeat: repeat-x;
+	background-position-y: 78%;
 	background-size: contain;
 
 	@media only screen and (max-width: $screen-lg) {
@@ -68,12 +69,25 @@
 	}
 
 	&[data-name="buildings"] {
+		width: 100%;
 		background-image: url('../images/buildings.png');
 		z-index: 2;
 	}
 
+	&[data-name="house"] {
+		top: -225vh;
+		width: 800vw;
+		height: 330vh;
+		background-image: url('../images/wide-house.png');
+		background-position-x: -350vw;
+		background-position-y: bottom;
+		background-size: 100%;
+		z-index: 3;
+	}
+
 	&[data-name="silhouette"] {
 		background-image: url('../images/silhouette.png');
+		background-position-y: 3vmax;
 		filter: contrast(95%);
 		z-index: 1;
 	}

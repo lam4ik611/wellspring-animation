@@ -33,7 +33,6 @@ class MobileAnimation {
     }
 
     parallax() {
-        console.log(this.mobileSections)
         this.mobileSections.forEach((section, index) => {
             ScrollTrigger.create({
                 trigger: section,

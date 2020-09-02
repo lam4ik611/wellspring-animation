@@ -28,4 +28,14 @@
 			opacity: 1;
 		}
 	}
+
+	&--top {
+		position: fixed;
+		bottom: -30vh;
+		transition: .5s linear;
+
+		&.active {
+			bottom: 2.5vh;
+		}
+	}
 }
