@@ -4,20 +4,20 @@
 	flex-direction: column;
 	max-width: 100vh;
 	width: 70vw;
-	height: 82vh;
+	height: 90vh;
 	margin: 0 auto;
-	color: #fff;
+	color: $white;
 	transform: translateY(0);
 	transition: 1s cubic-bezier(.47,.22,.39,.79);
-	background-image: url('../images/banner.svg');
+	background-image: url('../images/banner.png');
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position-y: -10vh;
+	background-position-x: center;
 	background-size: contain;
 
 	@media only screen and (max-width: $screen-lg) {
 		width: 90vw;
-		height: 70vh;
-		background-position: top;
+		height: 80vh;
 		background-size: cover;
 		z-index: 10;
 	}
@@ -31,8 +31,12 @@
 	}
 
 	&__logo {
-		width: 30vh;
+		position: absolute;
+		top: 5vh;
+		left: 50%;
+		width: 25vh;
 		height: auto;
+		transform: translateX(-50%);
 
 		@media only screen and (max-width: $screen-lg) {
 			width: 20vh;
@@ -41,7 +45,7 @@
 
 	&__text {
 		position: absolute;
-		top: 41vh;
+		top: 36vh;
 		left: 50%;
 		width: 55%;
 		min-width: 225px;
@@ -52,7 +56,7 @@
 		transform: translateX(-50%);
 
 		@media only screen and (max-width: $screen-lg) {
-			top: 36vh;
+			top: 32vh;
 			width: 100%;
 			font-size: 2vh;
 		}
@@ -61,10 +65,19 @@
 	&__label {
 		@extend .label;
 
-		margin-top: 15px;
+		position: absolute;
+		top: 59vh;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 4vh;
+		text-shadow: rgba(83,14,37,0.8) -2px 3px 0,
+		rgba(119,20,55,0.3) -2px 2px 0,
+		rgba(72,14,33,0.2) -3px 3px 0;
 
 		@media only screen and (max-width: $screen-lg) {
-			font-size: 4vh;
+			top: 52vh;
+			width: 80%;
+			font-size: 3vh;
 		}
 	}
 }

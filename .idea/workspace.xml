@@ -29,34 +29,173 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/child-shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/parents-shadow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSans-700.eot" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSans-700.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSans-700.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSans-700.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSans-700.woff" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSans-700.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSlab-700.eot" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSlab-700.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSlab-700.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSlab-700.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSlab-700.woff" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSlab-700.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSlab-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSlab-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSlab-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSlab-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MuseoSlab-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/MuseoSlab-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/house-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/house-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/house.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/house.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/animation/animation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/base/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/base/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/base/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/base/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-copy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-copy.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-house.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-house.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-lamp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-lamp.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-section.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/images/house.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/images/house.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/index.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-preview.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-preview.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/mixins/label.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/mixins/label.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/variables/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/variables/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger-LT-Std-65-Bold18824.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger-LT-Std-65-Bold18824.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger-LT-Std-65-Bold18824.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger-LT-Std-65-Bold18824.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger-LT-Std-75-Black18827.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger-LT-Std-75-Black18827.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger-LT-Std-75-Black18827.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger-LT-Std-75-Black18827.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger45Light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger45Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger45Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/Frutiger45Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/FrutigerBold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/FrutigerBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/FrutigerBold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/FrutigerBold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/FrutigerLight.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/FrutigerLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/FrutigerLight.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/FrutigerLight.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSans-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSans-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSans-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSans-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSans-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSans-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSans-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSans700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSansCyrl-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSansCyrl-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSansCyrl-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSansCyrl-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSansCyrl-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSansCyrl-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSlab-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSlab-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSlab-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSlab-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSlab-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSlab-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSlab-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fonts/MuseoSlab-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/03.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/04.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/05.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Buildings.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Copy-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Copy-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Forground.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/House-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/House-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Logo-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Scroll Button-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Silhouette.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/Street Lamps.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/banner-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/banner.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/buildings-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/buildings.min.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/buildings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/buildings.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/copy-01-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/copy-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/copy-02-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/copy-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/copy-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/copy-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/forground.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/girl-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/girl-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/girl-03.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/girl-04.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/girl-05.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/girl-06.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/girl-07.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/ground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/ground.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/house-01-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/house-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/house-02-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/house-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/house-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/house-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/house-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/house.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/lamp-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/lamp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/lamp.png.crdownload" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/lamplight-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/lamplight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/lamps.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/noise.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/boy-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/boy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/cyclist-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/cyclist.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/girl-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/girl-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/girl-03.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/girl-04.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/girl-05.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/girl-06.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/girl-07.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/persons/girl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/road-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/road.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/section-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/section-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/section-3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/section-4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/section-5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sign-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sign-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/silhouette.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sky-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sky-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sky-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sky-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sky-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/sky.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/star-.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/star-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/star-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/star-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/star-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/stars-01 (1).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/stars-01-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/stars-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/stars-02-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/stars-02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/stars-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/stars-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/street Lamps-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/street Lamps.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/znak-01-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/znak-02-min.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,12 +232,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js/animation" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/scss/mixins" />
       <recent name="$PROJECT_DIR$/assets/scss/components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/js/animation" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -133,7 +272,8 @@
       <workItem from="1598433025969" duration="20347000" />
       <workItem from="1598604216128" duration="25399000" />
       <workItem from="1598875982699" duration="41462000" />
-      <workItem from="1598975668333" duration="17254000" />
+      <workItem from="1598975668333" duration="17711000" />
+      <workItem from="1599040549539" duration="9083000" />
     </task>
     <servers />
   </component>
@@ -181,10 +321,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="392" y="176" width="572" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.744@0.0.1366.744" timestamp="1597945696055" />
-    <state x="100" y="99" width="1166" height="544" key="DiffContextDialog" timestamp="1597256532344">
+    <state x="100" y="99" width="1166" height="544" key="DiffContextDialog" timestamp="1599050130065">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="100" y="99" width="1166" height="544" key="DiffContextDialog/0.0.1366.744@0.0.1366.744" timestamp="1597256532344" />
+    <state x="100" y="99" width="1166" height="544" key="DiffContextDialog/0.0.1366.744@0.0.1366.744" timestamp="1599050130065" />
     <state x="340" y="152" width="676" height="432" key="EditFileWatcherDialog" timestamp="1596447221171">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -193,14 +333,18 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="461" y="127" width="424" height="479" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1598086141118" />
+    <state x="441" y="77" width="474" height="583" key="RollbackChangesDialog" timestamp="1599050101542">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="441" y="77" width="474" height="583" key="RollbackChangesDialog/0.0.1366.744@0.0.1366.744" timestamp="1599050101542" />
     <state x="187" y="6" key="SettingsEditor" timestamp="1598031800075">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="187" y="6" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1598031800075" />
-    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1598480123714">
+    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1599050130066">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1598480123714" />
+    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1599050130066" />
     <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599003406125">
       <screen x="0" y="0" width="1366" height="744" />
     </state>

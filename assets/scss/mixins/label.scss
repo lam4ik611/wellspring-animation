@@ -4,9 +4,9 @@
 	font-weight: 700;
 	color: $yellow;
 	text-align: center;
-	//text-shadow: $yellow-shadow -3px 3px 0px, $yellow-shadow -3px 3px 0px;
-	--darkreader-inline-color: $yellow-shadow;
-	--darkreader-inline-bgimage: initial;
+	text-shadow: rgba(29, 24, 51, 0.8) -1px 1px 0,
+	rgba(20, 13, 45, 0.4) -2px 2px 0,
+	rgba(20, 13, 45, 0.2) -3px 3px 0;
 
 	@media only screen and (max-width: $screen-lg) {
 		font-size: 3vh;

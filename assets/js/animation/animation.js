@@ -129,8 +129,10 @@ class Animation {
                     // flip persons
                     setTimeout(() => {
                         if (velocity > 1) {
+                            gsap.set(this.persons, {classList: 'animation-person'})
                             gsap.to(this.persons, {scaleX: 1, duration: .1, ease: 'power2.out'});
                         } else if (velocity < -1) {
+                            gsap.set(this.persons, {classList: 'animation-person flip'})
                             gsap.to(this.persons, {scaleX: -1, duration: .1, ease: 'power2.out'});
                         }
                     }, 300);
