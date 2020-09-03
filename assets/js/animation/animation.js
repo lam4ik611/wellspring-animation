@@ -39,6 +39,8 @@ class Animation {
             this.setBodyScroll();
             this.scrollTrigger();
         });
+
+
     }
 
     setBodyScroll() {
