@@ -12,6 +12,7 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	opacity: 0;
+	visibility: hidden;
 	transition: 1s;
 
 	@media only screen and (max-width: $screen-lg) {
@@ -38,6 +39,7 @@
 
 		&.active {
 			opacity: 1;
+			visibility: visible;
 		}
 
 		.animation-copy__label {
@@ -59,7 +61,7 @@
 
 		font-family: 'MuseoSans', serif;
 		margin-top: 20px;
-		font-size: 3.75vh;
+		font-size: 3.5vh;
 		color: $white;
 		text-shadow: rgba(29, 24, 51, 0.8) -1px 1px 0,
 		rgba(20, 13, 45, 0.4) -2px 2px 0,

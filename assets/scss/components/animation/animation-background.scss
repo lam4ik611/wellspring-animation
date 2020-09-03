@@ -28,11 +28,9 @@
 	}
 
 	&[data-name="sky"] {
-		opacity: .8;
-		background-image: url('../images/sky.png');
+		background-image: url('../images/sky.svg');
 		background-position-y: 90%;
 		background-size: cover;
-		filter: brightness(70%);
 	}
 
 	&[data-name="sky-color"] {
