@@ -97,7 +97,8 @@ class Animation {
         // parallax elements
         this.elementsTimeline = gsap.to(parallaxElements, {
             x: (index, target) => {
-                return -window.innerWidth * target.dataset.speed * 7;
+                let speed = -window.innerWidth * 11.5;
+                return speed * target.dataset.speed;
             },
             ease: 'none',
             force3D: false,
@@ -106,6 +107,7 @@ class Animation {
                 scrub: true,
                 start: 'top top',
                 end: () => `+=${this.container.offsetWidth - (window.innerWidth * 1.25)}`,
+                onEnterBack: () => this.resetUpMethod(),
                 onLeave: () => {
                     TweenLite.to('body', {
                         overflowY: 'hidden',
@@ -163,7 +165,7 @@ class Animation {
     sectionsMethod() {
         // appear of lamp lights while section is visible
         this.sections.forEach((value, index) => {
-            let startPosition, endPosition;
+            let startPosition, endPosition, countNumber = 1.9;
 
             switch (index) {
                 case 0:
@@ -171,28 +173,28 @@ class Animation {
                     endPosition = startPosition + window.innerWidth;
                     break;
                 case 1:
-                    startPosition = value.getBoundingClientRect().x * 3;
-                    endPosition = startPosition + window.innerWidth * 3;
+                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 2:
-                    startPosition = value.getBoundingClientRect().x * 2.85;
-                    endPosition = startPosition + window.innerWidth * 4;
+                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 3:
-                    startPosition = value.getBoundingClientRect().x * 2.75;
-                    endPosition = startPosition + window.innerWidth * 4;
+                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 4:
-                    startPosition = value.getBoundingClientRect().x * 2.75;
-                    endPosition = startPosition + window.innerWidth * 4;
+                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 5:
-                    startPosition = value.getBoundingClientRect().x * 2.75;
-                    endPosition = startPosition + window.innerWidth * 4;
+                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 6:
-                    startPosition = value.getBoundingClientRect().x * 2.5;
-                    endPosition = startPosition + window.innerWidth * 4;
+                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    endPosition = startPosition + window.innerWidth * 2;
                     break;
             }
 
@@ -286,11 +288,11 @@ class Animation {
                     gsap.to(this.persons, {y: houseSpeed});
                     gsap.to(houseElement, {y: houseSpeed});
 
-                    if (self.progress >= .15) {
+                    /*if (self.progress >= .15) {
                         this.scrollUpButton.classList.remove('active');
                     } else {
                         this.scrollUpButton.classList.add('active');
-                    }
+                    }*/
 
                     if (self.progress >= .95) {
                         this.finishedElement.classList.add('active');
@@ -302,21 +304,27 @@ class Animation {
                     this.setBodyScroll();
                     self.kill();
 
-                    gsap.to(cyclist, {
-                        x: () => 200,
-                        duration: 1.5,
-                        scrollTrigger: {
-                            trigger: this.walkingContainer,
-                            start: `top top`,
-                            end: `top top`,
-                        },
-                        onComplete: () => {
-                            this.isElementsStopped = false;
-                            this.scrollUpButton.classList.remove('active');
-                        },
-                    });
+                    this.resetUpMethod();
                 },
             }
+        });
+    }
+
+    resetUpMethod() {
+        const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
+
+        this.setBodyScroll();
+        this.isElementsStopped = false;
+
+        gsap.to(cyclist, {
+            x: () => 200,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: this.walkingContainer,
+                start: `top top`,
+                end: `top top`,
+                onEnter: () => this.scrollUpButton.classList.remove('active'),
+            },
         });
     }
 }

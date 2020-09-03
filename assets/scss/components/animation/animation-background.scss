@@ -67,8 +67,8 @@
 	}
 
 	&[data-name="buildings"] {
-		width: 100%;
 		background-image: url('../images/buildings.png');
+		background-size: 50%;
 		z-index: 2;
 	}
 
@@ -76,7 +76,7 @@
 		top: calc(-100vmax * 1.5);
 		width: 800vmax;
 		background-image: url('../images/wide-house.png');
-		background-position-x: -350vw;
+		background-position-x: -10vw;
 		background-position-y: bottom;
 		background-size: 100%;
 		z-index: 3;

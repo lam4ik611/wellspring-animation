@@ -10,6 +10,7 @@
 	height: 50vh;
 	background-image: url('../images/star-1.svg');
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: contain;
 	opacity: 0;
 	visibility: hidden;
@@ -29,7 +30,6 @@
 		left: 50%;
 		transform: translateX(-50%);
 		background-image: url('../images/star-2.svg');
-		background-position: center;
 		z-index: 21;
 
 		@media only screen and (max-width: $screen-lg) {
@@ -38,13 +38,12 @@
 		}
 
 		&.active {
-			opacity: 1;
 			visibility: visible;
+			opacity: 1;
 		}
 
 		.animation-copy__label {
 			font-size: 6vh;
-			transition-delay: .5s;
 
 			@media only screen and (max-width: $screen-lg) {
 				font-size: 3vh;
