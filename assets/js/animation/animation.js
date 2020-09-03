@@ -213,9 +213,9 @@ class Animation {
                         return;
                     }
 
-                    TweenLite.to('body', {
+                    /*TweenLite.to('body', {
                         overflowY: 'hidden',
-                    });
+                    });*/
 
                     setTimeout(() => {
                         this.setBodyScroll();
@@ -294,7 +294,7 @@ class Animation {
                         this.scrollUpButton.classList.add('active');
                     }*/
 
-                    if (self.progress >= .95) {
+                    if (self.progress >= .9) {
                         this.finishedElement.classList.add('active');
                     } else {
                         this.finishedElement.classList.remove('active');
