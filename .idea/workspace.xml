@@ -30,10 +30,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-copy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-copy.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-lamp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-lamp.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-sign.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/mixins/label.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/mixins/label.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/index.min.js" afterDir="false" />
@@ -115,7 +112,7 @@
       <workItem from="1598875982699" duration="41462000" />
       <workItem from="1598975668333" duration="17711000" />
       <workItem from="1599040549539" duration="31515000" />
-      <workItem from="1599146103618" duration="15146000" />
+      <workItem from="1599146103618" duration="15438000" />
     </task>
     <servers />
   </component>
