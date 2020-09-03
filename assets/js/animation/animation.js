@@ -242,7 +242,7 @@ class Animation {
         const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars' && value.dataset.name !== 'house');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
         const newParallaxElements = Array.prototype.concat.call(exceptStars, this.ground);
-        const scrollHeight = houseElement.offsetHeight * .54;
+        const scrollHeight = houseElement.offsetHeight * (window.innerWidth / houseElement.offsetHeight);
 
         this.isElementsStopped = true;
 
