@@ -6,7 +6,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 100vh;
+	width: 150vh;
 	height: 50vh;
 	background-image: url('../images/star-1.svg');
 	background-repeat: no-repeat;
@@ -28,6 +28,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		background-image: url('../images/star-2.svg');
+		background-position: center;
 		z-index: 21;
 
 		@media only screen and (max-width: $screen-lg) {
@@ -40,6 +41,7 @@
 		}
 
 		.animation-copy__label {
+			font-size: 6vh;
 			transition-delay: .5s;
 
 			@media only screen and (max-width: $screen-lg) {
@@ -57,7 +59,7 @@
 
 		font-family: 'MuseoSans', serif;
 		margin-top: 20px;
-		font-size: 3.2vh;
+		font-size: 4.25vh;
 		color: $white;
 		text-shadow: rgba(29, 24, 51, 0.8) -1px 1px 0,
 		rgba(20, 13, 45, 0.4) -2px 2px 0,

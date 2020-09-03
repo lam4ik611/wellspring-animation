@@ -75,9 +75,8 @@
 	}
 
 	&[data-name="house"] {
-		top: -225vh;
-		width: 800vw;
-		height: 330vh;
+		top: calc(-100vmax * 1.5);
+		width: 800vmax;
 		background-image: url('../images/wide-house.png');
 		background-position-x: -350vw;
 		background-position-y: bottom;
@@ -87,7 +86,7 @@
 
 	&[data-name="silhouette"] {
 		background-image: url('../images/silhouette.png');
-		background-position-y: 3vmax;
+		background-position-y: 0vmax;
 		filter: contrast(95%);
 		z-index: 1;
 	}

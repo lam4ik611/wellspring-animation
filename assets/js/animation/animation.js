@@ -98,6 +98,7 @@ class Animation {
                 return -window.innerWidth * target.dataset.speed * 7;
             },
             ease: 'none',
+            force3D: false,
             scrollTrigger: {
                 trigger: this.container,
                 scrub: true,
@@ -164,7 +165,7 @@ class Animation {
 
             switch (index) {
                 case 0:
-                    startPosition = value.getBoundingClientRect().x * 2.5;
+                    startPosition = value.getBoundingClientRect().x * 3;
                     endPosition = startPosition + window.innerWidth;
                     break;
                 case 1:
@@ -200,6 +201,7 @@ class Animation {
                 start: `${startPosition} center`,
                 end: `${endPosition} center`,
                 scrub: true,
+                force3D: false,
                 onEnter: self => {
                     if (!self.isActive ||
                         self.trigger === this.sections[0] ||
@@ -236,7 +238,7 @@ class Animation {
         const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars' && value.dataset.name !== 'house');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
         const newParallaxElements = Array.prototype.concat.call(exceptStars, this.ground);
-        const scrollHeight = houseElement.offsetHeight - window.innerHeight;
+        const scrollHeight = houseElement.offsetHeight * .575;
 
         this.isElementsStopped = true;
 
@@ -250,6 +252,7 @@ class Animation {
             x: () => window.innerWidth * .6,
             duration: 1.5,
             ease: 'power2.out',
+            force3D: false,
             scrollTrigger: {
                 trigger: this.walkingContainer,
                 start: `top top`,
@@ -271,6 +274,7 @@ class Animation {
                 start: `${window.innerWidth / 2} bottom`,
                 end: `${scrollHeight} top`,
                 scrub: true,
+                force3D: false,
                 onEnter: () => {},
                 onUpdate: self => {
                     let houseSpeed = self.progress * (scrollHeight * 1.25);

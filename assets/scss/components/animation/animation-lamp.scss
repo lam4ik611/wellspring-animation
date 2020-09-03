@@ -56,9 +56,9 @@
 	&__icon {
 		display: block;
 		margin-top: 20vh;
-		width: 4vw;
+		width: 6vw;
 		height: auto;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		opacity: 0;
 		transition-duration: .5s;
 
@@ -70,7 +70,7 @@
 
 	&__text {
 		max-width: calc(73vh - 50%);
-		font-size: 2.1vh;
+		font-size: 2vh;
 		line-height: 1.5;
 		text-align: center;
 		color: $blue;

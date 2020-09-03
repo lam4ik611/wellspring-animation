@@ -15,6 +15,8 @@ module.exports = {
         'postcss-nested-ancestors': {},
         'postcss-nested': {},
         'postcss-extend': {},
-        'autoprefixer': {}
+        'autoprefixer': {
+            'browsers': ['> 1%', 'last 2 versions']
+        }
     }
 };

@@ -10,7 +10,7 @@
 
 		&::before,
 		&::after {
-			right: 1.75rem !important;
+			right: 1.9rem !important;
 			transform: rotate(-45deg) !important;
 		}
 
@@ -23,7 +23,8 @@
 		}
 	}
 
-	&[data-el="animated.scroll-button"] {
+	&[data-el="animated.scroll-button"],
+	&[data-el="animated.scroll-up-button"] {
 		padding-right: 40px;
 
 		&::before,
