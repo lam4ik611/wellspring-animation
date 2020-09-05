@@ -12,7 +12,7 @@
 		color: $white;
 		transform: none;
 		box-shadow: #3c3034 -3px 4px 0px, #3c3034 0px 0px 0px;
-		filter: opacity(1) brightness(100%);
+		opacity: 1;
 		background: linear-gradient(0.25turn, #de5081, #b1305b, #BF1B52);
 
 		@media only screen and (max-width: $screen-lg) {
@@ -21,7 +21,8 @@
 		}
 
 		&:hover {
-			filter: opacity(1) brightness(110%);
+			opacity: 1;
+			filter: brightness(110%);
 		}
 
 		&.active {

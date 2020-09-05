@@ -31,15 +31,18 @@
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/animation/animation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/base/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/base/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-lamp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-lamp.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-copy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-copy.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-element.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-element.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-person.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-section.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-sign.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-sign.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-walking-container.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-walking-container.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-wrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-wrapper.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/index.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +122,7 @@
       <workItem from="1598975668333" duration="17711000" />
       <workItem from="1599040549539" duration="31515000" />
       <workItem from="1599146103618" duration="23456000" />
-      <workItem from="1599332711911" duration="936000" />
+      <workItem from="1599332711911" duration="1989000" />
     </task>
     <servers />
   </component>
@@ -203,10 +206,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="0" y="6" width="1013" height="493" key="dock-window-1/0.0.1366.744@0.0.1366.744" timestamp="1596480532375" />
-    <state x="389" y="120" width="587" height="502" key="find.popup" timestamp="1598607151339">
+    <state x="389" y="120" width="587" height="502" key="find.popup" timestamp="1599339270320">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="389" y="120" width="587" height="502" key="find.popup/0.0.1366.744@0.0.1366.744" timestamp="1598607151339" />
+    <state x="389" y="120" width="587" height="502" key="find.popup/0.0.1366.744@0.0.1366.744" timestamp="1599339270320" />
     <state x="347" y="164" width="672" height="677" key="run.anything.popup" timestamp="1599170702562">
       <screen x="0" y="0" width="1366" height="744" />
     </state>

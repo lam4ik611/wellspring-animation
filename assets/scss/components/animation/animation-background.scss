@@ -8,7 +8,6 @@
 	background-repeat: repeat-x;
 	background-position-y: 78%;
 	background-size: contain;
-	transition: .5s linear;
 
 	@media only screen and (max-width: $screen-lg) {
 		width: 100%;
@@ -47,9 +46,9 @@
 	}
 
 	&[data-name="stars"] {
+		opacity: .7;
 		background-image: url('../images/stars-1.png');
 		background-size: contain;
-		filter: opacity(.7);
 
 		@media only screen and (max-width: $screen-lg) {
 			background-size: cover;
@@ -80,13 +79,13 @@
 		background-position-x: -10vw;
 		background-position-y: bottom;
 		background-size: contain;
+		transition: .5s linear;
 		z-index: 3;
 	}
 
 	&[data-name="silhouette"] {
 		background-image: url('../images/silhouette.png');
 		background-position-y: 0vmax;
-		filter: contrast(95%);
 		z-index: 1;
 	}
 
