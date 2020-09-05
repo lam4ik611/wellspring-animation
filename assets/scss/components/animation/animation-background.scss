@@ -8,6 +8,7 @@
 	background-repeat: repeat-x;
 	background-position-y: 78%;
 	background-size: contain;
+	transition: .5s linear;
 
 	@media only screen and (max-width: $screen-lg) {
 		width: 100%;

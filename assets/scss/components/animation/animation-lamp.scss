@@ -2,6 +2,7 @@
 	position: absolute;
 	top: 6vh;
 	left: 33vw;
+	transition: .5s linear;
 
 	@media only screen and (max-width: $screen-lg) {
 		top: 43vh;

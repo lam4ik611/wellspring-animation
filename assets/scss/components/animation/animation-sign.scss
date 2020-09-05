@@ -6,6 +6,7 @@
 	height: 45vh;
 	background-repeat: no-repeat;
 	background-size: contain;
+	transition: .5s linear;
 
 	&--first {
 		background-image: url('../images/sign-1.png');
