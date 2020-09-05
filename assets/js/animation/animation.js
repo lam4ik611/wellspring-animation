@@ -171,31 +171,31 @@ class Animation {
 
             switch (index) {
                 case 0:
-                    startPosition = value.getBoundingClientRect().x * 3;
+                    startPosition = value.getBoundingClientRect().left * 3;
                     endPosition = startPosition + window.innerWidth;
                     break;
                 case 1:
-                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    startPosition = value.getBoundingClientRect().left * countNumber;
                     endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 2:
-                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    startPosition = value.getBoundingClientRect().left * countNumber;
                     endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 3:
-                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    startPosition = value.getBoundingClientRect().left * countNumber;
                     endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 4:
-                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    startPosition = value.getBoundingClientRect().left * countNumber;
                     endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 5:
-                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    startPosition = value.getBoundingClientRect().left * countNumber;
                     endPosition = startPosition + window.innerWidth * 2;
                     break;
                 case 6:
-                    startPosition = value.getBoundingClientRect().x * countNumber;
+                    startPosition = value.getBoundingClientRect().left * countNumber;
                     endPosition = startPosition + window.innerWidth * 2;
                     break;
             }
@@ -326,10 +326,12 @@ class Animation {
                 trigger: this.walkingContainer,
                 start: `top top`,
                 end: `top top`,
-                onEnter: () => {
-                    this.scrollUpButton.classList.remove('active');
-                    this.elements.forEach(element => element.classList.add('transition'));
-                },
+                onEnter: () => this.scrollUpButton.classList.remove('active'),
+                onLeaveBack: () => {
+                    setTimeout(() => {
+                        this.elements.forEach(element => element.classList.add('transition'))
+                    }, 500);
+                }
             },
         });
     }
