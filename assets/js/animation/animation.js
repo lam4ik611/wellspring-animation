@@ -74,6 +74,7 @@ class Animation {
         gsap.set(this.persons, {x: window.innerWidth});
         this.personsTimeline = gsap.to(this.persons, {
             x: () => window.innerWidth / 8,
+            duration: .5,
             scrollTrigger: {
                 trigger: this.walkingContainer,
                 start: `+=${window.innerWidth / 3} top`,
@@ -220,7 +221,7 @@ class Animation {
 
                     setTimeout(() => {
                         this.setBodyScroll();
-                    }, 1000);
+                    }, 1200);
                 },
             });
         });
