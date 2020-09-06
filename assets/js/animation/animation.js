@@ -100,7 +100,7 @@ class Animation {
                 return speed * target.dataset.speed;
             },
             ease: Linear.easeNone,
-            autoRound: false,
+            force3D: false,
             scrollTrigger: {
                 trigger: this.container,
                 scrub: true,
