@@ -37,16 +37,16 @@ class Animation {
                 window.scrollTo(0, 0);
             }
 
+            this.elements.forEach(element => element.classList.add('transition'));
             this.setBodyScroll();
             this.scrollTrigger();
         });
 
-        let stateCheck = setInterval(() => {
-            if (document.readyState === 'complete') {
-                clearInterval(stateCheck);
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
                 this.preloader.classList.add('hidden');
-            }
-        }, 2000);
+            }, 2000);
+        });
     }
 
     setBodyScroll() {
@@ -254,6 +254,7 @@ class Animation {
         this.isElementsStopped = true;
 
         this.scrollUpButton.classList.add('active');
+        this.elements.forEach(element => element.classList.remove('transition'));
 
         TweenLite.to('body', {
             overflowY: 'hidden',
@@ -331,6 +332,11 @@ class Animation {
                 start: `top top`,
                 end: `top top`,
                 onEnter: () => this.scrollUpButton.classList.remove('active'),
+                onLeaveBack: () => {
+                    setTimeout(() => {
+                        this.elements.forEach(element => element.classList.add('transition'))
+                    }, 1000);
+                }
             },
         });
     }
