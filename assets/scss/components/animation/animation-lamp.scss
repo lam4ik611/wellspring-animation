@@ -22,12 +22,12 @@
 
 		@media only screen and (max-width: $screen-lg) {
 			position: absolute;
-			top: 0;
-			right: 5%;
-			width: 50%;
+			top: 57.5vh;
+			right: 5vw;
+			width: 45vw;
 			max-width: 210px;
-			height: 100%;
-			background-position-y: bottom;
+			height: 45vh;
+			transform: translate(0, -50%);
 		}
 	}
 
@@ -49,15 +49,16 @@
 		transition: max-height, opacity .75s linear;
 
 		@media only screen and (max-width: $screen-lg) {
-			top: 44%;
+			top: 60vh;
 			left: unset;
-			right: calc(1vmin + 8vmax);
-			width: 40vh;
-			height: 57%;
+			right: 13vw;
+			//right: calc(1vmin + 8vmax);
+			width: 65vw;
+			height: 45vh;
 			min-height: auto;
 			max-width: 305px;
 			background-size: contain;
-			transform: translateX(0);
+			transform: translate(0, -50%);
 		}
 	}
 
@@ -87,7 +88,7 @@
 
 		@media only screen and (max-width: $screen-lg) {
 			max-width: 45%;
-			font-size: 1.25vh;
+			font-size: 1.05vh;
 		}
 	}
 }

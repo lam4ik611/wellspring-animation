@@ -64,6 +64,10 @@
 		background-position-y: 101%;
 		background-size: 1440vh;
 		z-index: 3;
+
+		@media only screen and (max-width: $screen-lg) {
+			z-index: 2;
+		}
 	}
 
 	&[data-name="buildings"] {
@@ -74,6 +78,7 @@
 		@media only screen and (max-width: $screen-lg) {
 			background-position-y: 80%;
 			background-size: 1500%;
+			z-index: 3;
 		}
 	}
 
