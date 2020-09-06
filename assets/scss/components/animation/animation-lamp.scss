@@ -5,10 +5,11 @@
 	transition: .5s linear;
 
 	@media only screen and (max-width: $screen-lg) {
-		top: 42.5%;
-		left: 20%;
-		height: 50%;
-		width: 80%;
+		position: relative;
+		top: 10%;
+		left: 0;
+		height: 80%;
+		width: 100%;
 		z-index: 10;
 	}
 
@@ -21,9 +22,12 @@
 
 		@media only screen and (max-width: $screen-lg) {
 			position: absolute;
-			right: 0;
-			width: 60%;
-			height: 90%;
+			top: 0;
+			right: 5%;
+			width: 50%;
+			max-width: 210px;
+			height: 100%;
+			background-position-y: bottom;
 		}
 	}
 
@@ -45,11 +49,15 @@
 		transition: max-height, opacity .75s linear;
 
 		@media only screen and (max-width: $screen-lg) {
-			position: absolute;
-			top: 5%;
-			left: 39.5%;
-			width: 86%;
+			top: 44%;
+			left: unset;
+			right: calc(1vmin + 8vmax);
+			width: 40vh;
+			height: 57%;
+			min-height: auto;
+			max-width: 305px;
 			background-size: contain;
+			transform: translateX(0);
 		}
 	}
 
@@ -68,7 +76,6 @@
 			height: 20%;
 		}
 	}
-
 	&__text {
 		max-width: calc(73vh - 50%);
 		font-size: 1.8vh;

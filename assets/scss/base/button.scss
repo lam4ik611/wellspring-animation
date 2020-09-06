@@ -3,6 +3,7 @@ button, [role="button"] {
 	font-size: .8rem;
 	font-weight: 700;
 	text-transform: uppercase;
+	white-space: nowrap;
 	color: $blue;
 	border-radius: 40px;
 	background-color: #fff;

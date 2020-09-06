@@ -30,7 +30,8 @@
 
 			&[data-name="cyclist"] {
 				top: 85%;
-				left: 34vh;
+				left: unset;
+				right: 1vmax;
 				height: 20vh;
 				transform: scaleX(-1);
 			}
@@ -52,8 +53,8 @@
 
 		@media only screen and (max-width: $screen-lg) {
 
-			.animation-copy,
-			.animation-button {
+			.animation-copy {
+				visibility: visible;
 				opacity: 1;
 			}
 		}
@@ -74,7 +75,7 @@
 			top: 0;
 			height: 140vh;
 			background-position-y: 78%;
-			background-size: 100% 65%;
+			background-size: auto 75vmax;
 			z-index: 20;
 		}
 
