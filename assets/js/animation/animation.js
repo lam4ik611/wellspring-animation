@@ -1,4 +1,4 @@
-import {gsap, TweenLite} from './gsap';
+import {gsap, TweenLite, Linear} from './gsap';
 import ScrollTrigger from './gsap/ScrollTrigger';
 import ScrollToPlugin from './gsap/ScrollToPlugin';
 
@@ -106,9 +106,9 @@ class Animation {
                 let speed = -window.innerWidth * 11.5;
                 return speed * target.dataset.speed;
             },
-            ease: 'none',
-            transformOrigin: 'none',
-            force3D: false,
+            ease: Linear.easeNone,
+            autoRound: true,
+            force3D: true,
             scrollTrigger: {
                 trigger: this.container,
                 scrub: true,
