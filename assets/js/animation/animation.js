@@ -101,7 +101,6 @@ class Animation {
             },
             ease: Linear.easeNone,
             autoRound: false,
-            force3D: true,
             scrollTrigger: {
                 trigger: this.container,
                 scrub: true,
