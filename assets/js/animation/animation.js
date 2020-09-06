@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 class Animation {
     constructor() {
+        this.preloader = document.querySelector('[data-el="preloader"]');
         this.container = document.querySelector('[data-el="animated.container"]');
         this.elements = document.querySelectorAll('[data-el="animated.element"]');
         this.ground = document.querySelector('[data-el="animated.ground"]');
@@ -40,7 +41,12 @@ class Animation {
             this.scrollTrigger();
         });
 
-
+        let stateCheck = setInterval(() => {
+            if (document.readyState === 'complete') {
+                clearInterval(stateCheck);
+                this.preloader.classList.add('hidden');
+            }
+        }, 2000);
     }
 
     setBodyScroll() {
