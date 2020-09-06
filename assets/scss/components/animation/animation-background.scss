@@ -70,6 +70,11 @@
 		background-image: url('../images/buildings.png');
 		background-size: 50%;
 		z-index: 2;
+
+		@media only screen and (max-width: $screen-lg) {
+			background-position-y: 80%;
+			background-size: 1500%;
+		}
 	}
 
 	&[data-name="house"] {

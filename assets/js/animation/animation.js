@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollToPlugin);
 
 class Animation {
     constructor() {
-        this.preloader = document.querySelector('[data-el="preloader"]');
         this.container = document.querySelector('[data-el="animated.container"]');
         this.elements = document.querySelectorAll('[data-el="animated.element"]');
         this.ground = document.querySelector('[data-el="animated.ground"]');
@@ -39,12 +38,6 @@ class Animation {
 
             this.setBodyScroll();
             this.scrollTrigger();
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                this.preloader.classList.add('hidden');
-            }, 2000);
         });
     }
 
@@ -107,7 +100,7 @@ class Animation {
                 return speed * target.dataset.speed;
             },
             ease: Linear.easeNone,
-            autoRound: true,
+            autoRound: false,
             force3D: true,
             scrollTrigger: {
                 trigger: this.container,
