@@ -36,7 +36,6 @@ class Animation {
                 window.scrollTo(0, 0);
             }
 
-            this.elements.forEach(element => element.classList.add('transition'));
             this.setBodyScroll();
             this.scrollTrigger();
         });
@@ -249,7 +248,6 @@ class Animation {
         this.isElementsStopped = true;
 
         this.scrollUpButton.classList.add('active');
-        this.elements.forEach(element => element.classList.remove('transition'));
 
         TweenLite.to('body', {
             overflowY: 'hidden',
@@ -267,7 +265,7 @@ class Animation {
             },
             onComplete: () => {
                 TweenLite.set('body', {
-                    height: +this.container.offsetWidth + scrollHeight,
+                    height: +this.container.offsetWidth + scrollHeight + 100,
                     overflowY: 'scroll',
                 });
 
@@ -327,11 +325,6 @@ class Animation {
                 start: `top top`,
                 end: `top top`,
                 onEnter: () => this.scrollUpButton.classList.remove('active'),
-                onLeaveBack: () => {
-                    setTimeout(() => {
-                        this.elements.forEach(element => element.classList.add('transition'))
-                    }, 500);
-                }
             },
         });
     }
