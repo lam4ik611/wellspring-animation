@@ -2,7 +2,6 @@
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-	//border: 5px solid red;
 	//transition: .5s linear;
 
 	.animation-copy {
@@ -12,19 +11,6 @@
 	@media only screen and (max-width: $screen-lg) {
 		height: 100vh;
 		overflow: hidden;
-
-		/*.animation-lamp__lamplight {
-			height: 100%;
-			opacity: 1;
-		}
-
-		.animation-lamp__icon,
-		.animation-lamp__text,
-		.animation-copy__label,
-		.animation-copy__text,
-		.animation-copy__button {
-			opacity: 1;
-		}*/
 	}
 
 	&.visible {
@@ -42,6 +28,17 @@
 		.animation-copy__button {
 			visibility: visible;
 			opacity: 1;
+		}
+	}
+
+	&.horizontal {
+
+		.animation-preview {
+			background-size: contain;
+		}
+
+		.animation-lamp {
+			width: 38vh;
 		}
 	}
 }

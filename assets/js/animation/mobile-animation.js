@@ -22,6 +22,11 @@ class MobileAnimation {
 
             this.setBodyScroll();
             this.parallax();
+            this.checkWindowSize();
+        });
+
+        window.addEventListener('resize', () => {
+            this.checkWindowSize();
         });
     }
 
@@ -30,6 +35,14 @@ class MobileAnimation {
             height: this.mobileContainer.offsetHeight,
             overflowY: 'scroll',
         });
+    }
+
+    checkWindowSize() {
+        if (window.innerWidth >= window.innerHeight) {
+            this.mobileSections.forEach(section => section.classList.add('horizontal'));
+        } else {
+            this.mobileSections.forEach(section => section.classList.remove('horizontal'));
+        }
     }
 
     parallax() {
