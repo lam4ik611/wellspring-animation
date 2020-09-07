@@ -1,6 +1,11 @@
 .animation-button {
 	@extend .animation-button;
 
+	@media only screen and (max-width: $screen-md) {
+		padding: .7rem 1.25rem;
+		font-size: .6rem;
+	}
+
 	&--finished {
 		position: relative;
 		top: 30px;
@@ -17,6 +22,7 @@
 
 		@media only screen and (max-width: $screen-lg) {
 			top: 20px;
+			padding: 2.25vh 4vh;
 			font-size: .5rem;
 		}
 

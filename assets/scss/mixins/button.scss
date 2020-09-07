@@ -16,10 +16,18 @@
 
 		&::before {
 			top: 1.35rem !important;
+
+			@media only screen and (max-width: $screen-md) {
+				top: .85rem !important;
+			}
 		}
 
 		&::after {
 			top: 1.6rem !important;
+
+			@media only screen and (max-width: $screen-md) {
+				top: 1.1rem;
+			}
 		}
 	}
 
@@ -37,6 +45,10 @@
 			border-top: .09rem solid $blue;
 			border-right: .09rem solid $blue;
 			transform: rotate(45deg);
+
+			@media only screen and (max-width: $screen-md) {
+				top: .85rem;
+			}
 		}
 
 		&::before {
