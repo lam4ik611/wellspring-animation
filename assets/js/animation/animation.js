@@ -72,6 +72,7 @@ class Animation {
         tl.set(this.persons, {x: window.innerWidth});
         tl.to(this.persons, {
             x: () => window.innerWidth / 8,
+            rotation: 0.01,
             duration: .5,
             scrollTrigger: {
                 trigger: this.walkingContainer,
@@ -100,6 +101,7 @@ class Animation {
                 let speed = -window.innerWidth * 11.5;
                 return speed * target.dataset.speed;
             },
+            rotation: 0.01,
             ease: Linear.easeNone,
             force3D: false,
             scrollTrigger: {
@@ -255,6 +257,7 @@ class Animation {
         let tl = new TimelineMax();
         tl.to(cyclist, {
             x: () => window.innerWidth * .6,
+            rotation: 0.01,
             duration: 1.5,
             ease: 'power2.out',
             force3D: false,
@@ -274,6 +277,7 @@ class Animation {
         });
 
         tl.to(houseElement, {
+            rotation: 0.01,
             scrollTrigger: {
                 trigger: this.container,
                 start: `${window.innerWidth / 2} bottom`,
