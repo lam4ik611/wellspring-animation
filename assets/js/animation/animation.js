@@ -1,4 +1,4 @@
-import {gsap, TweenLite, Linear} from './gsap';
+import {gsap, TweenLite, Linear, TimelineMax} from './gsap';
 import ScrollTrigger from './gsap/ScrollTrigger';
 import ScrollToPlugin from './gsap/ScrollToPlugin';
 
@@ -24,7 +24,6 @@ class Animation {
         this.isElementsStopped = false;
 
         this.elementsTimeline = null;
-        this.personsTimeline = null;
         this.houseTimeline = null;
 
         this.init();
@@ -57,7 +56,6 @@ class Animation {
 
     parallaxMethod() {
         const parallaxElements = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'ground');
-
         const walkingSheet = {
             frames: 5,
             defaultFrame: 7,
@@ -67,9 +65,12 @@ class Animation {
         let counter = 1;
         let walkingInterval;
 
+        let tl = new TimelineMax();
+        let tlParallax = new TimelineMax();
+
         // appear of persons
-        gsap.set(this.persons, {x: window.innerWidth});
-        this.personsTimeline = gsap.to(this.persons, {
+        tl.set(this.persons, {x: window.innerWidth});
+        tl.to(this.persons, {
             x: () => window.innerWidth / 8,
             duration: .5,
             scrollTrigger: {
@@ -94,7 +95,7 @@ class Animation {
         });*/
 
         // parallax elements
-        this.elementsTimeline = gsap.to(parallaxElements, {
+        this.elementsTimeline = tlParallax.to(parallaxElements, {
             x: (index, target) => {
                 let speed = -window.innerWidth * 11.5;
                 return speed * target.dataset.speed;
@@ -142,11 +143,11 @@ class Animation {
                     // flip persons
                     setTimeout(() => {
                         if (velocity > 1) {
-                            gsap.set(this.persons, {classList: 'animation-person'})
-                            gsap.to(this.persons, {scaleX: 1, duration: .1, ease: 'power2.out'});
+                            tl.set(this.persons, {classList: 'animation-person'})
+                            tl.to(this.persons, {scaleX: 1, duration: .1, ease: 'power2.out'});
                         } else if (velocity < -1) {
-                            gsap.set(this.persons, {classList: 'animation-person flip'})
-                            gsap.to(this.persons, {scaleX: -1, duration: .1, ease: 'power2.out'});
+                            tl.set(this.persons, {classList: 'animation-person flip'})
+                            tl.to(this.persons, {scaleX: -1, duration: .1, ease: 'power2.out'});
                         }
                     }, 300);
 
@@ -251,7 +252,8 @@ class Animation {
             overflowY: 'hidden',
         });
 
-        gsap.to(cyclist, {
+        let tl = new TimelineMax();
+        tl.to(cyclist, {
             x: () => window.innerWidth * .6,
             duration: 1.5,
             ease: 'power2.out',
@@ -267,11 +269,11 @@ class Animation {
                     overflowY: 'scroll',
                 });
 
-                gsap.to(cyclist, {scaleX: -1, duration: .1, ease: 'power2.out'});
+                tl.to(cyclist, {scaleX: -1, duration: .1, ease: 'power2.out'});
             },
         });
 
-        gsap.to(houseElement, {
+        tl.to(houseElement, {
             scrollTrigger: {
                 trigger: this.container,
                 start: `${window.innerWidth / 2} bottom`,
@@ -282,10 +284,10 @@ class Animation {
                 onUpdate: self => {
                     let houseSpeed = self.progress * (scrollHeight * 1.25);
 
-                    gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
-                    gsap.to(newParallaxElements, {y: houseSpeed});
-                    gsap.to(this.persons, {y: houseSpeed});
-                    gsap.to(houseElement, {y: houseSpeed});
+                    tl.to(stars, {y: (self.progress.toFixed(3) * 200)});
+                    tl.to(newParallaxElements, {y: houseSpeed});
+                    tl.to(this.persons, {y: houseSpeed});
+                    tl.to(houseElement, {y: houseSpeed});
 
                     /*if (self.progress >= .15) {
                         this.scrollUpButton.classList.remove('active');
@@ -315,7 +317,8 @@ class Animation {
         this.setBodyScroll();
         this.isElementsStopped = false;
 
-        gsap.to(cyclist, {
+        let tl = new TimelineMax();
+        tl.to(cyclist, {
             x: () => 200,
             duration: 1.5,
             scrollTrigger: {
