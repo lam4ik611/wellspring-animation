@@ -8,6 +8,8 @@
 	background-repeat: repeat-x;
 	background-position-y: 78%;
 	background-size: contain;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: perspective(1000px);
 
 	@media only screen and (max-width: $screen-lg) {
 		width: 100%;

@@ -31,6 +31,7 @@
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/animation/animation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <workItem from="1599332711911" duration="3701000" />
       <workItem from="1599412828256" duration="17505000" />
       <workItem from="1599498772453" duration="6608000" />
-      <workItem from="1599581303506" duration="1785000" />
+      <workItem from="1599581303506" duration="2484000" />
     </task>
     <servers />
   </component>
