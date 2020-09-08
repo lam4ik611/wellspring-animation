@@ -67,6 +67,7 @@ class Animation {
         let counter = 1;
         let walkingInterval;
 
+        let tlParallax = new TimelineMax();
         // appear of persons
         gsap.set(this.persons, {x: window.innerWidth});
         this.personsTimeline = gsap.to(this.persons, {
@@ -94,7 +95,7 @@ class Animation {
         });*/
 
         // parallax elements
-        this.elementsTimeline = gsap.to(parallaxElements, {
+        this.elementsTimeline = tlParallax.to(parallaxElements, {
             x: (index, target) => {
                 let speed = -window.innerWidth * 11.5;
                 return speed * target.dataset.speed;
@@ -241,7 +242,7 @@ class Animation {
         const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars' && value.dataset.name !== 'house');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
         const newParallaxElements = Array.prototype.concat.call(exceptStars, this.ground);
-        const scrollHeight = houseElement.offsetHeight * (window.innerWidth / houseElement.offsetHeight);
+        const scrollHeight = houseElement.offsetHeight * (window.innerWidth / houseElement.offsetHeight) + 100;
 
         this.isElementsStopped = true;
 
@@ -263,7 +264,7 @@ class Animation {
             },
             onComplete: () => {
                 TweenLite.set('body', {
-                    height: +this.container.offsetWidth + scrollHeight + 100,
+                    height: +this.container.offsetWidth + scrollHeight,
                     overflowY: 'scroll',
                 });
 
