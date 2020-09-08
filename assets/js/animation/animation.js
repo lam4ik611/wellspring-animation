@@ -106,7 +106,7 @@ class Animation {
                 trigger: this.container,
                 scrub: true,
                 start: 'top top',
-                end: () => `+=${this.container.offsetWidth - (window.innerWidth * 1.25)}`,
+                end: () => `+=${this.container.offsetWidth - (document.body.scrollWidth * 1.25)}`,
                 onEnterBack: () => this.resetUpMethod(),
                 onLeave: () => {
                     TweenLite.to('body', {
@@ -165,7 +165,7 @@ class Animation {
     sectionsMethod() {
         // appear of lamp lights while section is visible
         this.sections.forEach((value, index) => {
-            let startPosition, endPosition, countNumber = 1.9;
+            let startPosition, endPosition, countNumber = 1.95;
 
             switch (index) {
                 case 0:

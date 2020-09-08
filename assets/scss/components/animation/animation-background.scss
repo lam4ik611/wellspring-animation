@@ -9,7 +9,6 @@
 	background-position-y: 78%;
 	background-size: contain;
 	-webkit-backface-visibility: hidden;
-	-webkit-transform: perspective(1000px);
 
 	@media only screen and (max-width: $screen-lg) {
 		width: 100%;
@@ -49,14 +48,7 @@
 
 	&[data-name="stars"] {
 		opacity: .7;
-		/*background-image: url('../images/stars-1.png');*/
-		background: repeating-linear-gradient(
-						45deg,
-						#606dbc,
-						#606dbc 10px,
-						#465298 10px,
-						#465298 20px
-		);
+		background-image: url('../images/stars-1.png');
 		background-size: contain;
 
 		@media only screen and (max-width: $screen-lg) {
@@ -80,7 +72,7 @@
 	}
 
 	&[data-name="buildings"] {
-		/*background-image: url('../images/buildings.png');*/
+		background-image: url('../images/buildings.png');
 		background-size: 50%;
 		z-index: 2;
 
@@ -102,7 +94,7 @@
 	}
 
 	&[data-name="silhouette"] {
-		/*background-image: url('../images/silhouette.png');*/
+		background-image: url('../images/silhouette.png');
 		background-position-y: 0vmax;
 		z-index: 1;
 	}

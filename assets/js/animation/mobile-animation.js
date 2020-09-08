@@ -1,6 +1,7 @@
 import {gsap, TweenLite} from './gsap';
 import ScrollTrigger from './gsap/ScrollTrigger';
 import ScrollToPlugin from './gsap/ScrollToPlugin';
+import Swiper from 'swiper';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
