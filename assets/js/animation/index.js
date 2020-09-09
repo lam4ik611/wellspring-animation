@@ -1,5 +1,3 @@
-import './preloader';
-import './is-support-webp';
 import Animation from './animation';
 import MobileAnimation from './mobile-animation';
 

@@ -116,7 +116,7 @@ class Animation {
                     setTimeout(() => {
                         this.setBodyScroll();
                         this.houseMethod();
-                    }, 200)
+                    }, 250);
                 },
                 onUpdate: (self) => {
                     if (this.isElementsStopped) {
@@ -219,7 +219,7 @@ class Animation {
 
                     setTimeout(() => {
                         this.setBodyScroll();
-                    }, 1200);
+                    }, 1600);
                 },
             });
         });
