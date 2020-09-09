@@ -219,7 +219,7 @@ class Animation {
 
                     setTimeout(() => {
                         this.setBodyScroll();
-                    }, 1600);
+                    }, 1500);
                 },
             });
         });

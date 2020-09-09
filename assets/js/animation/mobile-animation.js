@@ -1,7 +1,6 @@
 import {gsap, TweenLite} from './gsap';
 import ScrollTrigger from './gsap/ScrollTrigger';
 import ScrollToPlugin from './gsap/ScrollToPlugin';
-import Swiper from 'swiper';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -21,7 +20,7 @@ class MobileAnimation {
                 window.scrollTo(0, 0);
             }
 
-            this.setBodyScroll();
+            //this.setBodyScroll();
             this.parallax();
             this.checkWindowSize();
         });
