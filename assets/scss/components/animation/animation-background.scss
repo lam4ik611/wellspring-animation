@@ -60,7 +60,7 @@
 	&[data-name="ground"] {
 		position: absolute;
 		width: 100vw;
-		background-image: url('../images/ground.webp');
+		background-image: url('../images/ground.png');
 		background-position-x: center;
 		background-position-y: 101%;
 		background-size: 1440vh;
@@ -72,7 +72,7 @@
 	}
 
 	&[data-name="buildings"] {
-		background-image: url('../images/buildings.webp');
+		background-image: url('../images/buildings.png');
 		background-size: 50%;
 		z-index: 2;
 
@@ -86,7 +86,7 @@
 	&[data-name="house"] {
 		top: calc(-100vmax * 1.5);
 		width: 800vmax;
-		background-image: url('../images/wide-house.webp');
+		background-image: url('../images/wide-house.png');
 		background-position-x: -10vw;
 		background-position-y: bottom;
 		background-size: contain;
@@ -94,7 +94,7 @@
 	}
 
 	&[data-name="silhouette"] {
-		background-image: url('../images/silhouette.webp');
+		background-image: url('../images/silhouette.png');
 		background-position-y: 0vmax;
 		z-index: 1;
 	}
@@ -107,5 +107,20 @@
 
 	&.webp {
 
+		&[data-name="buildings"] {
+			background-image: url('../images/buildings.webp');
+		}
+
+		&[data-name="ground"] {
+			background-image: url('../images/ground.webp');
+		}
+
+		&[data-name="house"] {
+			background-image: url('../images/wide-house.webp');
+		}
+
+		&[data-name="silhouette"] {
+			background-image: url('../images/silhouette.webp');
+		}
 	}
 }
