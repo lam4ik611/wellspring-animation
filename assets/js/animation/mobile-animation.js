@@ -55,7 +55,7 @@ class MobileAnimation {
             },
         });
 
-        this.mobileSections.forEach((section, index) => {
+        /*this.mobileSections.forEach((section, index) => {
             ScrollTrigger.create({
                 trigger: section,
                 start: `top center`,
@@ -63,7 +63,7 @@ class MobileAnimation {
                 toggleClass: 'visible',
                 once: true,
             });
-        });
+        });*/
 
         ScrollTrigger.create({
             trigger: this.mobileHouse,

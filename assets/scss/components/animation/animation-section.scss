@@ -13,7 +13,8 @@
 		overflow: hidden;
 	}
 
-	&.visible {
+	&.visible,
+	&.swiper-slide-active {
 		//border-color: green;
 
 		.animation-lamp__lamplight {
