@@ -13,11 +13,3 @@ let swiper = new Swiper('#mySwiper', {
         },
     },
 });
-
-swiper.on('slideChange', function () {
-    console.log('slide changed');
-});
-
-setTimeout(() => {
-    swiper.update();
-}, 1000);

@@ -8,9 +8,12 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	transition: .5s linear;
 	z-index: 100;
 
 	&.hidden {
+		opacity: 0;
+		visibility: hidden;
 
 		.preloader__top {
 			transform: translateY(-120%);
