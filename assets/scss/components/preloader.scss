@@ -13,11 +13,11 @@
 	&.hidden {
 
 		.preloader__top {
-			transform: translateY(-100%);
+			transform: translateY(-120%);
 		}
 
 		.preloader__bottom {
-			transform: translateY(100%);
+			transform: translateY(120%);
 		}
 	}
 
