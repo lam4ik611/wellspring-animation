@@ -47,7 +47,22 @@ class MobileAnimation {
     }
 
     parallax() {
-        new Swiper(this.mobileContainer);
+        const prevButton = document.querySelector('[data-el="swiper.button-prev"]'),
+            nextButton = document.querySelector('[data-el="swiper.button-next"]');
+
+        let swiper = new Swiper(this.mobileContainer, {
+            direction: 'horizontal',
+            slidesPerView: 'auto',
+            simulateTouch: true,
+            speed: 200,
+            navigation: {
+                prevEl: '[data-el="swiper.button-prev"]',
+                nextEl: '[data-el="swiper.button-next"]',
+            },
+        });
+
+        prevButton.addEventListener('click', () => swiper.slidePrev());
+        nextButton.addEventListener('click', () => swiper.slideNext());
 
         /*this.mobileSections.forEach((section, index) => {
             ScrollTrigger.create({

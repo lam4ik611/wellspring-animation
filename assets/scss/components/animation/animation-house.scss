@@ -20,22 +20,37 @@
 		.animation-person {
 
 			&[data-name="girl"] {
-				top: 82%;
+				top: 81%;
 				height: 20vh;
 			}
 
 			&[data-name="boy"] {
-				top: 78%;
-				width: 11vh;
+				top: 80%;
+				left: 4vh;
+				width: 9vh;
 				height: 22vh;
+
+				.animation-person__human {
+					width: 100% !important;
+					background-position-x: 100% !important;
+				}
+
+				.animation-person__shadow {
+					bottom: -18% !important;
+				}
 			}
 
 			&[data-name="cyclist"] {
-				top: 85%;
+				top: 87%;
 				left: unset;
 				right: 1vmax;
-				height: 20vh;
+				width: 17vh;
+				height: 15vh;
 				transform: scaleX(-1);
+
+				.animation-person__shadow {
+					bottom: -33% !important;
+				}
 			}
 		}
 

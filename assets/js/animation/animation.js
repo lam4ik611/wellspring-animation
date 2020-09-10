@@ -81,19 +81,6 @@ class Animation {
             },
         });
 
-        // set position of house
-        /*gsap.set(this.house, {x: window.innerWidth * 20});
-        this.houseTimeline = gsap.to(this.house, {
-            x: -window.innerWidth / 50,
-            scrollTrigger: {
-                trigger: this.house,
-                scrub: true,
-                start: 'bottom top',
-                end: () => `+=${this.container.offsetWidth}`,
-            },
-            force3D: true,
-        });*/
-
         // parallax elements
         this.elementsTimeline = tlParallax.to(parallaxElements, {
             x: (index, target) => {
