@@ -13,19 +13,21 @@
 	@media only screen and (max-width: $screen-lg) {
 		position: relative;
 		top: 0;
-		height: 140vh;
+		height: 120vh;
+		overflow-y: scroll;
 		transform: translateX(0%);
 
 		.animation-person {
 
 			&[data-name="girl"] {
-				top: 81%;
-				height: 25vh;
+				top: 82%;
+				height: 20vh;
 			}
 
 			&[data-name="boy"] {
 				top: 78%;
-				height: 30vh;
+				width: 11vh;
+				height: 22vh;
 			}
 
 			&[data-name="cyclist"] {
@@ -40,7 +42,7 @@
 		.animation-background {
 
 			&[data-name="ground"] {
-				background-position-y: 124vh;
+				background-position-y: 105vh;
 			}
 
 			&[data-name="silhouette"] {
@@ -74,7 +76,7 @@
 		@media only screen and (max-width: $screen-lg) {
 			top: 0;
 			height: 140vh;
-			background-position-y: 78%;
+			background-position-y: 60%;
 			background-size: auto 75vmax;
 			z-index: 20;
 		}

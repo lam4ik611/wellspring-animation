@@ -47,13 +47,7 @@ class MobileAnimation {
     }
 
     parallax() {
-        new Swiper('#mySwiper', {
-            on: {
-                init: function () {
-                    console.log('swiper initialized');
-                },
-            },
-        });
+        new Swiper(this.mobileContainer);
 
         /*this.mobileSections.forEach((section, index) => {
             ScrollTrigger.create({

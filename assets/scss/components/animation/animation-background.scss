@@ -32,6 +32,11 @@
 		background-image: url('../images/sky.svg');
 		background-position-y: 90%;
 		background-size: cover;
+
+		@media only screen and (max-width: $screen-lg) {
+			position: absolute;
+			background-position-x: 20%;
+		}
 	}
 
 	&[data-name="sky-color"] {
