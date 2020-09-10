@@ -1,6 +1,7 @@
 import {gsap, TweenLite} from './gsap';
 import ScrollTrigger from './gsap/ScrollTrigger';
 import ScrollToPlugin from './gsap/ScrollToPlugin';
+import Swiper from "swiper";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -46,6 +47,14 @@ class MobileAnimation {
     }
 
     parallax() {
+        new Swiper('#mySwiper', {
+            on: {
+                init: function () {
+                    console.log('swiper initialized');
+                },
+            },
+        });
+
         this.mobileSections.forEach((section, index) => {
             ScrollTrigger.create({
                 trigger: section,
