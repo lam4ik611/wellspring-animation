@@ -5,10 +5,13 @@ import ScrollToPlugin from './gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
+const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
 class Animation {
     constructor() {
         this.container = document.querySelector('[data-el="animated.container"]');
-        this.elements = document.querySelectorAll('[data-el="animated.element"]');
+        this.elements = isChrome ? document.querySelectorAll('[data-el="animated.element"]')
+            : document.querySelectorAll('[data-el="animated.element"], [data-el="animated.stars"]');
         this.ground = document.querySelector('[data-el="animated.ground"]');
         this.persons = document.querySelectorAll('[data-el="animated.person"]');
         this.wrapper = document.getElementById('wrapper');
@@ -73,6 +76,7 @@ class Animation {
         this.personsTimeline = gsap.to(this.persons, {
             x: () => window.innerWidth / 8,
             duration: .5,
+            force3D: false,
             scrollTrigger: {
                 trigger: this.walkingContainer,
                 start: `+=${window.innerWidth / 3} top`,
@@ -101,9 +105,8 @@ class Animation {
                     });
 
                     setTimeout(() => {
-                        this.setBodyScroll();
                         this.houseMethod();
-                    }, 250);
+                    }, 100);
                 },
                 onUpdate: (self) => {
                     if (this.isElementsStopped) {
@@ -235,10 +238,6 @@ class Animation {
 
         this.scrollUpButton.classList.add('active');
 
-        TweenLite.to('body', {
-            overflowY: 'hidden',
-        });
-
         gsap.to(cyclist, {
             x: () => window.innerWidth * .6,
             duration: 1.5,
@@ -266,7 +265,6 @@ class Animation {
                 end: `${scrollHeight} top`,
                 scrub: true,
                 force3D: false,
-                onEnter: () => {},
                 onUpdate: self => {
                     let houseSpeed = self.progress * (scrollHeight * 1.25);
 
