@@ -106,7 +106,7 @@ class Animation {
 
                     setTimeout(() => {
                         this.houseMethod();
-                    }, 100);
+                    }, 250);
                 },
                 onUpdate: (self) => {
                     if (this.isElementsStopped) {
@@ -227,7 +227,7 @@ class Animation {
     }
 
     houseMethod() {
-        const stars = Array.prototype.slice.call(this.elements).find(value => value.dataset.name === 'stars');
+        const stars = !isChrome && Array.prototype.slice.call(this.elements).find(value => value.dataset.name === 'stars');
         const houseElement = Array.prototype.slice.call(this.elements).find(value => value.dataset.name === 'house');
         const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars' && value.dataset.name !== 'house');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
@@ -268,7 +268,7 @@ class Animation {
                 onUpdate: self => {
                     let houseSpeed = self.progress * (scrollHeight * 1.25);
 
-                    gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
+                    if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
                     gsap.to(newParallaxElements, {y: houseSpeed});
                     gsap.to(this.persons, {y: houseSpeed});
                     gsap.to(houseElement, {y: houseSpeed});
