@@ -108,7 +108,7 @@ class Animation {
                 onUpdate: (self) => {
                     console.log(self.trigger)
                     //let houseSpeed = self.progress * (scrollHeight * 1.25);
-                    gsap.to(parallaxElements, {x: -(self.progress * this.container.offsetHeight * 14.8)})
+                    gsap.to(parallaxElements, {x: -(self.progress * this.container.offsetHeight * 14.75)})
                     if (this.isElementsStopped) {
                         return;
                     }
@@ -155,7 +155,7 @@ class Animation {
     sectionsMethod() {
         // appear of lamp lights while section is visible
         this.sections.forEach((value, index) => {
-            let startPosition, endPosition, countNumber = 1.95;
+            let startPosition, endPosition, countNumber = 1.9;
 
             switch (index) {
                 case 0:
@@ -203,13 +203,13 @@ class Animation {
                         return;
                     }
 
-                    TweenLite.to('body', {
+                    /*TweenLite.to('body', {
                         overflowY: 'hidden',
                     });
 
                     setTimeout(() => {
                         this.setBodyScroll();
-                    }, 1500);
+                    }, 1500);*/
                 },
             });
         });
