@@ -102,7 +102,7 @@ class Animation {
 
                     setTimeout(() => {
                         this.houseMethod();
-                    }, 250);
+                    }, 1000);
                 },
                 onUpdate: (self) => {
                     gsap.to(parallaxElements, {
