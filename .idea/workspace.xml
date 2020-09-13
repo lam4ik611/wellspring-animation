@@ -31,6 +31,8 @@
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/animation/animation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/index.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +123,7 @@
       <workItem from="1599674780367" duration="13275000" />
       <workItem from="1599752536608" duration="12726000" />
       <workItem from="1599843759183" duration="16239000" />
-      <workItem from="1600017650349" duration="6654000" />
+      <workItem from="1600017650349" duration="8416000" />
     </task>
     <servers />
   </component>
@@ -169,10 +171,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="392" y="176" width="572" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.744@0.0.1366.744" timestamp="1597945696055" />
-    <state x="100" y="99" width="1166" height="544" key="DiffContextDialog" timestamp="1599854421069">
+    <state x="100" y="99" width="1166" height="544" key="DiffContextDialog" timestamp="1600029363775">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="100" y="99" width="1166" height="544" key="DiffContextDialog/0.0.1366.744@0.0.1366.744" timestamp="1599854421069" />
+    <state x="100" y="99" width="1166" height="544" key="DiffContextDialog/0.0.1366.744@0.0.1366.744" timestamp="1600029363775" />
     <state x="340" y="152" width="676" height="432" key="EditFileWatcherDialog" timestamp="1596447221171">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -193,10 +195,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1599987404555" />
-    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599757387510">
+    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600029416771">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1599757387510" />
+    <state x="100" y="99" width="1166" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1600029416771" />
     <state x="293" y="0" width="710" height="739" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599150318859">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
