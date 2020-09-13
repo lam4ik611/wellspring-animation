@@ -260,7 +260,7 @@ class Animation {
                 gsap.to(houseElement, {
                     scrollTrigger: {
                         trigger: this.container,
-                        start: `${window.innerWidth / 2} bottom`,
+                        start: `${window.innerWidth - window.innerHeight} bottom`,
                         end: `${scrollHeight} top`,
                         scrub: true,
                         force3D: false,
