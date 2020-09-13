@@ -67,8 +67,8 @@
 		width: 100vw;
 		background-image: url('../images/ground.png');
 		background-position-x: center;
-		background-position-y: 101%;
-		background-size: 1440vh;
+		background-position-y: bottom;
+		background-size: 51vh;
 		z-index: 3;
 
 		@media only screen and (max-width: $screen-lg) {

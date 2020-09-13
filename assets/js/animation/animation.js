@@ -87,7 +87,6 @@ class Animation {
 
         // parallax elements
         this.elementsTimeline = tlParallax.to(parallaxElements, {
-
             ease: Linear.none,
             force3D: false,
             scrollTrigger: {
@@ -106,9 +105,12 @@ class Animation {
                     }, 250);
                 },
                 onUpdate: (self) => {
-                    console.log(self.trigger)
-                    //let houseSpeed = self.progress * (scrollHeight * 1.25);
-                    gsap.to(parallaxElements, {x: -(self.progress * this.container.offsetHeight * 14.75)})
+                    gsap.to(parallaxElements, {
+                        x: (index, target) => {
+                            return -((self.progress * (window.innerWidth / window.innerHeight)) * this.container.offsetHeight * 11.5 * target.dataset.speed)
+                        },
+                    });
+
                     if (this.isElementsStopped) {
                         return;
                     }
