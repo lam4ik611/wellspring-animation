@@ -102,7 +102,7 @@ class Animation {
 
                     setTimeout(() => {
                         this.houseMethod();
-                    }, 250);
+                    }, 500);
                 },
                 onUpdate: (self) => {
                     gsap.to(parallaxElements, {
@@ -267,12 +267,14 @@ class Animation {
             scrub: true,
             force3D: false,
             onUpdate: self => {
-                let houseSpeed = self.progress * (scrollHeight * 1.25);
+                if (self.progress >= .05) {
+                    let houseSpeed = self.progress * (scrollHeight * 1.25);
 
-                if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
-                gsap.to(newParallaxElements, {y: houseSpeed});
-                gsap.to(this.persons, {y: houseSpeed});
-                gsap.to(houseElement, {y: houseSpeed});
+                    if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
+                    gsap.to(newParallaxElements, {y: houseSpeed});
+                    gsap.to(this.persons, {y: houseSpeed});
+                    gsap.to(houseElement, {y: houseSpeed});
+                }
 
                 if (self.progress >= .9) {
                     this.finishedElement.classList.add('active');
