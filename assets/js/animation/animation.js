@@ -102,7 +102,7 @@ class Animation {
 
                     setTimeout(() => {
                         this.houseMethod();
-                    }, 1000);
+                    }, 250);
                 },
                 onUpdate: (self) => {
                     gsap.to(parallaxElements, {
@@ -260,41 +260,37 @@ class Animation {
             },
         });
 
-        gsap.to(houseElement, {
-            scrollTrigger: {
-                trigger: this.container,
-                start: `${window.innerWidth / 2} bottom`,
-                end: `${scrollHeight} top`,
-                scrub: true,
-                force3D: false,
-                onUpdate: self => {
-                    let houseSpeed = self.progress * (scrollHeight * 1.25);
+        setTimeout(() => {
+            gsap.to(houseElement, {
+                scrollTrigger: {
+                    trigger: this.container,
+                    start: `${window.innerWidth / 2} bottom`,
+                    end: `${scrollHeight} top`,
+                    scrub: true,
+                    force3D: false,
+                    onUpdate: self => {
+                        let houseSpeed = self.progress * (scrollHeight * 1.25);
 
-                    if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
-                    gsap.to(newParallaxElements, {y: houseSpeed});
-                    gsap.to(this.persons, {y: houseSpeed});
-                    gsap.to(houseElement, {y: houseSpeed});
+                        if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
+                        gsap.to(newParallaxElements, {y: houseSpeed});
+                        gsap.to(this.persons, {y: houseSpeed});
+                        gsap.to(houseElement, {y: houseSpeed});
 
-                    /*if (self.progress >= .15) {
-                        this.scrollUpButton.classList.remove('active');
-                    } else {
-                        this.scrollUpButton.classList.add('active');
-                    }*/
+                        if (self.progress >= .9) {
+                            this.finishedElement.classList.add('active');
+                        } else {
+                            this.finishedElement.classList.remove('active');
+                        }
+                    },
+                    onLeaveBack: self => {
+                        this.setBodyScroll();
+                        self.kill();
 
-                    if (self.progress >= .9) {
-                        this.finishedElement.classList.add('active');
-                    } else {
-                        this.finishedElement.classList.remove('active');
-                    }
-                },
-                onLeaveBack: self => {
-                    this.setBodyScroll();
-                    self.kill();
-
-                    this.resetUpMethod();
-                },
-            }
-        });
+                        this.resetUpMethod();
+                    },
+                }
+            });
+        }, 500);
     }
 
     resetUpMethod() {
