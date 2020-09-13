@@ -257,35 +257,36 @@ class Animation {
                 });
 
                 gsap.to(cyclist, {scaleX: -1, duration: .1, ease: 'power2.out'});
-                gsap.to(houseElement, {
-                    scrollTrigger: {
-                        trigger: this.container,
-                        start: `${window.innerWidth - window.innerHeight} bottom`,
-                        end: `${scrollHeight} top`,
-                        scrub: true,
-                        force3D: false,
-                        onUpdate: self => {
-                            let houseSpeed = self.progress * (scrollHeight * 1.25);
+            },
+        });
 
-                            if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
-                            gsap.to(newParallaxElements, {y: houseSpeed});
-                            gsap.to(this.persons, {y: houseSpeed});
-                            gsap.to(houseElement, {y: houseSpeed});
+        ScrollTrigger.create({
+            trigger: this.container,
+            start: `${window.innerWidth - window.innerHeight} bottom`,
+            end: `${scrollHeight} top`,
+            scrub: true,
+            force3D: false,
+            onUpdate: self => {
+                let houseSpeed = self.progress * (scrollHeight * 1.25);
 
-                            if (self.progress >= .9) {
-                                this.finishedElement.classList.add('active');
-                            } else {
-                                this.finishedElement.classList.remove('active');
-                            }
-                        },
-                        onLeaveBack: self => {
-                            this.setBodyScroll();
-                            self.kill();
+                if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
+                gsap.to(newParallaxElements, {y: houseSpeed});
+                gsap.to(this.persons, {y: houseSpeed});
+                gsap.to(houseElement, {y: houseSpeed});
 
-                            this.resetUpMethod();
-                        },
-                    }
-                });
+                if (self.progress >= .9) {
+                    this.finishedElement.classList.add('active');
+                    this.scrollUpButton.classList.remove('active')
+                } else {
+                    this.finishedElement.classList.remove('active')
+                    this.scrollUpButton.classList.add('active')
+                }
+            },
+            onLeaveBack: self => {
+                this.setBodyScroll();
+                self.kill();
+
+                this.resetUpMethod();
             },
         });
     }
