@@ -30,7 +30,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/animation/animation-background.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/base/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/base/base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       <workItem from="1599752536608" duration="12726000" />
       <workItem from="1599843759183" duration="16239000" />
       <workItem from="1600017650349" duration="9570000" />
-      <workItem from="1600282130873" duration="1622000" />
+      <workItem from="1600282130873" duration="2532000" />
     </task>
     <servers />
   </component>

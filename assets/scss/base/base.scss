@@ -30,8 +30,19 @@ body {
 	-webkit-overflow-scrolling: touch;
 
 	&::-webkit-scrollbar {
-		width: 0;  /* Remove scrollbar space */
-		background: transparent;  /* Optional: just make scrollbar invisible */
+		width: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: rgba(43, 28, 107, .7);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $sky-color;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: #222040;
 	}
 
 	@media only screen and (max-width: $screen-lg) {
