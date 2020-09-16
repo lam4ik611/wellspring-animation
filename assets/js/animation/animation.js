@@ -119,10 +119,10 @@ class Animation {
 
                     if (this.isScrolling === null) {
                         // setting walking animation
-                        this.persons.forEach(person => person.dataset.step = counter);
+                        Object.values(this.persons).forEach(person => person.dataset.step = counter);
                         walkingInterval = setInterval(() => {
                             counter++;
-                            this.persons.forEach(person => person.dataset.step = counter);
+                            Object.values(this.persons).forEach(person => person.dataset.step = counter);
 
                             if (counter >= walkingSheet.frames) {
                                 counter = 0;
@@ -146,7 +146,7 @@ class Animation {
                     this.isScrolling = setTimeout(() => {
                         // clearing walking animation
                         clearInterval(walkingInterval);
-                        this.persons.forEach(person => person.dataset.step = walkingSheet.defaultFrame);
+                        Object.values(this.persons).forEach(person => person.dataset.step = walkingSheet.defaultFrame);
                         this.isScrolling = null;
                     }, 500);
                 },
@@ -156,7 +156,7 @@ class Animation {
 
     sectionsMethod() {
         // appear of lamp lights while section is visible
-        this.sections.forEach((value, index) => {
+        Object.values(this.sections).forEach((value, index) => {
             let startPosition, endPosition, countNumber = 1.9;
 
             switch (index) {
@@ -198,21 +198,6 @@ class Animation {
                 end: `${endPosition} center`,
                 scrub: true,
                 force3D: false,
-                onEnter: self => {
-                    if (!self.isActive ||
-                        self.trigger === this.sections[0] ||
-                        self.trigger === this.sections[this.sections.length - 1]) {
-                        return;
-                    }
-
-                    /*TweenLite.to('body', {
-                        overflowY: 'hidden',
-                    });
-
-                    setTimeout(() => {
-                        this.setBodyScroll();
-                    }, 1500);*/
-                },
             });
         });
     }
