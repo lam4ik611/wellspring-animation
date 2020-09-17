@@ -40,8 +40,10 @@ class Animation {
                 window.scrollTo(0, 0);
             }
 
-            this.setBodyScroll();
-            this.scrollTrigger();
+            setTimeout(() => {
+                this.setBodyScroll();
+                this.scrollTrigger();
+            }, 1500);
         });
     }
 
@@ -220,7 +222,7 @@ class Animation {
         const exceptStars = Array.prototype.slice.call(this.elements).filter(value => value.dataset.name !== 'stars' && value.dataset.name !== 'house');
         const cyclist = Array.prototype.slice.call(this.persons).filter(value => value.dataset.name === 'cyclist');
         const newParallaxElements = Array.prototype.concat.call(exceptStars, this.ground);
-        const scrollHeight = houseElement.offsetHeight * (window.innerWidth / houseElement.offsetHeight) + 100;
+        const scrollHeight = houseElement.offsetHeight * (window.innerWidth / houseElement.offsetHeight);
 
         this.isElementsStopped = true;
 
