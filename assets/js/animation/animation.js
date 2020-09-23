@@ -1,7 +1,7 @@
 import {gsap, TweenLite, Linear, TimelineMax} from './gsap';
 import ScrollTrigger from './gsap/ScrollTrigger';
 import ScrollToPlugin from './gsap/ScrollToPlugin';
-import imagesLoaded from 'imagesloaded';
+import preloader from '../preloader';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -41,7 +41,18 @@ class Animation {
                 window.scrollTo(0, 0);
             }
 
-            this.preloaderMethod();
+            preloader.then(success => {
+                if (!success) {
+                    setTimeout(() => {
+                        location.reload();
+                    }, 3000);
+
+                    return;
+                }
+
+                this.setBodyScroll();
+                this.scrollTrigger();
+            });
         });
     }
 
@@ -56,21 +67,6 @@ class Animation {
         this.parallaxMethod();
         this.sectionsMethod();
         this.previewMethod();
-    }
-
-    preloaderMethod() {
-        const wrapper = document.querySelector('.wrapper');
-        const preloader = document.querySelector('[data-el="preloader"]');
-
-        const imgLoad = imagesLoaded(wrapper, {background: true});
-        imgLoad.on('always', () => {
-            setTimeout(() => {
-                preloader.classList.add('hidden');
-
-                this.setBodyScroll();
-                this.scrollTrigger();
-            }, 1000);
-        });
     }
 
     parallaxMethod() {
