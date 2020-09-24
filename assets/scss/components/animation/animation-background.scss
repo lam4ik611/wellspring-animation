@@ -11,17 +11,6 @@
 	will-change: transform;
 	-webkit-backface-visibility: hidden;
 
-	@media only screen and (max-width: $screen-lg) {
-		width: 100%;
-		background-size: cover;
-
-		&[data-name="sky"],
-		&[data-name="stars-1"],
-		&[data-name="stars-2"] {
-			position: absolute;
-		}
-	}
-
 	&[data-name="sky"],
 	&[data-name="stars-1"],
 	&[data-name="stars-2"] {
@@ -33,11 +22,6 @@
 		background-image: url('../images/sky.svg');
 		background-position-y: 90%;
 		background-size: cover;
-
-		@media only screen and (max-width: $screen-lg) {
-			position: absolute;
-			background-position-x: 20%;
-		}
 	}
 
 	&[data-name="sky-color"] {
@@ -56,11 +40,6 @@
 		opacity: .7;
 		background-image: url('../images/stars-1.png');
 		background-size: contain;
-
-		@media only screen and (max-width: $screen-lg) {
-			background-size: cover;
-			z-index: 3;
-		}
 	}
 
 	&[data-name="ground"] {
@@ -71,22 +50,12 @@
 		background-position-y: bottom;
 		background-size: 51vh;
 		z-index: 3;
-
-		@media only screen and (max-width: $screen-lg) {
-			z-index: 2;
-		}
 	}
 
 	&[data-name="buildings"] {
 		background-image: url('../images/buildings.png');
 		background-size: 50%;
 		z-index: 2;
-
-		@media only screen and (max-width: $screen-lg) {
-			background-position-y: 80%;
-			background-size: 1500%;
-			z-index: 3;
-		}
 	}
 
 	&[data-name="house"] {

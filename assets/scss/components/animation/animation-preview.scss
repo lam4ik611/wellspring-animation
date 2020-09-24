@@ -15,14 +15,6 @@
 	background-position-x: center;
 	background-size: contain;
 
-	@media only screen and (max-width: $screen-lg) {
-		max-width: 800px;
-		width: 90vw;
-		height: 80vh;
-		background-size: cover;
-		z-index: 10;
-	}
-
 	&.hidden {
 		transform: translateY(-100%);
 
@@ -38,10 +30,6 @@
 		width: 30vh;
 		height: auto;
 		transform: translateX(-50%);
-
-		@media only screen and (max-width: $screen-lg) {
-			width: 20vh;
-		}
 	}
 
 	&__text {
@@ -56,12 +44,6 @@
 		line-height: 1.75;
 		text-align: center;
 		transform: translateX(-50%);
-
-		@media only screen and (max-width: $screen-lg) {
-			top: 32vh;
-			width: 100%;
-			font-size: 2vh;
-		}
 	}
 
 	&__label {
@@ -75,11 +57,5 @@
 		text-shadow: rgba(83,14,37,0.8) -2px 3px 0,
 		rgba(119,20,55,0.3) -2px 2px 0,
 		rgba(72,14,33,0.2) -3px 3px 0;
-
-		@media only screen and (max-width: $screen-lg) {
-			top: 52vh;
-			width: 80%;
-			font-size: 3vh;
-		}
 	}
 }

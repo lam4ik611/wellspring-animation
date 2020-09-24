@@ -74,22 +74,15 @@ class MobileAnimation {
         prevButton.addEventListener('click', () => swiper.slidePrev());
         nextButton.addEventListener('click', () => swiper.slideNext());
 
-        /*this.mobileSections.forEach((section, index) => {
-            ScrollTrigger.create({
-                trigger: section,
-                start: `top center`,
-                end: 'bottom center',
-                toggleClass: 'visible',
-                once: true,
-            });
-        });*/
-
         ScrollTrigger.create({
             trigger: this.mobileHouse,
             start: `top center`,
             end: 'bottom center',
             toggleClass: 'visible',
-            once: true
+            once: true,
+            onEnter: self => {
+                self.trigger.scrollTop = self.trigger.offsetHeight;
+            },
         });
     }
 }
