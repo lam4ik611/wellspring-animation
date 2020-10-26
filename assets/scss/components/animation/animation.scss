@@ -1,0 +1,23 @@
+.animation {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	width: 1500vw;
+	min-height: 100vh;
+
+	@media only screen and (max-width: $screen-lg) {
+		display: none;
+	}
+
+	&--mobile {
+		display: none;
+
+		@media only screen and (max-width: $screen-lg) {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			width: 100vw;
+			height: 100vh;
+		}
+	}
+}

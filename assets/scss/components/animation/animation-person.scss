@@ -1,0 +1,164 @@
+.animation-person {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+
+	&__human {
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__shadow {
+		position: absolute;
+		height: 6vh;
+		background: url('../images/parents-shadow.png') no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
+
+	&[data-name="girl"] {
+		top: 54vh;
+		width: 18vh;
+		height: 40%;
+		z-index: 11;
+
+		.animation-person__human {
+			background-image: url('../images/persons/girl.svg');
+		}
+
+		&[data-step="1"] .animation-person__human {
+			background-position-x: 67%;
+		}
+
+		&[data-step="2"] .animation-person__human {
+			background-position-x: 0;
+		}
+
+		&[data-step="3"] .animation-person__human {
+			background-position-x: 17%;
+		}
+
+		&[data-step="4"] .animation-person__human {
+			background-position-x: 34%;
+		}
+
+		&[data-step="5"] .animation-person__human {
+			background-position-x: 53%;
+		}
+
+		&[data-step="6"] .animation-person__human {
+			background-position-x: 84%;
+		}
+
+		&[data-step="7"] .animation-person__human {
+			background-position-x: 102%;
+		}
+	}
+
+	&[data-name="boy"] {
+		top: 49vh;
+		left: 5vmin;
+		width: 22vh;
+		height: 45%;
+
+		.animation-person__human {
+			background-image: url('../images/persons/boy.svg');
+		}
+
+		&.flip {
+
+			.animation-person__shadow {
+				left: 70% !important;
+			}
+		}
+
+		.animation-person__shadow {
+			left: 40%;
+			bottom: -4%;
+			width: 150%;
+			height: 5vh;
+			transform: translateX(-50%);
+		}
+
+		&[data-step="1"] .animation-person__human {
+			background-position-x: 72%;
+		}
+
+		&[data-step="2"] .animation-person__human {
+			background-position-x: 0;
+		}
+
+		&[data-step="3"] .animation-person__human {
+			background-position-x: 19%;
+		}
+
+		&[data-step="4"] .animation-person__human {
+			background-position-x: 40%;
+		}
+
+		&[data-step="5"] .animation-person__human {
+			background-position-x: 54%;
+			width: 19vh;
+		}
+
+		&[data-step="6"] .animation-person__human {
+			background-position-x: 88%;
+		}
+
+		&[data-step="7"] .animation-person__human {
+			background-position-x: 102%;
+			width: 21vh;
+		}
+	}
+
+	&[data-name="cyclist"] {
+		top: 67vh;
+		left: 25vh;
+		width: 33.5vh;
+		height: 30%;
+		z-index: 12;
+
+		.animation-person__human {
+			background-image: url('../images/persons/cyclist.svg');
+		}
+
+		.animation-person__shadow {
+			left: 50%;
+			bottom: -13%;
+			width: 130%;
+			transform: translateX(-50%);
+		}
+
+		.animation-person__shadow {
+			background-image: url('../images/child-shadow.png');
+		}
+
+		&[data-step="1"] .animation-person__human {
+			background-position-x: 33.2%;
+		}
+
+		&[data-step="2"] .animation-person__human {
+			background-position-x: 67%;
+		}
+
+		&[data-step="3"] .animation-person__human {
+			background-position-x: 100.3%;
+		}
+
+		&[data-step="4"] .animation-person__human {
+			background-position-x: -0.3%;
+		}
+
+		&[data-step="5"] .animation-person__human {
+			background-position-x: 33.4%;
+		}
+
+		&[data-step="7"] .animation-person__human {
+			background-position-x: 67%;
+		}
+	}
+}

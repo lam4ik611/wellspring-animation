@@ -1,0 +1,62 @@
+.animation-button {
+	position: absolute;
+	bottom: 5vh;
+	left: 50%;
+	transform: translate(-50%, 0);
+	transition: .4s cubic-bezier(.47,.22,.39,.79);
+	z-index: 20;
+
+	&--top {
+
+		&::before,
+		&::after {
+			right: 1.6rem !important;
+			transform: rotate(-45deg) !important;
+		}
+
+		&::before {
+			top: 1.35rem !important;
+
+			@media only screen and (max-width: $screen-md) {
+				top: .85rem !important;
+			}
+		}
+
+		&::after {
+			top: 1.6rem !important;
+
+			@media only screen and (max-width: $screen-md) {
+				top: 1.1rem !important;
+			}
+		}
+	}
+
+	&[data-el="animated.scroll-button"],
+	&[data-el="animated.scroll-up-button"] {
+		padding-right: 40px;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 1.35rem;
+			width: .4rem;
+			height: .4rem;
+			border-top: .09rem solid $blue;
+			border-right: .09rem solid $blue;
+			transform: rotate(45deg);
+
+			@media only screen and (max-width: $screen-md) {
+				top: .85rem;
+			}
+		}
+
+		&::before {
+			right: 1.95rem;
+		}
+
+		&::after {
+			right: 1.65rem;
+		}
+	}
+}

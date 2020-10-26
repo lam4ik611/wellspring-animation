@@ -1,0 +1,61 @@
+.animation-preview {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 100vh;
+	width: 70vw;
+	height: 95vh;
+	margin: 0 auto;
+	color: $white;
+	transform: translateY(0);
+	transition: 1s cubic-bezier(.47,.22,.39,.79);
+	background-image: url('../images/banner.png');
+	background-repeat: no-repeat;
+	background-position-y: -10vh;
+	background-position-x: center;
+	background-size: contain;
+
+	&.hidden {
+		transform: translateY(-100%);
+
+		& + .animation-button {
+			transform: translate(-50%, 200%);
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		top: 5vh;
+		left: 50%;
+		width: 30vh;
+		height: auto;
+		transform: translateX(-50%);
+	}
+
+	&__text {
+		position: absolute;
+		top: 40vh;
+		left: 50%;
+		width: 55%;
+		min-width: 225px;
+		font-family: 'MuseoSlab', serif;
+		font-weight: 500;
+		font-size: 2.25vh;
+		line-height: 1.75;
+		text-align: center;
+		transform: translateX(-50%);
+	}
+
+	&__label {
+		@extend .label;
+
+		position: absolute;
+		top: 63vh;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 3.8vh;
+		text-shadow: rgba(83,14,37,0.8) -2px 3px 0,
+		rgba(119,20,55,0.3) -2px 2px 0,
+		rgba(72,14,33,0.2) -3px 3px 0;
+	}
+}

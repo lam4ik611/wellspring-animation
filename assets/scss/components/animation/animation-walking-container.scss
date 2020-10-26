@@ -1,0 +1,14 @@
+.animation-walking-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 20;
+	//transform: translateX(100vw);
+	/*overflow: hidden;*/
+
+	&.visible {
+		//position: fixed;
+	}
+}

@@ -1,0 +1,65 @@
+.animation-copy {
+	position: absolute;
+	top: 9vh;
+	left: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 90vh;
+	height: 40vh;
+	background-image: url('../images/star-1.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	opacity: 0;
+	visibility: hidden;
+	transition: 1s;
+
+	&--finished {
+		position: fixed;
+		top: calc(-100vmax + 110vw);
+		left: 50%;
+		transform: translateX(-50%);
+		background-image: url('../images/star-2.svg');
+		z-index: 21;
+
+		&.active {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.animation-copy__label {
+			font-size: 6vh;
+		}
+	}
+
+	&__label {
+		@extend .label;
+	}
+
+	&__text {
+		@extend .label;
+
+		font-family: 'MuseoSans', serif;
+		margin-top: 15px;
+		font-size: 2.25vh;
+		color: $white;
+		text-shadow: rgba(29, 24, 51, 0.8) -1px 1px 0,
+		rgba(20, 13, 45, 0.4) -2px 2px 0,
+		rgba(20, 13, 45, 0.2) -3px 3px 0;
+		opacity: 0;
+		transition-delay: .2s;
+		transition: 1s;
+	}
+
+	&__button {
+		@extend .animation-button;
+
+		bottom: 0;
+		color: $white;
+		box-shadow: #3c3034 -3px 4px 0px, #3c3034 0px 0px 0px;
+		opacity: 1;
+		background: linear-gradient(0.25turn, #de5081, #b1305b, #BF1B52);
+	}
+}

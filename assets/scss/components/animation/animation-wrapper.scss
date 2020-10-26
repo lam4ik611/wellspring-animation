@@ -1,0 +1,11 @@
+.animation-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	z-index: 4;
+
+	@media only screen and (max-width: $screen-lg) {
+		flex-direction: row;
+	}
+}
