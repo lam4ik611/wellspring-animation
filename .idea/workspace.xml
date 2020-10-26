@@ -28,7 +28,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="8925643d-6e19-4a0c-a8c7-18b538f09197" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/scss/components/swiper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/components/swiper.scss" afterDir="false" />
+    </list>
+>>>>>>> 8a2bd0bf662709837e1eeb0c23e762551d87acfd
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +60,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../otakoi" />
+>>>>>>> 8a2bd0bf662709837e1eeb0c23e762551d87acfd
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
@@ -126,8 +136,11 @@
       <workItem from="1600793011819" duration="547000" />
       <workItem from="1600885551062" duration="3009000" />
       <workItem from="1600969472022" duration="6660000" />
+<<<<<<< HEAD
       <workItem from="1603733235402" duration="2293000" />
       <workItem from="1603736114576" duration="5767000" />
+=======
+>>>>>>> 8a2bd0bf662709837e1eeb0c23e762551d87acfd
     </task>
     <servers />
   </component>
@@ -171,10 +184,16 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="446" y="263" width="464" height="211" key="#Stylelint/0.0.1366.744@0.0.1366.744" timestamp="1596445581217" />
+<<<<<<< HEAD
     <state x="392" y="175" width="572" height="385" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603739271496">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="392" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1603739271496" />
+=======
+    <state x="392" y="176" width="572" height="385" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597945696055">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+>>>>>>> 8a2bd0bf662709837e1eeb0c23e762551d87acfd
     <state x="392" y="176" width="572" height="385" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.744@0.0.1366.744" timestamp="1597945696055" />
     <state x="100" y="99" width="1166" height="544" key="DiffContextDialog" timestamp="1600029363775">
       <screen x="0" y="0" width="1366" height="744" />

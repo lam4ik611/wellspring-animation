@@ -261,7 +261,11 @@ class Animation {
                         scrub: true,
                         force3D: false,
                         onUpdate: self => {
+<<<<<<< HEAD
                             let houseSpeed = self.progress * (scrollHeight * 1.7);
+=======
+                            let houseSpeed = self.progress * (scrollHeight * 1.25);
+>>>>>>> 8a2bd0bf662709837e1eeb0c23e762551d87acfd
 
                             if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
                             gsap.to(newParallaxElements, {y: houseSpeed});
