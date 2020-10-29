@@ -7,27 +7,22 @@
 	z-index: 20;
 
 	&--top {
+		padding-right: 2rem !important;
 
 		&::before,
 		&::after {
-			right: 1.6rem !important;
+			right: 1.15rem !important;
+			width: .3rem !important;
+			height: .3rem !important;
 			transform: rotate(-45deg) !important;
 		}
 
 		&::before {
-			top: 1.35rem !important;
-
-			@media only screen and (max-width: $screen-md) {
-				top: .85rem !important;
-			}
+			top: 1rem !important;
 		}
 
 		&::after {
-			top: 1.6rem !important;
-
-			@media only screen and (max-width: $screen-md) {
-				top: 1.1rem !important;
-			}
+			top: 1.25rem !important;
 		}
 	}
 

@@ -29,10 +29,23 @@
 	&--top {
 		position: fixed;
 		bottom: -30vh;
+		padding: .75rem 2rem .65rem 1rem;
+		font-size: .6rem;
+		opacity: .75;
+		background-color: #fff;
+		z-index: 10;
 		transition: .5s linear;
 
 		&.active {
 			bottom: 2.5vh;
+		}
+
+		&::before {
+			right: 1.25rem;
+		}
+
+		&::after {
+			right: 1rem;
 		}
 	}
 }
