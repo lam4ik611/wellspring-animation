@@ -62,9 +62,9 @@
 		top: calc(-100vmax * 1.5);
 		width: 800vmax;
 		background-repeat: no-repeat;
-		background-position-x: 97.2%;
+		background-position-x: 96.7%; // it needs change if floors has updated, 1 floor = .5 unit
 		background-position-y: 61%;
-		background-size: 11%;
+		background-size: 10%; // it needs change if floors has updated, 1 floor = 1 unit
 		z-index: 3;
 	}
 
