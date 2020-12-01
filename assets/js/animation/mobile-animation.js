@@ -81,7 +81,7 @@ class MobileAnimation {
             toggleClass: 'visible',
             once: true,
             onEnter: self => {
-                self.trigger.scrollTop = self.trigger.offsetHeight;
+                self.trigger.scrollTop = self.trigger.offsetHeight * 2;
             },
         });
     }
