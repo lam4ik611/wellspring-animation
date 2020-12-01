@@ -59,12 +59,12 @@
 	}
 
 	&[data-name="house"] {
-		top: calc(-100vmax * 1.5);
-		width: 800vmax;
+		top: calc(-100vmax * 3); // wtf
+		width: 900vmax; // wtf
 		background-repeat: no-repeat;
-		background-position-x: 96.7%; // it needs change if floors has updated, 1 floor = .5 unit
-		background-position-y: 61%;
-		background-size: 10%; // it needs change if floors has updated, 1 floor = 1 unit
+		background-position-x: 85.25%; // it needs change if floors has updated, 1 floor = -.5 unit
+		background-position-y: 94%; // wtf
+		background-size: 10%; // it needs change if floors has updated, 1 floor = -1 unit
 		z-index: 3;
 	}
 
