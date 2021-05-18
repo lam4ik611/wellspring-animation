@@ -60,11 +60,12 @@
 
 	&[data-name="house"] {
 		top: calc(-100vmax * 3); // wtf
-		width: 900vmax; // wtf
+		width: 1000vmax; // 1 floor = +100 unit
+		background-image: url('../images/house.png');
 		background-repeat: no-repeat;
-		background-position-x: 85.25%; // it needs change if floors has updated, 1 floor = -.5 unit
-		background-position-y: 94%; // wtf
-		background-size: 10%; // it needs change if floors has updated, 1 floor = -1 unit
+		background-position-x: 76.15%; // it needs change if floors has updated, 1 floor = -10 unit
+		background-position-y: 80%; // // it needs change if floors has updated, 1 floor = -10 unit
+		background-size: 10%;
 		z-index: 3;
 	}
 

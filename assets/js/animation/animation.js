@@ -261,7 +261,7 @@ class Animation {
                         scrub: true,
                         force3D: false,
                         onUpdate: self => {
-                            let floorCount = 2.5; // the variable depends on floor count
+                            let floorCount = 3.15; // the variable depends on floor count
                             let houseSpeed = self.progress * (scrollHeight * floorCount);
 
                             if (!isChrome) gsap.to(stars, {y: (self.progress.toFixed(3) * 200)});
